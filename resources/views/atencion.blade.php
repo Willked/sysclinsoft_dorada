@@ -291,16 +291,14 @@
                                         </div>
                                         <div>
                                             <label for="departamento">{{ __('Departamento') }}<span class="atencion-req">*</span></label>
-                                            <select id="departamento" class="atencion-select" name="departamento">
-                                                <option selected>{{ __('Tolima') }}</option>
-                                                <option>{{ __('Cundinamarca') }}</option>
+                                            <select id="departamento" class="atencion-select" name="departamento_id" data-atencion-geo-base="{{ url('/geo/departamentos') }}" data-atencion-default-dep-dane="17">
+                                                <option value="">{{ __('Cargando…') }}</option>
                                             </select>
                                         </div>
                                         <div>
                                             <label for="municipio">{{ __('Municipio') }}<span class="atencion-req">*</span></label>
-                                            <select id="municipio" class="atencion-select" name="municipio">
-                                                <option selected>{{ __('Ibagué') }}</option>
-                                                <option>{{ __('Cali') }}</option>
+                                            <select id="municipio" class="atencion-select" name="municipio_id" disabled data-atencion-default-mun-dane="73001">
+                                                <option value="">{{ __('Seleccione un departamento') }}</option>
                                             </select>
                                         </div>                                      
                                         <div>
@@ -606,6 +604,119 @@
                 }
             });
             updateGlasgowTotal();
+
+            var depSel = document.getElementById('departamento');
+            var munSel = document.getElementById('municipio');
+            if (depSel && munSel) {
+                var geoBase = (depSel.getAttribute('data-atencion-geo-base') || '').replace(/\/$/, '');
+                var defaultDepDane = depSel.getAttribute('data-atencion-default-dep-dane') || '';
+                var defaultMunDane = munSel.getAttribute('data-atencion-default-mun-dane') || '';
+                var msgSelDep = @json(__('Seleccione un departamento'));
+                var msgSelMun = @json(__('Seleccione un municipio'));
+                var msgLoading = @json(__('Cargando…'));
+                var msgErrDep = @json(__('No se pudieron cargar los departamentos'));
+                var msgErrMun = @json(__('No se pudieron cargar los municipios'));
+
+                function setMunicipiosPlaceholder(msg) {
+                    munSel.innerHTML = '';
+                    var o = document.createElement('option');
+                    o.value = '';
+                    o.textContent = msg;
+                    munSel.appendChild(o);
+                    munSel.value = '';
+                    munSel.disabled = true;
+                }
+
+                function loadMunicipios(depId, selectDane) {
+                    if (!depId) {
+                        setMunicipiosPlaceholder(msgSelDep);
+                        return;
+                    }
+                    munSel.disabled = true;
+                    setMunicipiosPlaceholder(msgLoading);
+                    fetch(geoBase + '/' + encodeURIComponent(depId) + '/municipios', {
+                        headers: { Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+                        credentials: 'same-origin',
+                    })
+                        .then(function (r) {
+                            if (!r.ok) throw new Error('municipios');
+                            return r.json();
+                        })
+                        .then(function (list) {
+                            if (!Array.isArray(list)) throw new Error('municipios');
+                            munSel.innerHTML = '';
+                            var ph = document.createElement('option');
+                            ph.value = '';
+                            ph.textContent = msgSelMun;
+                            munSel.appendChild(ph);
+                            list.forEach(function (m) {
+                                var opt = document.createElement('option');
+                                opt.value = m.id;
+                                opt.textContent = m.nombre;
+                                opt.setAttribute('data-dane-code', m.dane_code);
+                                munSel.appendChild(opt);
+                            });
+                            munSel.disabled = false;
+                            if (selectDane) {
+                                for (var i = 0; i < munSel.options.length; i++) {
+                                    if (munSel.options[i].getAttribute('data-dane-code') === selectDane) {
+                                        munSel.selectedIndex = i;
+                                        break;
+                                    }
+                                }
+                            }
+                        })
+                        .catch(function () {
+                            setMunicipiosPlaceholder(msgErrMun);
+                        });
+                }
+
+                fetch(geoBase, {
+                    headers: { Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+                    credentials: 'same-origin',
+                })
+                    .then(function (r) {
+                        if (!r.ok) throw new Error('dep');
+                        return r.json();
+                    })
+                    .then(function (list) {
+                        if (!Array.isArray(list)) throw new Error('dep');
+                        depSel.innerHTML = '';
+                        var ph = document.createElement('option');
+                        ph.value = '';
+                        ph.textContent = msgSelDep;
+                        depSel.appendChild(ph);
+                        var defaultId = '';
+                        list.forEach(function (d) {
+                            var opt = document.createElement('option');
+                            opt.value = d.id;
+                            opt.textContent = d.nombre;
+                            opt.setAttribute('data-dane-code', d.dane_code);
+                            depSel.appendChild(opt);
+                            if (defaultDepDane && d.dane_code === defaultDepDane) {
+                                defaultId = String(d.id);
+                            }
+                        });
+                        if (defaultId) {
+                            depSel.value = defaultId;
+                            loadMunicipios(defaultId, defaultMunDane);
+                        } else {
+                            setMunicipiosPlaceholder(msgSelDep);
+                        }
+                    })
+                    .catch(function () {
+                        depSel.innerHTML = '';
+                        var o = document.createElement('option');
+                        o.value = '';
+                        o.textContent = msgErrDep;
+                        depSel.appendChild(o);
+                        setMunicipiosPlaceholder(msgSelDep);
+                    });
+
+                depSel.addEventListener('change', function () {
+                    loadMunicipios(depSel.value, '');
+                });
+            }
         })();
     </script>
 </body>

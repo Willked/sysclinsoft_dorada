@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DivipolaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,4 +22,7 @@ Route::middleware([
     Route::get('/atenciones/nueva', function () {
         return view('atencion');
     })->name('atenciones.nueva');
+
+    Route::get('/geo/departamentos', [DivipolaController::class, 'departamentos'])->name('geo.departamentos');
+    Route::get('/geo/departamentos/{departamento}/municipios', [DivipolaController::class, 'municipios'])->name('geo.municipios');
 });
