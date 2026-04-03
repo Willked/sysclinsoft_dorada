@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AtencionController;
 use App\Http\Controllers\DivipolaController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,9 +20,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/atenciones/nueva', function () {
-        return view('atencion');
-    })->name('atenciones.nueva');
+    Route::get('/atenciones/nueva', [AtencionController::class, 'create'])->name('atenciones.nueva');
 
     Route::get('/geo/departamentos', [DivipolaController::class, 'departamentos'])->name('geo.departamentos');
     Route::get('/geo/departamentos/{departamento}/municipios', [DivipolaController::class, 'municipios'])->name('geo.municipios');

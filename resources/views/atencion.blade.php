@@ -148,11 +148,11 @@
                                         <div>
                                             <label for="doc-type">{{ __('Tipo de documento') }}<span class="atencion-req">*</span></label>
                                             <select id="doc-type" class="atencion-select" name="tipo_documento">
-                                                <option selected>{{ __('CC — Cédula de ciudadanía') }}</option>
-                                                <option>{{ __('TI — Tarjeta de identidad') }}</option>
-                                                <option>{{ __('CE — Cédula de extranjería') }}</option>
-                                                <option>{{ __('PA — Pasaporte') }}</option>
-                                                <option>{{ __('MS — Menor sin identificación') }}</option>
+                                                @forelse ($tipoDocumentos as $tipoDocumento)
+                                                    <option value="{{ $tipoDocumento->codigo }}" @if ($tipoDocumento->codigo == 'CC') selected @endif>{{ $tipoDocumento->nombre }}</option>
+                                                @empty
+                                                    <option value="">{{ __('No hay tipos de documento') }}</option>
+                                                @endforelse
                                             </select>
                                         </div>
                                         <div>
@@ -182,18 +182,17 @@
                                         <div>
                                             <label for="sexo">{{ __('Sexo') }}<span class="atencion-req">*</span></label>
                                             <select id="sexo" class="atencion-select" name="sexo">
-                                                <option selected>{{ __('Masculino') }}</option>
-                                                <option>{{ __('Femenino') }}</option>
+                                                @foreach ($sexos as $sexo => $nombre)
+                                                    <option value="{{ $sexo }}" @if ($sexo == 'M') selected @endif>{{ $nombre }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div>
                                             <label for="estado-civil">{{ __('Estado civil') }}<span class="atencion-req">*</span></label>
                                             <select id="estado-civil" class="atencion-select" name="estado_civil">
-                                                <option selected>{{ __('Soltero') }}</option>
-                                                <option>{{ __('Casado') }}</option>
-                                                <option>{{ __('Divorciado') }}</option>
-                                                <option>{{ __('Viudo') }}</option>
-                                                <option>{{ __('Unión libre') }}</option>
+                                                @foreach ($estadosCiviles as $estadoCivil => $nombre)
+                                                    <option value="{{ $estadoCivil }}" @if ($estadoCivil == 'S') selected @endif>{{ $nombre }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div>
@@ -228,19 +227,19 @@
                                         <div>
                                             <label for="parentesco-acompanante">{{ __('Parentesco del acompañante') }}<span class="atencion-req">*</span></label>
                                             <select id="parentesco-acompanante" class="atencion-select" name="parentesco_acompanante">
-                                                <option selected>{{ __('Padre') }}</option>
-                                                <option>{{ __('Madre') }}</option>
-                                                <option>{{ __('Hermano') }}</option>
-                                                <option>{{ __('Hermana') }}</option>
+                                                @foreach ($parentescos as $parentesco => $nombre)
+                                                    <option value="{{ $parentesco }}" @if ($parentesco == 'P') selected @endif>{{ $nombre }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div>
                                             <label for="doc-type-acompanante">{{ __('Tipo de documento del acompañante') }}<span class="atencion-req">*</span></label>
                                             <select id="doc-type-acompanante" class="atencion-select" name="doc_type_acompanante">
-                                                <option selected>{{ __('CC — Cédula de ciudadanía') }}</option>
-                                                <option>{{ __('TI — Tarjeta de identidad') }}</option>
-                                                <option>{{ __('CE — Cédula de extranjería') }}</option>
-                                                <option>{{ __('PA — Pasaporte') }}</option>
+                                                @forelse ($tipoDocumentos as $tipoDocumento)
+                                                    <option value="{{ $tipoDocumento->codigo }}" @if ($tipoDocumento->codigo == 'CC') selected @endif>{{ $tipoDocumento->nombre }}</option>
+                                                @empty
+                                                    <option value="">{{ __('No hay tipos de documento') }}</option>
+                                                @endforelse
                                             </select>
                                         </div>
                                         <div>
@@ -267,18 +266,17 @@
                                         <div>
                                             <label for="tipo-servicio">{{ __('Tipo de servicio') }}<span class="atencion-req">*</span></label>
                                             <select id="tipo-servicio" class="atencion-select" name="tipo_servicio">
-                                                <option>{{ __('01 — Urgencias en escena') }}</option>
-                                                <option selected>{{ __('02 — Traslado primario') }}</option>
-                                                <option>{{ __('03 — Traslado secundario') }}</option>
-                                                <option>{{ __('04 — Traslado neonatal') }}</option>
+                                                @foreach ($tipoServicios as $tipoServicio => $nombre)
+                                                    <option value="{{ $tipoServicio }}" @if ($tipoServicio == '01') selected @endif>{{ $nombre }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div>
                                             <label for="causa-externa">{{ __('Causa externa') }}</label>
                                             <select id="causa-externa" class="atencion-select" name="causa_externa">
-                                                <option selected>{{ __('01 — Accidente de tránsito') }}</option>
-                                                <option>{{ __('30 — Enfermedad general') }}</option>
-                                                <option>{{ __('02 — Lesión por agresión') }}</option>
+                                                @foreach ($causaExternas as $causaExterna => $nombre)
+                                                    <option value="{{ $causaExterna }}" @if ($causaExterna == '01') selected @endif>{{ $nombre }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div>
@@ -304,13 +302,32 @@
                                         <div>
                                             <label for="eps">{{ __('EPS') }}<span class="atencion-req">*</span></label>
                                             <select id="eps" class="atencion-select" name="eps">
-                                                <option selected>{{ __('Sanitas') }}</option>
-                                                <option>{{ __('Colmedica') }}</option>
+                                                @foreach ($eps as $eps => $nombre)
+                                                    <option value="{{ $eps }}" @if ($eps == '1') selected @endif>{{ $nombre }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div>
                                             <label for="autorizacion">{{ __('Nro. autorización EPS') }}</label>
                                             <input id="autorizacion" class="atencion-input" type="text" name="autorizacion_eps" placeholder="{{ __('Opcional') }}">
+                                        </div>
+                                        <div>
+                                            <label for="tipo-usuario">{{ __('Tipo de usuario') }}<span class="atencion-req">*</span></label>
+                                            <select id="tipo-usuario" class="atencion-select" name="tipo_usuario">
+                                                @forelse ($tipoUsuarios as $tipoUsuario)
+                                                    <option value="{{ $tipoUsuario->codigo }}" @if ($tipoUsuario->codigo == '10') selected @endif>{{ $tipoUsuario->nombre }}</option>
+                                                @empty
+                                                    <option value="">{{ __('No hay tipos de usuario') }}</option>
+                                                @endforelse
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="zona">{{ __('Zona') }}<span class="atencion-req">*</span></label>
+                                            <select id="zona" class="atencion-select" name="zona">
+                                                @foreach ($zonas as $zona => $nombre)
+                                                    <option value="{{ $zona }}" @if ($zona == 'U') selected @endif>{{ $nombre }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
