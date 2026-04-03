@@ -36,14 +36,14 @@
                 </button>
             </div>
             <div class="dashboard-nav-section">{{ __('Principal') }}</div>
-            <a href="{{ route('dashboard') }}" class="dashboard-nav-item active">
+            <a href="{{ route('dashboard') }}" class="dashboard-nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                 <x-lucide-home />
                 {{ __('Dashboard') }}
             </a>
-            <div class="dashboard-nav-item" role="presentation">
+            <a href="{{ route('atenciones.nueva') }}" class="dashboard-nav-item {{ request()->routeIs('atenciones.nueva') ? 'active' : '' }}">
                 <x-lucide-clipboard-list />
                 {{ __('Atenciones') }}
-            </div>
+            </a>
             <div class="dashboard-nav-item" role="presentation">
                 <x-lucide-users />
                 {{ __('Pacientes') }}
@@ -83,7 +83,7 @@
                 <div class="dashboard-topbar-right">
                     <span style="font-size:12px;color:var(--dash-text-secondary)">{{ __('Hoy') }}, {{ $todayLabel }}</span>
                     <button type="button" class="dashboard-btn-outline">{{ __('Exportar') }}</button>
-                    <button type="button" class="dashboard-btn-primary">+ {{ __('Nueva atención') }}</button>
+                    <a href="{{ route('atenciones.nueva') }}" class="dashboard-btn-primary" style="text-decoration:none;display:inline-block">+ {{ __('Nueva atención') }}</a>
                 </div>
             </header>
 

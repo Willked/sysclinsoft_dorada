@@ -17,4 +17,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/atenciones/nueva', function () {
+        return view('atencion');
+    })->name('atenciones.nueva');
 });
