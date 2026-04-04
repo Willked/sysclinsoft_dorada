@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('codigo', 8)->unique()->comment('Código corto p.ej. CC, TI');
             $table->string('nombre', 160);
-            $table->unsignedSmallInteger('orden')->default(0);
             $table->boolean('activo')->default(true);
             $table->timestamps();
         });
@@ -46,7 +45,6 @@ return new class extends Migration
             DB::table('tipo_documentos')->insert([
                 'codigo' => $codigo,
                 'nombre' => $nombre,
-                'orden' => ++$orden,
                 'activo' => true,
                 'created_at' => $now,
                 'updated_at' => $now,
