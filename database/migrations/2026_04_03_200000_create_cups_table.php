@@ -40,7 +40,6 @@ return new class extends Migration
             DB::table('cups')->insert([
                 'codigo' => $codigo,
                 'nombre' => $nombre,
-                'orden' => ++$orden,
                 'activo' => true,
                 'created_at' => $now,
                 'updated_at' => $now,

@@ -27,16 +27,15 @@ return new class extends Migration
         $orden = 0;
 
         $rows = [
-            ['01', '01 — Accidente de tránsito'],
-            ['30', '30 — Enfermedad general'],
-            ['02', '02 — Lesión por agresión'],
+            ['01', 'Accidente de tránsito'],
+            ['30', 'Enfermedad general'],
+            ['02', 'Lesión por agresión'],
         ];
 
         foreach ($rows as [$codigo, $nombre]) {
             DB::table('causa_externas')->insert([
                 'codigo' => $codigo,
                 'nombre' => $nombre,
-                'orden' => ++$orden,
                 'activo' => true,
                 'created_at' => $now,
                 'updated_at' => $now,
