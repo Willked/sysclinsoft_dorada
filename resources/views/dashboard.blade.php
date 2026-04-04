@@ -94,13 +94,24 @@
                 <div class="dashboard-kpi-grid">
                     <div class="dashboard-kpi ok">
                         <div class="dashboard-kpi-label">{{ __('Atenciones hoy') }}</div>
-                        <div class="dashboard-kpi-value">14</div>
-                        <div class="dashboard-kpi-sub">+3 {{ __('vs ayer') }}</div>
+                        <div class="dashboard-kpi-value">{{ $atencionesHoy }}</div>
+                        <div class="dashboard-kpi-sub">
+                            @php
+                                $diffHoy = $atencionesHoy - $atencionesAyer;
+                            @endphp
+                            @if ($diffHoy > 0)
+                                +{{ $diffHoy }} {{ __('vs ayer') }}
+                            @elseif ($diffHoy < 0)
+                                {{ $diffHoy }} {{ __('vs ayer') }}
+                            @else
+                                {{ __('Igual que ayer') }}
+                            @endif
+                        </div>
                     </div>
                     <div class="dashboard-kpi warn">
                         <div class="dashboard-kpi-label">{{ __('En atención') }}</div>
-                        <div class="dashboard-kpi-value">3</div>
-                        <div class="dashboard-kpi-sub">2 {{ __('traslados activos') }}</div>
+                        <div class="dashboard-kpi-value">{{ $enAtencion }}</div>
+                        <div class="dashboard-kpi-sub">{{ __('Estado en atención en sistema') }}</div>
                     </div>
                     <div class="dashboard-kpi">
                         <div class="dashboard-kpi-label">{{ __('Pacientes registrados') }}</div>
@@ -124,58 +135,55 @@
                         <div class="dashboard-card">
                             <div class="dashboard-card-header">
                                 <h3>{{ __('Atenciones recientes') }}</h3>
-                                <a href="#">{{ __('Ver todas') }}</a>
+                                <a href="{{ route('atenciones.nueva') }}">{{ __('Nueva atención') }}</a>
                             </div>
-                            <div class="dashboard-row-item">
-                                <div class="dashboard-row-main">
-                                    <span>María García Rodríguez</span>
-                                    <small>APH-2026-000014 · {{ __('Traslado primario') }}</small>
+                            @forelse ($atenciones as $atencion)
+                                @php
+                                    $p = $atencion->paciente;
+                                    $nombrePaciente = $p
+                                        ? trim(implode(' ', array_filter([
+                                            $p->primer_nombre,
+                                            $p->segundo_nombre,
+                                            $p->primer_apellido,
+                                            $p->segundo_apellido,
+                                        ])))
+                                        : '—';
+                                    $refAnio = $atencion->hora_llamada?->format('Y') ?? $atencion->created_at->format('Y');
+                                    $ref = 'APH-'.$refAnio.'-'.str_pad((string) $atencion->id, 6, '0', STR_PAD_LEFT);
+                                    $tipoServicio = $atencion->cup?->nombre ?? $atencion->tipo_servicio ?? __('Sin clasificar');
+                                    $mins = null;
+                                    if ($atencion->hora_llamada && $atencion->llegada_escena) {
+                                        $mins = (int) $atencion->hora_llamada->diffInMinutes($atencion->llegada_escena);
+                                    }
+                                    $badgeClass = match ($atencion->estado) {
+                                        'en_atencion' => 'en-atencion',
+                                        'finalizado' => 'finalizado',
+                                        default => 'pendiente',
+                                    };
+                                    $estadoLabel = match ($atencion->estado) {
+                                        'en_atencion' => __('En atención'),
+                                        'finalizado' => __('Finalizado'),
+                                        default => $atencion->estado,
+                                    };
+                                    $tClass = $mins === null ? '' : ($mins <= 12 ? 'ok' : ($mins <= 18 ? 'warn' : 'crit'));
+                                @endphp
+                                <div class="dashboard-row-item">
+                                    <div class="dashboard-row-main">
+                                        <span>{{ $nombrePaciente }}</span>
+                                        <small>{{ $ref }} · {{ $tipoServicio }}</small>
+                                    </div>
+                                    <div class="dashboard-row-right">
+                                        <span class="dashboard-badge {{ $badgeClass }}">{{ $estadoLabel }}</span>
+                                        @if ($mins !== null)
+                                            <div class="dashboard-t-resp {{ $tClass }}">T. {{ __('respuesta') }}: {{ $mins }} min</div>
+                                        @else
+                                            <div class="dashboard-t-resp" style="color:var(--dash-text-secondary)">—</div>
+                                        @endif
+                                    </div>
                                 </div>
-                                <div class="dashboard-row-right">
-                                    <span class="dashboard-badge en-atencion">{{ __('En atención') }}</span>
-                                    <div class="dashboard-t-resp ok">T. {{ __('respuesta') }}: 8 min</div>
-                                </div>
-                            </div>
-                            <div class="dashboard-row-item">
-                                <div class="dashboard-row-main">
-                                    <span>Carlos Mendoza López</span>
-                                    <small>APH-2026-000013 · {{ __('Urgencias en escena') }}</small>
-                                </div>
-                                <div class="dashboard-row-right">
-                                    <span class="dashboard-badge en-atencion">{{ __('En atención') }}</span>
-                                    <div class="dashboard-t-resp warn">T. {{ __('respuesta') }}: 18 min</div>
-                                </div>
-                            </div>
-                            <div class="dashboard-row-item">
-                                <div class="dashboard-row-main">
-                                    <span>Lucía Herrera Pinto</span>
-                                    <small>APH-2026-000012 · {{ __('Traslado secundario') }}</small>
-                                </div>
-                                <div class="dashboard-row-right">
-                                    <span class="dashboard-badge finalizado">{{ __('Finalizado') }}</span>
-                                    <div class="dashboard-t-resp ok">T. {{ __('respuesta') }}: 11 min</div>
-                                </div>
-                            </div>
-                            <div class="dashboard-row-item">
-                                <div class="dashboard-row-main">
-                                    <span>Andrés Vargas Castro</span>
-                                    <small>APH-2026-000011 · {{ __('Urgencias en escena') }}</small>
-                                </div>
-                                <div class="dashboard-row-right">
-                                    <span class="dashboard-badge finalizado">{{ __('Finalizado') }}</span>
-                                    <div class="dashboard-t-resp crit">T. {{ __('respuesta') }}: 24 min</div>
-                                </div>
-                            </div>
-                            <div class="dashboard-row-item">
-                                <div class="dashboard-row-main">
-                                    <span>Paula Jiménez Torres</span>
-                                    <small>APH-2026-000010 · {{ __('Apoyo asistencial') }}</small>
-                                </div>
-                                <div class="dashboard-row-right">
-                                    <span class="dashboard-badge finalizado">{{ __('Finalizado') }}</span>
-                                    <div class="dashboard-t-resp ok">T. {{ __('respuesta') }}: 9 min</div>
-                                </div>
-                            </div>
+                            @empty
+                                <p style="margin:12px 0 0;font-size:14px;color:var(--dash-text-secondary)">{{ __('No hay atenciones registradas.') }}</p>
+                            @endforelse
                         </div>
 
                         <div class="dashboard-card">
