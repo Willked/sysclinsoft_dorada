@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -43,5 +44,10 @@ class Paciente extends Model
     public function acompanante(): HasOne
     {
         return $this->hasOne(Acompanante::class);
+    }
+
+    public function atenciones(): HasMany
+    {
+        return $this->hasMany(Atencion::class);
     }
 }

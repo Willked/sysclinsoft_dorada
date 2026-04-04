@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 /**
@@ -22,25 +21,6 @@ return new class extends Migration
 
             $table->index('activo');
         });
-
-        $now = now();
-        $orden = 0;
-
-        $rows = [
-            ['01', 'Accidente de tránsito'],
-            ['30', 'Enfermedad general'],
-            ['02', 'Lesión por agresión'],
-        ];
-
-        foreach ($rows as [$codigo, $nombre]) {
-            DB::table('causa_externas')->insert([
-                'codigo' => $codigo,
-                'nombre' => $nombre,
-                'activo' => true,
-                'created_at' => $now,
-                'updated_at' => $now,
-            ]);
-        }
     }
 
     public function down(): void

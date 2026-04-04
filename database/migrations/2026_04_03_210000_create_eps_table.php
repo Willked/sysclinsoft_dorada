@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('contacto', 255)->nullable();
             $table->string('contacto_telefono', 32)->nullable();
             $table->string('contacto_email', 255)->nullable();
+            $table->unsignedSmallInteger('orden')->default(0);
             $table->boolean('activo')->default(true);
             $table->timestamps();
 

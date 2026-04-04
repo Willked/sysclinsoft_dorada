@@ -25,6 +25,6 @@ class TipoDocumento extends Model
 
     public function scopeActivosOrdenados(Builder $query): Builder
     {
-        return $query->where('activo', true)->orderBy('codigo')->orderBy('nombre');
+        return $query->where('activo', true)->orderBy('orden')->orderBy('codigo');
     }
 }

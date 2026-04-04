@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CausaExterna;
+use App\Models\Cup;
+use App\Models\Paciente;
 use App\Models\TipoDocumento;
 use App\Models\TipoUsuario;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class AtencionController extends Controller
@@ -37,21 +42,44 @@ class AtencionController extends Controller
                 'U' => __('Urbana'),
                 'R' => __('Rural'),
             ],
-            'tipoServicios' => [
-                '01' => __('01 — Urgencias en escena'),
-                '02' => __('02 — Traslado primario'),
-                '03' => __('03 — Traslado secundario'),
-                '04' => __('04 — Traslado neonatal'),
-            ],
-            'causaExternas' => [
-                '01' => __('01 — Accidente de tránsito'),
-                '30' => __('30 — Enfermedad general'),
-                '02' => __('02 — Lesión por agresión'),
-            ],
-            'eps' => [
-                '1' => __('Sanitas'),
-                '2' => __('Colmedica'),
-            ],
+            'cups' => Cup::query()->activosOrdenados()->get(),
+            'causaExternas' => CausaExterna::query()->activosOrdenados()->get(),
+            'eps' => Eps::query()->activosOrdenados()->get(),
         ]);
+    }
+
+    public function store(Request $request): RedirectResponse
+    {
+        // $tipoDocumentoId = TipoDocumento::query()
+        //     ->where('codigo', $request->input('tipo_documento'))
+        //     ->value('id');
+
+        // if ($tipoDocumentoId === null) {
+        //     return redirect()
+        //         ->route('atenciones.nueva')
+        //         ->withInput()
+        //         ->with('error', __('Tipo de documento no reconocido.'));
+        // }
+
+        // Paciente::create([
+        //     'tipo_documento_id' => $tipoDocumentoId,
+        //     'numero_documento' => $request->input('numero_documento'),
+        //     'primer_nombre' => $request->input('primer_nombre'),
+        //     'segundo_nombre' => $request->input('segundo_nombre') ?: null,
+        //     'primer_apellido' => $request->input('primer_apellido'),
+        //     'segundo_apellido' => $request->input('segundo_apellido') ?: null,
+        //     'fecha_nacimiento' => $request->input('fecha_nacimiento'),
+        //     'sexo' => $request->input('sexo'),
+        //     'estado_civil' => $request->input('estado_civil'),
+        //     'direccion' => $request->input('direccion'),
+        //     'email' => $request->input('email'),
+        //     'telefono' => $request->input('telefono'),
+        // ]);
+
+        // return redirect()
+        //     ->route('atenciones.nueva')
+        //     ->with('status', __('Paciente guardado (prueba).'));
+
+        dd($request->all());
     }
 }
