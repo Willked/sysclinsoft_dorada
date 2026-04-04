@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Ambulancia extends Model
@@ -21,5 +22,10 @@ class Ambulancia extends Model
         return [
             'activo' => 'boolean',
         ];
+    }
+
+    public function scopeActivosOrdenados(Builder $query): Builder
+    {
+        return $query->where('activo', true)->orderBy('codigo');
     }
 }

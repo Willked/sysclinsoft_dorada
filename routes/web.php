@@ -21,6 +21,7 @@ Route::middleware([
     })->name('dashboard');
 
     Route::get('/atenciones/nueva', [AtencionController::class, 'create'])->name('atenciones.nueva');
+    Route::post('/atenciones/nueva', [AtencionController::class, 'store'])->name('atenciones.nueva.store');
 
     Route::get('/geo/departamentos', [DivipolaController::class, 'departamentos'])->name('geo.departamentos');
     Route::get('/geo/departamentos/{departamento}/municipios', [DivipolaController::class, 'municipios'])->name('geo.municipios');

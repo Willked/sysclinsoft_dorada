@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -34,5 +35,14 @@ class Conductor extends Model
     public function tipoDocumento(): BelongsTo
     {
         return $this->belongsTo(TipoDocumento::class);
+    }
+
+    public function scopeActivosOrdenados(Builder $query): Builder
+    {
+        return $query
+            ->selectRaw("id, trim(concat_ws(' ', primer_nombre, segundo_nombre, primer_apellido, segundo_apellido)) as nombre")
+            ->where('activo', true)
+            ->orderBy('primer_apellido')
+            ->orderBy('primer_nombre');
     }
 }

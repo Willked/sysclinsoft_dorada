@@ -89,6 +89,21 @@
             </header>
 
             <div class="dashboard-content">
+                <form method="POST" action="{{ route('atenciones.nueva.store') }}">
+                    @csrf
+                    @if (session('status'))
+                        <p role="status" style="margin:0 0 12px;padding:10px 12px;border-radius:8px;background:#d1fae5;color:#065f46;font-size:14px;">{{ session('status') }}</p>
+                    @endif
+                    @if (session('error'))
+                        <p role="alert" style="margin:0 0 12px;padding:10px 12px;border-radius:8px;background:#fee2e2;color:#991b1b;font-size:14px;">{{ session('error') }}</p>
+                    @endif
+                    @if ($errors->any())
+                        <ul role="alert" style="margin:0 0 12px;padding:10px 12px 10px 24px;border-radius:8px;background:#fee2e2;color:#991b1b;font-size:14px;">
+                            @foreach ($errors->all() as $message)
+                                <li>{{ $message }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
                 <div class="atencion-wrap">
                     <div class="atencion-topbar">
                         <div class="atencion-topbar-left">
@@ -103,7 +118,7 @@
                         </div>
                         <div class="atencion-topbar-actions">
                             <button type="button" class="dashboard-btn-outline">{{ __('Guardar borrador') }}</button>
-                            <button type="button" class="dashboard-btn-primary">{{ __('Iniciar atención') }}</button>
+                            <button type="submit" name="action" value="iniciar" class="dashboard-btn-primary">{{ __('Iniciar atención') }}</button>
                         </div>
                     </div>
 
@@ -133,6 +148,7 @@
                             <span class="atencion-step-label">{{ __('Signos vitales') }}</span>
                         </div>
                     </div>
+
 
                     <div class="atencion-layout">
                         <div>
@@ -266,16 +282,16 @@
                                         <div>
                                             <label for="tipo-servicio">{{ __('Tipo de servicio') }}<span class="atencion-req">*</span></label>
                                             <select id="tipo-servicio" class="atencion-select" name="tipo_servicio">
-                                                @foreach ($tipoServicios as $tipoServicio => $nombre)
-                                                    <option value="{{ $tipoServicio }}" @if ($tipoServicio == '01') selected @endif>{{ $nombre }}</option>
+                                                @foreach ($cups as $cup)
+                                                    <option value="{{ $cup->codigo }}" @if ($cup->codigo == '01') selected @endif>{{ $cup->nombre }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                         <div>
                                             <label for="causa-externa">{{ __('Causa externa') }}</label>
                                             <select id="causa-externa" class="atencion-select" name="causa_externa">
-                                                @foreach ($causaExternas as $causaExterna => $nombre)
-                                                    <option value="{{ $causaExterna }}" @if ($causaExterna == '01') selected @endif>{{ $nombre }}</option>
+                                                @foreach ($causaExternas as $causaExterna)
+                                                    <option value="{{ $causaExterna->codigo }}" @if ($causaExterna->codigo === '01') selected @endif>{{ $causaExterna->nombre }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -295,15 +311,15 @@
                                         </div>
                                         <div>
                                             <label for="municipio">{{ __('Municipio') }}<span class="atencion-req">*</span></label>
-                                            <select id="municipio" class="atencion-select" name="municipio_id" disabled data-atencion-default-mun-dane="73001">
+                                            <select id="municipio" class="atencion-select" name="municipio_id" disabled data-atencion-default-mun-dane="17380">
                                                 <option value="">{{ __('Seleccione un departamento') }}</option>
                                             </select>
                                         </div>                                      
                                         <div>
                                             <label for="eps">{{ __('EPS') }}<span class="atencion-req">*</span></label>
                                             <select id="eps" class="atencion-select" name="eps">
-                                                @foreach ($eps as $eps => $nombre)
-                                                    <option value="{{ $eps }}" @if ($eps == '1') selected @endif>{{ $nombre }}</option>
+                                                @foreach ($eps as $eps)
+                                                    <option value="{{ $eps->codigo }}" @if ($eps->codigo == '1') selected @endif>{{ $eps->nombre }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -342,6 +358,35 @@
                                     <span class="atencion-card-head-note">{{ __('Requeridos por RIPS') }}</span>
                                 </div>
                                 <div class="atencion-card-body">
+                                    <div class="atencion-field-grid cols3">
+                                        <div>
+                                            <label for="ambulancia-placa">{{ __('movil') }}<span class="atencion-req">*</span></label>
+                                            <select id="ambulancia-placa" class="atencion-select" name="ambulancia_id">
+                                                <option value="">{{ __('Seleccione una movil') }}</option>
+                                                @foreach ($ambulancias as $ambulancia)
+                                                    <option value="{{ $ambulancia->id }}" @if ($ambulancia->codigo === '01') selected @endif>   {{ $ambulancia->placa }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="conductor-nombre">{{ __('Conductor') }}<span class="atencion-req">*</span></label>                                                
+                                            <select id="conductor-nombre" class="atencion-select" name="conductor_id">
+                                                <option value="">{{ __('Seleccione un conductor') }}</option>
+                                                @foreach ($conductores as $conductor)
+                                                    <option value="{{ $conductor->id }}">{{ $conductor->nombre }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="medico-nombre">{{ __('Médico') }}<span class="atencion-req">*</span></label>
+                                            <select id="medico-nombre" class="atencion-select" name="medico_id">
+                                                <option value="">{{ __('Seleccione un médico') }}</option>
+                                                @foreach ($medicos as $medico)
+                                                    <option value="{{ $medico->id }}" @if ($medico->id == '1') selected @endif>{{ $medico->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="atencion-field-grid cols3">
                                         <div class="atencion-tiempo-row">
                                             <label>{{ __('Hora de llamada') }}<span class="atencion-req">*</span></label>
@@ -505,10 +550,11 @@
                         <div class="atencion-footer-actions">
                             <button type="button" class="dashboard-btn-outline">{{ __('Cancelar') }}</button>
                             <button type="button" class="dashboard-btn-outline">{{ __('Guardar borrador') }}</button>
-                            <button type="button" class="dashboard-btn-primary">{{ __('Iniciar atención') }} →</button>
+                            <button type="submit" name="action" value="iniciar" class="dashboard-btn-primary">{{ __('Iniciar atención') }} →</button>
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>

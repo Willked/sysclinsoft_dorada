@@ -25,6 +25,6 @@ class Cup extends Model
 
     public function scopeActivosOrdenados(Builder $query): Builder
     {
-        return $query->where('activo', true)->orderBy('orden')->orderBy('codigo');
+        return $query->where('activo', true)->orderBy('orden')->orderBy('nombre');
     }
 }
