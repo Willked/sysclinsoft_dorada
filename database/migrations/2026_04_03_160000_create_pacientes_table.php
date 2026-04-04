@@ -36,7 +36,6 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->unique(['tipo_documento_id', 'numero_documento'], 'pacientes_documento_unique');
             $table->index('fecha_nacimiento');
         });
     }
