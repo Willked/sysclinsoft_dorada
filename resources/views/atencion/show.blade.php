@@ -62,8 +62,10 @@
     };
 
     $signos = $atencion->signosVitales;
+    $notasClinicas = $atencion->notasClinicas;
     $ultimaToma = $signos->last();
     $showSignosModal = $errors->signosVitales->any();
+    $showNotaModal = $errors->notaClinica->any();
     $minsEscena = null;
     if ($atencion->hora_llamada && $atencion->llegada_escena) {
         $minsEscena = (int) $atencion->hora_llamada->diffInMinutes($atencion->llegada_escena);
@@ -287,8 +289,8 @@
                                     </span>
                                     <button type="button" class="hc-btn-primary" style="font-size:12px;padding:6px 14px" id="open-signos-modal">+ {{ __('Registrar toma') }}</button>
                                 </div>
-                                @if (session('status'))
-                                    <div class="hc-inline-alert success">{{ session('status') }}</div>
+                                @if (session('status_signos'))
+                                    <div class="hc-inline-alert success">{{ session('status_signos') }}</div>
                                 @endif
                                 @if ($errors->signosVitales->any())
                                     <div class="hc-inline-alert error">{{ $errors->signosVitales->first() }}</div>
@@ -373,6 +375,19 @@
 
                             <div class="hc-panel" data-hc-panel="1" role="tabpanel" hidden>
                                 <div style="padding:14px 16px">
+                                    <div class="hc-vitals-toolbar hc-panel-toolbar">
+                                        <span style="font-size:12px;color:var(--dash-text-secondary)">
+                                            {{ $notasClinicas->count() }}
+                                            {{ $notasClinicas->count() === 1 ? __('nota registrada') : __('notas registradas') }}
+                                        </span>
+                                        <button type="button" class="hc-btn-primary" style="font-size:12px;padding:6px 14px" id="open-nota-modal">+ {{ __('Registrar nota') }}</button>
+                                    </div>
+                                    @if (session('status_nota'))
+                                        <div class="hc-inline-alert success">{{ session('status_nota') }}</div>
+                                    @endif
+                                    @if ($errors->notaClinica->any())
+                                        <div class="hc-inline-alert error">{{ $errors->notaClinica->first() }}</div>
+                                    @endif
                                     <div class="hc-section-title">{{ __('Hallazgos / evaluación física') }}</div>
                                     @if (filled($atencion->evaluacion_fisica))
                                         <p class="hc-prose">{{ $atencion->evaluacion_fisica }}</p>
@@ -383,6 +398,19 @@
                                         <div class="hc-section-title" style="margin-top:16px">{{ __('Comentarios') }}</div>
                                         <p class="hc-prose">{{ $atencion->comentario }}</p>
                                     @endif
+                                    <div class="hc-section-title" style="margin-top:16px">{{ __('Historial de notas clínicas') }}</div>
+                                    @forelse ($notasClinicas as $nota)
+                                        <article class="hc-note-item">
+                                            <div class="hc-note-meta">
+                                                <strong>{{ $nota->usuario?->name ?? __('Usuario') }}</strong>
+                                                · {{ $nota->tipo_redactor === 'medico' ? __('Médico') : __('Enfermería') }}
+                                                · {{ $nota->created_at?->format('d/m/Y H:i') }}
+                                            </div>
+                                            <p class="hc-prose">{{ $nota->contenido }}</p>
+                                        </article>
+                                    @empty
+                                        <p class="hc-empty" style="padding:0">{{ __('Sin notas registradas.') }}</p>
+                                    @endforelse
                                 </div>
                             </div>
 
@@ -463,6 +491,25 @@
             </form>
         </div>
     </div>
+    <div class="hc-modal-backdrop{{ $showNotaModal ? ' is-open' : '' }}" id="nota-modal-backdrop" aria-hidden="{{ $showNotaModal ? 'false' : 'true' }}">
+        <div class="hc-modal hc-modal-sm" role="dialog" aria-modal="true" aria-labelledby="nota-modal-title">
+            <div class="hc-modal-head">
+                <h3 id="nota-modal-title">{{ __('Registrar nota clínica') }}</h3>
+                <button type="button" class="hc-modal-close" id="close-nota-modal" aria-label="{{ __('Cerrar') }}">&times;</button>
+            </div>
+            <form method="POST" action="{{ route('atenciones.notas-clinicas.store', $atencion) }}" class="hc-modal-form">
+                @csrf
+                <label class="hc-modal-textarea" style="margin-top:0">
+                    <span>{{ __('Nota clínica') }}</span>
+                    <textarea name="contenido" rows="7" maxlength="5000" required>{{ old('contenido') }}</textarea>
+                </label>
+                <div class="hc-modal-actions">
+                    <button type="button" class="hc-btn-outline" id="cancel-nota-modal">{{ __('Cancelar') }}</button>
+                    <button type="submit" class="hc-btn-primary">{{ __('Guardar nota') }}</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <script>
         (function () {
             var tabs = document.querySelectorAll('.hc-tab');
@@ -489,6 +536,40 @@
             var openBtn = document.getElementById('open-signos-modal');
             var closeBtn = document.getElementById('close-signos-modal');
             var cancelBtn = document.getElementById('cancel-signos-modal');
+
+            if (!backdrop) return;
+
+            function openModal() {
+                backdrop.classList.add('is-open');
+                backdrop.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                backdrop.classList.remove('is-open');
+                backdrop.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            if (openBtn) openBtn.addEventListener('click', openModal);
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+            backdrop.addEventListener('click', function (e) {
+                if (e.target === backdrop) closeModal();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && backdrop.classList.contains('is-open')) closeModal();
+            });
+        })();
+    </script>
+    <script>
+        (function () {
+            var backdrop = document.getElementById('nota-modal-backdrop');
+            var openBtn = document.getElementById('open-nota-modal');
+            var closeBtn = document.getElementById('close-nota-modal');
+            var cancelBtn = document.getElementById('cancel-nota-modal');
 
             if (!backdrop) return;
 

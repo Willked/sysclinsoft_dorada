@@ -9,6 +9,7 @@ use App\Models\CausaExterna;
 use App\Models\Conductor;
 use App\Models\Cup;
 use App\Models\Eps;
+use App\Models\NotaClinica;
 use App\Models\Paciente;
 use App\Models\SignoVital;
 use App\Models\TipoDocumento;
@@ -70,6 +71,7 @@ class AtencionController extends Controller
             'cup',
             'medico',
             'signosVitales' => fn ($q) => $q->orderBy('medicion_en')->orderBy('id'),
+            'notasClinicas' => fn ($q) => $q->with('usuario')->orderByDesc('created_at')->orderByDesc('id'),
         ]);
 
         $ultimoGlasgow = $atencion->glasgowRegistros()
@@ -118,7 +120,29 @@ class AtencionController extends Controller
 
         return redirect()
             ->route('atenciones.show', $atencion)
-            ->with('status', __('Toma de signos vitales registrada correctamente.'));
+            ->with('status_signos', __('Toma de signos vitales registrada correctamente.'));
+    }
+
+    public function storeNotaClinica(Request $request, Atencion $atencion): RedirectResponse
+    {
+        $validated = $request->validateWithBag('notaClinica', [
+            'contenido' => ['required', 'string', 'min:5', 'max:5000'],
+        ]);
+
+        $tipoRedactor = auth()->id() === $atencion->medico_id
+            ? NotaClinica::TIPO_MEDICO
+            : NotaClinica::TIPO_ENFERMERIA;
+
+        NotaClinica::query()->create([
+            'atencion_id' => $atencion->id,
+            'usuario_id' => auth()->id(),
+            'tipo_redactor' => $tipoRedactor,
+            'contenido' => trim($validated['contenido']),
+        ]);
+
+        return redirect()
+            ->route('atenciones.show', $atencion)
+            ->with('status_nota', __('Nota clínica registrada correctamente.'));
     }
 
     public function store(Request $request): RedirectResponse
