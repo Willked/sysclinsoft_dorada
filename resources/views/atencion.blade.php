@@ -686,7 +686,6 @@
                     <div class="atencion-footer-bar">
                         <span class="atencion-footer-info">{{ __('Atendiendo:') }} {{ $displayName }} · {{ $footerStamp }}</span>
                         <div class="atencion-footer-actions">
-                            <button type="button" class="dashboard-btn-outline">{{ __('Cancelar') }}</button>
                             <button type="submit" name="action" value="iniciar" class="dashboard-btn-primary">{{ $editing ? __('Guardar cambios') : __('Iniciar atención') }} →</button>
                         </div>
                     </div>
