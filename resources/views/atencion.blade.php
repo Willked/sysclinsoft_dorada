@@ -43,7 +43,7 @@
                 <x-lucide-home />
                 {{ __('Dashboard') }}
             </a>
-            <a href="{{ route('atenciones.nueva') }}" class="dashboard-nav-item {{ request()->routeIs('atenciones.nueva') ? 'active' : '' }}">
+            <a href="{{ route('atenciones.nueva') }}" class="dashboard-nav-item {{ request()->routeIs('atenciones.nueva', 'atenciones.show') ? 'active' : '' }}">
                 <x-lucide-clipboard-list />
                 {{ __('Atenciones') }}
             </a>

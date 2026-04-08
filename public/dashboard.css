@@ -424,6 +424,16 @@ body.dashboard-page {
     background: var(--dash-bg-secondary);
 }
 
+a.dashboard-row-link {
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+}
+
+a.dashboard-row-link:hover {
+    background: var(--dash-bg-secondary);
+}
+
 .dashboard-row-main span {
     display: block;
     font-size: 13px;

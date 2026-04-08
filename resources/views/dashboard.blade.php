@@ -40,7 +40,7 @@
                 <x-lucide-home />
                 {{ __('Dashboard') }}
             </a>
-            <a href="{{ route('atenciones.nueva') }}" class="dashboard-nav-item {{ request()->routeIs('atenciones.nueva') ? 'active' : '' }}">
+            <a href="{{ route('atenciones.nueva') }}" class="dashboard-nav-item {{ request()->routeIs('atenciones.nueva', 'atenciones.show') ? 'active' : '' }}">
                 <x-lucide-clipboard-list />
                 {{ __('Atenciones') }}
             </a>
@@ -167,7 +167,7 @@
                                     };
                                     $tClass = $mins === null ? '' : ($mins <= 12 ? 'ok' : ($mins <= 18 ? 'warn' : 'crit'));
                                 @endphp
-                                <div class="dashboard-row-item">
+                                <a href="{{ route('atenciones.show', $atencion) }}" class="dashboard-row-item dashboard-row-link">
                                     <div class="dashboard-row-main">
                                         <span>{{ $nombrePaciente }}</span>
                                         <small>{{ $ref }} · {{ $tipoServicio }}</small>
@@ -180,7 +180,7 @@
                                             <div class="dashboard-t-resp" style="color:var(--dash-text-secondary)">—</div>
                                         @endif
                                     </div>
-                                </div>
+                                </a>
                             @empty
                                 <p style="margin:12px 0 0;font-size:14px;color:var(--dash-text-secondary)">{{ __('No hay atenciones registradas.') }}</p>
                             @endforelse

@@ -10,6 +10,7 @@ use App\Models\Conductor;
 use App\Models\Cup;
 use App\Models\Eps;
 use App\Models\Paciente;
+use App\Models\SignoVital;
 use App\Models\TipoDocumento;
 use App\Models\TipoUsuario;
 use App\Models\User;
@@ -57,6 +58,67 @@ class AtencionController extends Controller
             'conductores' => Conductor::activosOrdenados()->get(),
             'medicos' => User::all(),
         ]);
+    }
+
+    public function show(Atencion $atencion): View
+    {
+        $atencion->load([
+            'paciente.tipoDocumento',
+            'eps',
+            'tipoUsuario',
+            'municipio',
+            'cup',
+            'medico',
+            'signosVitales' => fn ($q) => $q->orderBy('medicion_en')->orderBy('id'),
+        ]);
+
+        $ultimoGlasgow = $atencion->glasgowRegistros()
+            ->orderByDesc('medicion_en')
+            ->orderByDesc('id')
+            ->first();
+
+        return view('atencion.show', [
+            'atencion' => $atencion,
+            'ultimoGlasgow' => $ultimoGlasgow,
+        ]);
+    }
+
+    public function storeSignosVitales(Request $request, Atencion $atencion): RedirectResponse
+    {
+        $validated = $request->validateWithBag('signosVitales', [
+            'medicion_en' => ['nullable', 'date'],
+            'presion_sistolica' => ['nullable', 'integer', 'min:40', 'max:300'],
+            'presion_diastolica' => ['nullable', 'integer', 'min:20', 'max:200'],
+            'frecuencia_cardiaca' => ['nullable', 'integer', 'min:20', 'max:260'],
+            'frecuencia_respiratoria' => ['nullable', 'integer', 'min:5', 'max:80'],
+            'temperatura' => ['nullable', 'numeric', 'min:25', 'max:45'],
+            'saturacion_oxigeno' => ['nullable', 'integer', 'min:0', 'max:100'],
+            'glicemia' => ['nullable', 'integer', 'min:10', 'max:1000'],
+            'fraccion_inspirada_oxigeno' => ['nullable', 'string', 'max:16'],
+            'observaciones' => ['nullable', 'string', 'max:1000'],
+        ]);
+
+        if (! collect($validated)->except(['medicion_en', 'observaciones'])->filter(static fn ($v) => $v !== null && $v !== '')->isNotEmpty()) {
+            return redirect()
+                ->route('atenciones.show', $atencion)
+                ->withInput()
+                ->withErrors(['medicion_en' => __('Debe registrar al menos un signo vital.')], 'signosVitales');
+        }
+
+        $signo = new SignoVital();
+        $signo->fill($validated);
+        $signo->atencion_id = $atencion->id;
+        $signo->registrado_por_id = auth()->id();
+        $signo->medicion_en = filled($validated['medicion_en'] ?? null)
+            ? Carbon::parse($validated['medicion_en'])
+            : now();
+        $signo->save();
+
+        $atencion->forceFill(['signos_vitales_id' => $signo->id])->save();
+
+        return redirect()
+            ->route('atenciones.show', $atencion)
+            ->with('status', __('Toma de signos vitales registrada correctamente.'));
     }
 
     public function store(Request $request): RedirectResponse
