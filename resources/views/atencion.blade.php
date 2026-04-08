@@ -141,7 +141,7 @@
                         <p role="alert" style="margin:0 0 12px;padding:10px 12px;border-radius:8px;background:#fee2e2;color:#991b1b;font-size:14px;">{{ session('error') }}</p>
                     @endif
                     @if ($errors->any())
-                        <p class="atencion-form-summary-error" role="alert">{{ __('Faltan datos obligatorios o hay errores en el formulario. Revise los campos indicados abajo.') }}</p>
+                        <p class="atencion-form-summary-error" role="alert" style="margin:0 0 12px;padding:10px 12px;border-radius:8px;background:#fee2e2;color:#991b1b;font-size:14px;">{{ __('Faltan datos obligatorios o hay errores en el formulario. Revise los campos indicados abajo.') }}</p>
                     @endif
                 <div class="atencion-wrap">
                     <div class="atencion-topbar">
@@ -160,37 +160,33 @@
                         </div>
                     </div>
 
-                    <div class="atencion-steps" role="list">
-                        <div class="atencion-step is-active" id="step-paciente" role="listitem">
+                    <nav class="atencion-steps" aria-label="{{ __('Secciones del formulario') }}">
+                        <a href="#atencion-seccion-paciente" class="atencion-step is-active" data-atencion-step aria-current="true">
                             <span class="atencion-step-num">1</span>
-                            <span class="atencion-step-label">{{ __('Paciente') }}</span>
-                        </div>
-                        <div class="atencion-step" role="listitem">
+                            <span class="atencion-step-label">{{ __('Identificación del paciente') }}</span>
+                        </a>
+                        <a href="#atencion-seccion-acompanante" class="atencion-step" data-atencion-step>
                             <span class="atencion-step-num">2</span>
-                            <span class="atencion-step-label">{{ __('Acompañante') }}</span>
-                        </div>
-                        <div class="atencion-step" role="listitem">
+                            <span class="atencion-step-label">{{ __('Identificación del acompañante') }}</span>
+                        </a>
+                        <a href="#atencion-seccion-servicio" class="atencion-step" data-atencion-step>
                             <span class="atencion-step-num">3</span>
-                            <span class="atencion-step-label">{{ __('Servicio') }}</span>
-                        </div>
-                        <div class="atencion-step" role="listitem">
+                            <span class="atencion-step-label">{{ __('Datos del servicio') }}</span>
+                        </a>
+                        <a href="#atencion-seccion-tiempos" class="atencion-step" data-atencion-step>
                             <span class="atencion-step-num">4</span>
-                            <span class="atencion-step-label">{{ __('Tiempos APH') }}</span>
-                        </div>
-                        <div class="atencion-step" role="listitem">
-                            <span class="atencion-step-num">4</span>
-                            <span class="atencion-step-label">{{ __('Clínica') }}</span>
-                        </div>
-                        <div class="atencion-step" role="listitem">
+                            <span class="atencion-step-label">{{ __('Tiempos operacionales APH') }}</span>
+                        </a>
+                        <a href="#atencion-seccion-triage" class="atencion-step" data-atencion-step>
                             <span class="atencion-step-num">5</span>
-                            <span class="atencion-step-label">{{ __('Signos vitales') }}</span>
-                        </div>
-                    </div>
+                            <span class="atencion-step-label">{{ __('Clasificación de triage') }}</span>
+                        </a>
+                    </nav>
 
 
                     <div class="atencion-layout">
                         <div>
-                            <div class="atencion-card">
+                            <div class="atencion-card" id="atencion-seccion-paciente" tabindex="-1">
                                 <div class="atencion-card-head">
                                     <h3>
                                         <span class="atencion-section-icon" aria-hidden="true"><x-lucide-user /></span>
@@ -303,7 +299,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="atencion-card">
+                            <div class="atencion-card" id="atencion-seccion-acompanante" tabindex="-1">
                                 <div class="atencion-card-head">
                                     <h3>
                                         <span class="atencion-section-icon" aria-hidden="true"><x-lucide-user /></span>
@@ -362,7 +358,7 @@
                                 </div>
                             </div>
 
-                            <div class="atencion-card">
+                            <div class="atencion-card" id="atencion-seccion-servicio" tabindex="-1">
                                 <div class="atencion-card-head">
                                     <h3>
                                         <span class="atencion-section-icon" aria-hidden="true"><x-lucide-clipboard-list /></span>
@@ -476,7 +472,7 @@
                                 </div>
                             </div>
 
-                            <div class="atencion-card">
+                            <div class="atencion-card" id="atencion-seccion-tiempos" tabindex="-1">
                                 <div class="atencion-card-head">
                                     <h3>
                                         <span class="atencion-section-icon" aria-hidden="true"><x-lucide-clock /></span>
@@ -568,7 +564,7 @@
                                 </div>
                             </div>
 
-                            <div class="atencion-card">
+                            <div class="atencion-card" id="atencion-seccion-triage" tabindex="-1">
                                 <div class="atencion-card-head">
                                     <h3>
                                         <span class="atencion-section-icon" aria-hidden="true"><x-lucide-heart /></span>
@@ -589,7 +585,7 @@
                         </div>
 
                         <div>
-                            <div class="atencion-sidebar-card">
+                            <div class="atencion-sidebar-card" id="atencion-seccion-manejo" tabindex="-1">
                                 <div class="atencion-sidebar-card-head">{{ __('Manejo prehospitalario') }}</div>
                                 <div class="atencion-sidebar-card-body">
                                     <div class="atencion-check-row" role="button" tabindex="0" data-atencion-check>
@@ -615,7 +611,7 @@
                                 </div>
                             </div>
 
-                            <div class="atencion-sidebar-card">
+                            <div class="atencion-sidebar-card" id="atencion-seccion-glasgow" tabindex="-1">
                                 <div class="atencion-sidebar-card-head">{{ __('Escala de Glasgow') }}</div>
                                 <div class="atencion-sidebar-card-body">
                                     <div class="atencion-glasgow-grid">
@@ -645,7 +641,7 @@
                                 </div>
                             </div>
 
-                            <div class="atencion-sidebar-card">
+                            <div class="atencion-sidebar-card" id="atencion-seccion-resumen" tabindex="-1">
                                 <div class="atencion-sidebar-card-head">{{ __('Resumen atención') }}</div>
                                 <div class="atencion-sidebar-card-body" style="display:flex;flex-direction:column;gap:8px">
                                     <div class="atencion-resumen-row">
@@ -747,6 +743,70 @@
                         if (mq.matches) closeMenu();
                     });
                 });
+            }
+
+            var atencionWrap = document.querySelector('.atencion-wrap');
+            var stepLinks = atencionWrap ? atencionWrap.querySelectorAll('a[data-atencion-step]') : [];
+            if (atencionWrap && stepLinks.length) {
+                var sectionIds = [];
+                stepLinks.forEach(function (a) {
+                    var hid = (a.getAttribute('href') || '').replace(/^#/, '');
+                    if (hid) sectionIds.push(hid);
+                });
+                function setActiveStep(activeAnchor) {
+                    stepLinks.forEach(function (a) {
+                        var on = a === activeAnchor;
+                        a.classList.toggle('is-active', on);
+                        if (on) {
+                            a.setAttribute('aria-current', 'true');
+                        } else {
+                            a.removeAttribute('aria-current');
+                        }
+                    });
+                }
+                stepLinks.forEach(function (a) {
+                    a.addEventListener('click', function (e) {
+                        var id = (a.getAttribute('href') || '').replace(/^#/, '');
+                        var el = id ? document.getElementById(id) : null;
+                        if (!el) return;
+                        e.preventDefault();
+                        setActiveStep(a);
+                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        try {
+                            el.focus({ preventScroll: true });
+                        } catch (err) { /* ignore */ }
+                    });
+                });
+                var scrollSyncTimer;
+                function syncActiveStepFromScroll() {
+                    var offset = 96;
+                    var y = window.scrollY + offset;
+                    var bestAnchor = stepLinks[0];
+                    sectionIds.forEach(function (id, i) {
+                        var sec = document.getElementById(id);
+                        if (!sec) return;
+                        var top = sec.getBoundingClientRect().top + window.scrollY;
+                        if (top <= y && stepLinks[i]) {
+                            bestAnchor = stepLinks[i];
+                        }
+                    });
+                    if (bestAnchor) {
+                        setActiveStep(bestAnchor);
+                    }
+                }
+                window.addEventListener('scroll', function () {
+                    clearTimeout(scrollSyncTimer);
+                    scrollSyncTimer = setTimeout(syncActiveStepFromScroll, 60);
+                }, { passive: true });
+                syncActiveStepFromScroll();
+                var hash = window.location.hash.replace(/^#/, '');
+                if (hash) {
+                    stepLinks.forEach(function (a) {
+                        if ((a.getAttribute('href') || '') === '#' + hash) {
+                            setActiveStep(a);
+                        }
+                    });
+                }
             }
 
             function localDatetimeValue() {

@@ -83,8 +83,10 @@
 
 .atencion-wrap .atencion-steps {
     display: flex;
+    flex-wrap: nowrap;
     gap: 0;
     margin-bottom: 20px;
+    width: 100%;
     background: var(--dash-bg-primary);
     border: 0.5px solid var(--dash-border-tertiary);
     border-radius: var(--atencion-border-radius-lg);
@@ -92,14 +94,28 @@
 }
 
 .atencion-wrap .atencion-step {
-    flex: 1;
-    padding: 12px 16px;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 12px 8px;
     text-align: center;
     font-size: 12px;
-    cursor: default;
+    cursor: pointer;
     border-right: 0.5px solid var(--dash-border-tertiary);
     position: relative;
-    min-width: 0;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.atencion-wrap a.atencion-step:focus {
+    outline: none;
+}
+
+.atencion-wrap a.atencion-step:focus-visible {
+    outline: 2px solid var(--dash-brand-mid);
+    outline-offset: -2px;
+    z-index: 1;
 }
 
 .atencion-wrap .atencion-step:last-child {
@@ -135,11 +151,20 @@
     font-size: 11px;
     color: var(--dash-text-secondary);
     margin-top: 3px;
+    line-height: 1.25;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .atencion-wrap .atencion-step.is-active .atencion-step-label {
     color: var(--dash-brand);
     font-weight: 500;
+}
+
+.atencion-wrap .atencion-card[id^="atencion-seccion-"],
+.atencion-wrap .atencion-sidebar-card[id^="atencion-seccion-"] {
+    scroll-margin-top: 96px;
 }
 
 .atencion-wrap .atencion-card {
@@ -217,13 +242,19 @@
     margin-left: 2px;
 }
 
+/* Aviso tipo alert-danger (Bootstrap): error de formulario resumido */
 .atencion-wrap .atencion-form-summary-error {
     margin: 0 0 12px;
-    padding: 10px 12px;
-    border-radius: 8px;
-    background: #fee2e2;
-    color: #991b1b;
+    padding: 12px 16px;
+    border-radius: var(--dash-radius-md);
+    background: var(--dash-clinical-crit-bg);
+    color: var(--dash-clinical-crit-text);
     font-size: 14px;
+    line-height: 1.45;
+    font-weight: 500;
+    border: 1px solid rgba(163, 45, 45, 0.22);
+    border-left: 4px solid var(--dash-clinical-crit-text);
+    box-shadow: 0 1px 2px rgba(163, 45, 45, 0.06);
 }
 
 .atencion-wrap .atencion-field-error {
@@ -585,12 +616,15 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .atencion-wrap .atencion-steps {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+    .atencion-wrap .atencion-step {
+        padding: 10px 6px;
     }
 
-    .atencion-wrap .atencion-step {
-        flex: 1 0 100px;
+    .atencion-wrap .atencion-step-label {
+        font-size: 10px;
+    }
+
+    .atencion-wrap .atencion-step-num {
+        font-size: 16px;
     }
 }
