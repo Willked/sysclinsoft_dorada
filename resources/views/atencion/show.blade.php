@@ -104,7 +104,7 @@
                 <x-lucide-home />
                 {{ __('Dashboard') }}
             </a>
-            <a href="{{ route('atenciones.nueva') }}" class="dashboard-nav-item {{ request()->routeIs('atenciones.nueva', 'atenciones.show') ? 'active' : '' }}">
+            <a href="{{ route('atenciones.nueva') }}" class="dashboard-nav-item {{ request()->routeIs('atenciones.nueva', 'atenciones.show', 'atenciones.edit') ? 'active' : '' }}">
                 <x-lucide-clipboard-list />
                 {{ __('Atenciones') }}
             </a>
@@ -168,10 +168,14 @@
                         </div>
                     </div>
                     <div class="hc-actions">
-                        <button type="button" class="hc-btn-outline" disabled title="{{ __('Próximamente') }}">{{ __('Editar') }}</button>
+                        <a href="{{ route('atenciones.edit', $atencion) }}" class="hc-btn-outline" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">{{ __('Editar') }}</a>
                         <button type="button" class="hc-btn-danger" disabled title="{{ __('Próximamente') }}">{{ __('Finalizar atención') }}</button>
                     </div>
                 </div>
+
+                @if (session('status_atencion'))
+                    <div class="hc-inline-alert success" style="margin:0 0 14px">{{ session('status_atencion') }}</div>
+                @endif
 
                 <div class="hc-grid">
                     <div>

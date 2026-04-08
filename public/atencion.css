@@ -217,6 +217,27 @@
     margin-left: 2px;
 }
 
+.atencion-wrap .atencion-form-summary-error {
+    margin: 0 0 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #fee2e2;
+    color: #991b1b;
+    font-size: 14px;
+}
+
+.atencion-wrap .atencion-field-error {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: var(--dash-clinical-crit-text);
+    line-height: 1.35;
+}
+
+.atencion-wrap .atencion-input.atencion-input-invalid,
+.atencion-wrap .atencion-select.atencion-input-invalid {
+    border-color: var(--dash-clinical-crit-text);
+}
+
 .atencion-wrap .atencion-input,
 .atencion-wrap .atencion-select,
 .atencion-wrap .atencion-textarea {
@@ -230,17 +251,19 @@
     font-family: inherit;
 }
 
+/* Sin resalte azul al cargar o al enfocar; el borde distintivo solo en error (.atencion-input-invalid). */
 .atencion-wrap .atencion-input:focus,
 .atencion-wrap .atencion-select:focus,
 .atencion-wrap .atencion-textarea:focus {
     outline: none;
-    border-color: var(--dash-brand-mid);
-    box-shadow: 0 0 0 2px rgba(55, 138, 221, 0.15);
+    border-color: var(--dash-border-secondary);
+    box-shadow: none;
 }
 
-.atencion-wrap .atencion-input.is-highlight {
-    border-color: var(--dash-brand-mid);
-    box-shadow: 0 0 0 2px rgba(55, 138, 221, 0.15);
+.atencion-wrap .atencion-input.atencion-input-invalid:focus,
+.atencion-wrap .atencion-select.atencion-input-invalid:focus,
+.atencion-wrap .atencion-textarea.atencion-input-invalid:focus {
+    border-color: var(--dash-clinical-crit-text);
 }
 
 .atencion-wrap .atencion-patient-found {
