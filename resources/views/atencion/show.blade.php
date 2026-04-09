@@ -169,7 +169,12 @@
                     </div>
                     <div class="hc-actions">
                         <a href="{{ route('atenciones.edit', $atencion) }}" class="hc-btn-outline" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">{{ __('Editar') }}</a>
-                        <button type="button" class="hc-btn-danger" disabled title="{{ __('Próximamente') }}">{{ __('Finalizar atención') }}</button>
+                        @if ($atencion->estado !== 'finalizado')
+                            <form method="POST" action="{{ route('atenciones.finalizar', $atencion) }}" class="hc-inline-form" onsubmit="return confirm(@json(__('¿Confirma finalizar esta atención?')));">
+                                @csrf
+                                <button type="submit" class="hc-btn-danger">{{ __('Finalizar atención') }}</button>
+                            </form>
+                        @endif
                     </div>
                 </div>
 
@@ -203,8 +208,6 @@
                                     </div>
                                 </div>
                                 <dl class="hc-dl">
-                                    <dt>{{ __('Grupo') }}</dt>
-                                    <dd>—</dd>
                                     <dt>{{ __('EPS') }}</dt>
                                     <dd>{{ $atencion->eps?->nombre ?? '—' }}</dd>
                                     <dt>{{ __('Tipo usuario') }}</dt>

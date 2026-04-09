@@ -113,6 +113,13 @@
     display: flex;
     gap: 8px;
     flex-shrink: 0;
+    align-items: center;
+}
+
+.hc-inline-form {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
 }
 
 .hc-btn-primary {

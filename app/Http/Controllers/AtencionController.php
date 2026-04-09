@@ -133,7 +133,7 @@ class AtencionController extends Controller
                 ->withErrors(['medicion_en' => __('Debe registrar al menos un signo vital.')], 'signosVitales');
         }
 
-        $signo = new SignoVital();
+        $signo = new SignoVital;
         $signo->fill($validated);
         $signo->atencion_id = $atencion->id;
         $signo->registrado_por_id = auth()->id();
@@ -239,6 +239,21 @@ class AtencionController extends Controller
         return redirect()
             ->route('atenciones.show', $atencion)
             ->with('status_atencion', __('Atención actualizada correctamente.'));
+    }
+
+    public function finalizar(Atencion $atencion): RedirectResponse
+    {
+        if ($atencion->estado === 'finalizado') {
+            return redirect()
+                ->route('dashboard')
+                ->with('status', __('La atención ya estaba finalizada.'));
+        }
+
+        $atencion->forceFill(['estado' => 'finalizado'])->save();
+
+        return redirect()
+            ->route('dashboard')
+            ->with('status', __('Atención finalizada correctamente.'));
     }
 
     private function createPaciente(Request $request): Paciente
