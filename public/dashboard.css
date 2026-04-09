@@ -1039,3 +1039,89 @@ a.dashboard-row-link:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* —— Carga global (formularios POST) —— */
+html.dashboard-loading-active,
+html.dashboard-loading-active body {
+    overflow: hidden;
+}
+
+.dashboard-loading-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 11000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.dashboard-loading-overlay.is-visible {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+.dashboard-loading-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(2px);
+}
+
+.dashboard-loading-panel {
+    position: relative;
+    z-index: 1;
+    min-width: 220px;
+    max-width: 90vw;
+    padding: 28px 32px;
+    background: var(--dash-bg-primary);
+    border: 0.5px solid var(--dash-border-secondary);
+    border-radius: var(--dash-radius-lg);
+    box-shadow: 0 16px 48px rgba(15, 23, 42, 0.18);
+    text-align: center;
+}
+
+.dashboard-loading-spinner {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 16px;
+    border: 3px solid var(--dash-bg-secondary);
+    border-top-color: var(--dash-brand);
+    border-radius: 50%;
+    animation: dashboard-loading-spin 0.7s linear infinite;
+}
+
+.dashboard-loading-label {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dash-text-primary);
+}
+
+.dashboard-loading-hint {
+    margin: 8px 0 0;
+    font-size: 12px;
+    color: var(--dash-text-secondary);
+    line-height: 1.35;
+}
+
+@keyframes dashboard-loading-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dashboard-loading-spinner {
+        animation-duration: 1.4s;
+    }
+
+    .dashboard-loading-overlay {
+        transition: none;
+    }
+}

@@ -643,6 +643,7 @@
             </div>
         </div>
     </div>
+    @include('partials.dashboard-loading-overlay')
     <script>
         (function () {
             var sidebar = document.getElementById('dashboard-sidebar');

@@ -466,6 +466,7 @@
             </form>
         </div>
     </div>
+    @include('partials.dashboard-loading-overlay')
     <script>
         (function () {
             var tabs = document.querySelectorAll('.hc-tab');
