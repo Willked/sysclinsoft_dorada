@@ -15,5 +15,11 @@ return [
 
     'previous' => '&laquo; Previous',
     'next' => 'Next &raquo;',
+    'showing' => 'Showing',
+    'range_to' => 'to',
+    'of_total' => 'of',
+    'results' => 'results',
+    'summary_empty' => 'No results on this page',
+    'aria_nav' => 'Pagination navigation',
 
 ];

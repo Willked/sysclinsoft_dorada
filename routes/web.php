@@ -3,6 +3,7 @@
 use App\Http\Controllers\AtencionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DivipolaController;
+use App\Http\Controllers\Parametros\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,4 +31,11 @@ Route::middleware([
 
     Route::get('/geo/departamentos', [DivipolaController::class, 'departamentos'])->name('geo.departamentos');
     Route::get('/geo/departamentos/{departamento}/municipios', [DivipolaController::class, 'municipios'])->name('geo.municipios');
+
+    Route::middleware(['permission:usuarios.gestionar'])->prefix('parametros')->name('parametros.')->group(function (): void {
+        Route::post('usuarios/{usuario}/restore', [UsuarioController::class, 'restore'])
+            ->name('usuarios.restore')
+            ->whereNumber('usuario');
+        Route::resource('usuarios', UsuarioController::class);
+    });
 });
