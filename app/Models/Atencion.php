@@ -114,6 +114,12 @@ class Atencion extends Model
         return $this->belongsTo(TipoUsuario::class);
     }
 
+    /** Diagnóstico principal según catálogo CIE-10 (`cie_10`). */
+    public function diagnostico(): BelongsTo
+    {
+        return $this->belongsTo(Cie10::class, 'diagnostico_id');
+    }
+
     public function signosVitales(): HasMany
     {
         return $this->hasMany(SignoVital::class);

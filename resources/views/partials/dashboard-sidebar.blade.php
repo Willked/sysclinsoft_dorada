@@ -31,7 +31,7 @@
         <x-lucide-users />
         {{ __('Pacientes') }}
     </div>
-    @canany(['usuarios.gestionar', 'roles.gestionar', 'ambulancias.gestionar', 'eps.gestionar', 'cups.gestionar'])
+    @canany(['usuarios.gestionar', 'roles.gestionar', 'ambulancias.gestionar', 'eps.gestionar', 'cups.gestionar', 'cie10.gestionar'])
         <div class="dashboard-nav-section">{{ __('Parametrización') }}</div>
     @endcanany
     @can('usuarios.gestionar')
@@ -62,6 +62,12 @@
         <a href="{{ route('parametros.cups.index') }}" class="dashboard-nav-item {{ request()->routeIs('parametros.cups.*') ? 'active' : '' }}">
             <x-lucide-file-digit />
             {{ __('CUPS') }}
+        </a>
+    @endcan
+    @can('cie10.gestionar')
+        <a href="{{ route('parametros.cie10.index') }}" class="dashboard-nav-item {{ request()->routeIs('parametros.cie10.*') ? 'active' : '' }}">
+            <x-lucide-stethoscope />
+            {{ __('CIE-10') }}
         </a>
     @endcan
     <div class="dashboard-nav-section">{{ __('Administrativo') }}</div>

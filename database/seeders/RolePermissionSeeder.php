@@ -30,6 +30,7 @@ class RolePermissionSeeder extends Seeder
             'ambulancias.gestionar',
             'eps.gestionar',
             'cups.gestionar',
+            'cie10.gestionar',
             'sistema.parametros',
         ];
 

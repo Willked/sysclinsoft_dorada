@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             TipoDocumentoSeeder::class,
             TipoUsuarioSeeder::class,
             CupSeeder::class,
+            Cie10Seeder::class,
             EpsSeeder::class,
             CausaExternaSeeder::class,
             AmbulanciaSeeder::class,

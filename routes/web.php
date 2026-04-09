@@ -4,6 +4,7 @@ use App\Http\Controllers\AtencionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DivipolaController;
 use App\Http\Controllers\Parametros\AmbulanciaController;
+use App\Http\Controllers\Parametros\Cie10Controller;
 use App\Http\Controllers\Parametros\CupController;
 use App\Http\Controllers\Parametros\EpsController;
 use App\Http\Controllers\Parametros\RolController;
@@ -74,6 +75,16 @@ Route::middleware([
             Route::post('cups/{cup}/desactivar', [CupController::class, 'desactivar'])
                 ->name('cups.desactivar');
             Route::resource('cups', CupController::class)->except(['show', 'destroy']);
+        });
+
+        Route::middleware(['permission:cie10.gestionar'])->group(function (): void {
+            Route::post('cie10/{cie10}/activar', [Cie10Controller::class, 'activar'])
+                ->name('cie10.activar');
+            Route::post('cie10/{cie10}/desactivar', [Cie10Controller::class, 'desactivar'])
+                ->name('cie10.desactivar');
+            Route::resource('cie10', Cie10Controller::class)
+                ->parameters(['cie10' => 'cie10'])
+                ->except(['show', 'destroy']);
         });
     });
 });
