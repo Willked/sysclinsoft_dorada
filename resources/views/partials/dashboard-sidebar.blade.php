@@ -31,7 +31,7 @@
         <x-lucide-users />
         {{ __('Pacientes') }}
     </div>
-    @canany(['usuarios.gestionar', 'roles.gestionar', 'ambulancias.gestionar'])
+    @canany(['usuarios.gestionar', 'roles.gestionar', 'ambulancias.gestionar', 'eps.gestionar'])
         <div class="dashboard-nav-section">{{ __('Parametrización') }}</div>
     @endcanany
     @can('usuarios.gestionar')
@@ -50,6 +50,12 @@
         <a href="{{ route('parametros.ambulancias.index') }}" class="dashboard-nav-item {{ request()->routeIs('parametros.ambulancias.*') ? 'active' : '' }}">
             <x-lucide-ambulance />
             {{ __('Ambulancias') }}
+        </a>
+    @endcan
+    @can('eps.gestionar')
+        <a href="{{ route('parametros.eps.index') }}" class="dashboard-nav-item {{ request()->routeIs('parametros.eps.*') ? 'active' : '' }}">
+            <x-lucide-building-2 />
+            {{ __('EPS') }}
         </a>
     @endcan
     <div class="dashboard-nav-section">{{ __('Administrativo') }}</div>

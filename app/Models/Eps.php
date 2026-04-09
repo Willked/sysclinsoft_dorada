@@ -30,11 +30,12 @@ class Eps extends Model
     {
         return [
             'activo' => 'boolean',
+            'orden' => 'integer',
         ];
     }
 
     public function scopeActivosOrdenados(Builder $query): Builder
     {
-        return $query->where('activo', true)->orderBy('orden')->orderBy('nombre');
+        return $query->where('activo', true)->orderBy('nombre');
     }
 }

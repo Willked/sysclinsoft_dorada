@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('eps', function (Blueprint $table) {
+            /** BIGINT UNSIGNED, AUTO_INCREMENT, PRIMARY KEY (equivale a bigIncrements). */
             $table->id();
             /** Código de habilitación u otro identificador oficial cuando aplique */
             $table->string('codigo', 32)->unique();

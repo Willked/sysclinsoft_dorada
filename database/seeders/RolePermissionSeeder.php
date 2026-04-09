@@ -28,6 +28,7 @@ class RolePermissionSeeder extends Seeder
             'usuarios.gestionar',
             'roles.gestionar',
             'ambulancias.gestionar',
+            'eps.gestionar',
             'sistema.parametros',
         ];
 
