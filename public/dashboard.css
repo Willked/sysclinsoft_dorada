@@ -732,6 +732,56 @@ a.dashboard-row-link:hover {
     flex-shrink: 0;
 }
 
+.parametros-permisos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    max-width: 900px;
+}
+
+.parametros-permisos-grupo {
+    margin: 0;
+    padding: 12px 14px;
+    border: 0.5px solid var(--dash-border-tertiary);
+    border-radius: var(--dash-radius-md);
+    background: var(--dash-bg-secondary);
+}
+
+.parametros-permisos-grupo legend {
+    padding: 0 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--dash-text-secondary);
+}
+
+.parametros-permisos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.parametros-perm-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--dash-text-primary);
+    cursor: pointer;
+}
+
+.parametros-perm-item input {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.parametros-perm-item span {
+    word-break: break-word;
+    line-height: 1.35;
+}
+
 .dashboard-badge-active {
     background: var(--dash-clinical-ok-bg);
     color: var(--dash-clinical-ok-strong);

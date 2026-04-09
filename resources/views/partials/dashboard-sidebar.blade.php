@@ -31,11 +31,19 @@
         <x-lucide-users />
         {{ __('Pacientes') }}
     </div>
-    @can('usuarios.gestionar')
+    @canany(['usuarios.gestionar', 'roles.gestionar'])
         <div class="dashboard-nav-section">{{ __('Parametrización') }}</div>
+    @endcanany
+    @can('usuarios.gestionar')
         <a href="{{ route('parametros.usuarios.index') }}" class="dashboard-nav-item {{ request()->routeIs('parametros.usuarios.*') ? 'active' : '' }}">
             <x-lucide-settings />
             {{ __('Usuarios del sistema') }}
+        </a>
+    @endcan
+    @can('roles.gestionar')
+        <a href="{{ route('parametros.roles.index') }}" class="dashboard-nav-item {{ request()->routeIs('parametros.roles.*') ? 'active' : '' }}">
+            <x-lucide-shield />
+            {{ __('Roles y permisos') }}
         </a>
     @endcan
     <div class="dashboard-nav-section">{{ __('Administrativo') }}</div>

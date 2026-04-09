@@ -3,6 +3,7 @@
 use App\Http\Controllers\AtencionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DivipolaController;
+use App\Http\Controllers\Parametros\RolController;
 use App\Http\Controllers\Parametros\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,10 +33,18 @@ Route::middleware([
     Route::get('/geo/departamentos', [DivipolaController::class, 'departamentos'])->name('geo.departamentos');
     Route::get('/geo/departamentos/{departamento}/municipios', [DivipolaController::class, 'municipios'])->name('geo.municipios');
 
-    Route::middleware(['permission:usuarios.gestionar'])->prefix('parametros')->name('parametros.')->group(function (): void {
-        Route::post('usuarios/{usuario}/restore', [UsuarioController::class, 'restore'])
-            ->name('usuarios.restore')
-            ->whereNumber('usuario');
-        Route::resource('usuarios', UsuarioController::class);
+    Route::prefix('parametros')->name('parametros.')->group(function (): void {
+        Route::middleware(['permission:usuarios.gestionar'])->group(function (): void {
+            Route::post('usuarios/{usuario}/restore', [UsuarioController::class, 'restore'])
+                ->name('usuarios.restore')
+                ->whereNumber('usuario');
+            Route::resource('usuarios', UsuarioController::class);
+        });
+
+        Route::middleware(['permission:roles.gestionar'])->group(function (): void {
+            Route::resource('roles', RolController::class)
+                ->parameters(['roles' => 'rol'])
+                ->except(['show']);
+        });
     });
 });
