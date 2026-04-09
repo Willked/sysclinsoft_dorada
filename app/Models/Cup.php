@@ -20,6 +20,7 @@ class Cup extends Model
     {
         return [
             'activo' => 'boolean',
+            'orden' => 'integer',
         ];
     }
 

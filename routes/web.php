@@ -4,6 +4,7 @@ use App\Http\Controllers\AtencionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DivipolaController;
 use App\Http\Controllers\Parametros\AmbulanciaController;
+use App\Http\Controllers\Parametros\CupController;
 use App\Http\Controllers\Parametros\EpsController;
 use App\Http\Controllers\Parametros\RolController;
 use App\Http\Controllers\Parametros\UsuarioController;
@@ -65,6 +66,14 @@ Route::middleware([
             Route::resource('eps', EpsController::class)
                 ->parameters(['eps' => 'eps'])
                 ->except(['show', 'destroy']);
+        });
+
+        Route::middleware(['permission:cups.gestionar'])->group(function (): void {
+            Route::post('cups/{cup}/activar', [CupController::class, 'activar'])
+                ->name('cups.activar');
+            Route::post('cups/{cup}/desactivar', [CupController::class, 'desactivar'])
+                ->name('cups.desactivar');
+            Route::resource('cups', CupController::class)->except(['show', 'destroy']);
         });
     });
 });
