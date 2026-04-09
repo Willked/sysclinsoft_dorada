@@ -88,6 +88,9 @@
             </header>
 
             <div class="dashboard-content">
+                @if (session('status'))
+                    <p role="status" style="margin:0 0 16px;padding:10px 12px;border-radius:8px;background:#d1fae5;color:#065f46;font-size:14px;">{{ session('status') }}</p>
+                @endif
                 <div class="dashboard-content-header">
                     <h1>{{ __('Bienvenido') }} {{ $displayName }}</h1>
                 </div>

@@ -23,9 +23,10 @@ class DatabaseSeeder extends Seeder
             CausaExternaSeeder::class,
             AmbulanciaSeeder::class,
             ConductorSeeder::class,
+            RolePermissionSeeder::class,
         ]);
 
-        User::query()->firstOrCreate(
+        $adminUser = User::query()->firstOrCreate(
             ['email' => 'admin@admin.com'],
             [
                 'name' => 'admin',
@@ -33,5 +34,6 @@ class DatabaseSeeder extends Seeder
                 'email_verified_at' => now(),
             ]
         );
+        $adminUser->syncRoles(['administrador']);
     }
 }
