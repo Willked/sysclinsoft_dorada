@@ -27,6 +27,7 @@ class RolePermissionSeeder extends Seeder
             'atenciones.notas_clinicas',
             'usuarios.gestionar',
             'roles.gestionar',
+            'ambulancias.gestionar',
             'sistema.parametros',
         ];
 

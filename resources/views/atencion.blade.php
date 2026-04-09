@@ -436,7 +436,7 @@
                                             <select id="ambulancia-placa" class="atencion-select @error('ambulancia_id') atencion-input-invalid @enderror" name="ambulancia_id">
                                                 <option value="">{{ __('Seleccione una movil') }}</option>
                                                 @foreach ($ambulancias as $ambulancia)
-                                                    <option value="{{ $ambulancia->id }}" @selected(old('ambulancia_id', $atencionModel?->ambulancia_id) == $ambulancia->id)>   {{ $ambulancia->placa }}</option>
+                                                    <option value="{{ $ambulancia->id }}" @selected(old('ambulancia_id', $atencionModel?->ambulancia_id) == $ambulancia->id)>{{ $ambulancia->placa ?: $ambulancia->codigo }}</option>
                                                 @endforeach
                                             </select>
                                             @error('ambulancia_id')

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AtencionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DivipolaController;
+use App\Http\Controllers\Parametros\AmbulanciaController;
 use App\Http\Controllers\Parametros\RolController;
 use App\Http\Controllers\Parametros\UsuarioController;
 use Illuminate\Support\Facades\Route;
@@ -45,6 +46,14 @@ Route::middleware([
             Route::resource('roles', RolController::class)
                 ->parameters(['roles' => 'rol'])
                 ->except(['show']);
+        });
+
+        Route::middleware(['permission:ambulancias.gestionar'])->group(function (): void {
+            Route::post('ambulancias/{ambulancia}/activar', [AmbulanciaController::class, 'activar'])
+                ->name('ambulancias.activar');
+            Route::post('ambulancias/{ambulancia}/desactivar', [AmbulanciaController::class, 'desactivar'])
+                ->name('ambulancias.desactivar');
+            Route::resource('ambulancias', AmbulanciaController::class)->except(['show']);
         });
     });
 });
