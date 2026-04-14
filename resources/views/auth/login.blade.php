@@ -1,48 +1,120 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>{{ config('app.name', 'SysClinSoft') }}</title>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('styles.css') }}">
+</head>
+<body>
+    <div class="screen">
+        <div class="left">
+            <div class="left-top">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <x-lucide-heart-pulse id="icon-heart-pulse" />
+                    </div>
+                    <div>
+                        <div class="brand-name">SysClinSoft</div>
+                        <div class="brand-sub">Sistema de gestion clinica</div>
+                    </div>
+                </div>
 
-        <x-validation-errors class="mb-4" />
-
-        @session('status')
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ $value }}
-            </div>
-        @endsession
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
-
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
+                <div class="hero-title">Historia clinica prehospitalaria integrada</div>
+                <div class="hero-sub">
+                    Registro de atenciones APH con integracion HL7 FHIR R4 y generacion automatica de RIPS JSON para ADRES.
+                </div>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
+            <div class="left-bottom">
+                Resolucion 2275 de 2023 · HL7 FHIR R4 · Colombia
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="form-wrap">
+                <div class="form-title">Bienvenido</div>
+                <div class="form-sub">Ingresa tus credenciales para acceder al sistema de historia clinica.</div>
+
+                @if ($errors->any())
+                    <div class="form-alert form-alert-error">
+                        {{ $errors->first() }}
+                    </div>
                 @endif
 
-                <x-button class="ms-4">
-                    {{ __('Log in') }}
-                </x-button>
+                @if (session('status'))
+                    <div class="form-alert form-alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
+
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+
+                    <div class="field">
+                        <label for="email">Correo electronico</label>
+                        <input id="email" type="email" name="email" value="{{ old('email') }}" placeholder="usuario@ejemplo.com" autocomplete="username" required autofocus>
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Contrasena</label>
+                        <div class="input-wrap">
+                            <input id="password" type="password" name="password" autocomplete="current-password" required>
+                            <button
+                                type="button"
+                                class="input-icon"
+                                id="toggle-password"
+                                aria-label="Mostrar contrasena"
+                                aria-controls="password"
+                                aria-pressed="false"
+                            >
+                                <x-lucide-eye-off id="icon-eye-off" />
+                                <x-lucide-eye id="icon-eye" style="display: none;" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row-check">
+                        <label class="check-label" for="remember">
+                            <input id="remember" name="remember" type="checkbox" class="native-checkbox" {{ old('remember') ? 'checked' : '' }}>
+                            Mantener sesion activa
+                        </label>
+                        @if (Route::has('password.request'))
+                            <a class="forgot" href="{{ route('password.request') }}">¿Olvidaste tu contrasena?</a>
+                        @endif
+                    </div>
+
+                    <button type="submit" class="btn-login">Ingresar al sistema</button>
+                </form>
+
+                <div class="form-footer">
+                    Sistema restringido a personal autorizado.<br>
+                    Toda actividad queda registrada.
+                    <div class="version-badge">v1.0.0 · Laravel {{ app()->version() }} · FHIR R4</div>
+                </div>
             </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+        </div>
+    </div>
+    <script>
+        const passwordInput = document.getElementById('password');
+        const toggleButton = document.getElementById('toggle-password');
+        const eyeOffIcon = document.getElementById('icon-eye-off');
+        const eyeIcon = document.getElementById('icon-eye');
+
+        if (passwordInput && toggleButton && eyeOffIcon && eyeIcon) {
+            toggleButton.addEventListener('click', () => {
+                const isHidden = passwordInput.type === 'password';
+
+                passwordInput.type = isHidden ? 'text' : 'password';
+                toggleButton.setAttribute('aria-pressed', String(isHidden));
+                toggleButton.setAttribute('aria-label', isHidden ? 'Ocultar contrasena' : 'Mostrar contrasena');
+                eyeOffIcon.style.display = isHidden ? 'none' : 'block';
+                eyeIcon.style.display = isHidden ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>

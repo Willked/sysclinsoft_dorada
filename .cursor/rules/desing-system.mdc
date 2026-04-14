@@ -1,0 +1,38 @@
+---
+description: Paleta HC ambulancias — colores marca, clínicos y triage (SysClinSoft)
+alwaysApply: true
+---
+
+# Diseño visual — HC ambulancias
+
+**Fuente de verdad de tokens CSS:** `tailwind.config.js` → `theme.extend.colors` (`brand`, `clinical`). No duplicar hex en vistas: usar utilidades Tailwind (`bg-brand`, `text-clinical-crit-text`, etc.).
+
+## Marca (`brand`)
+
+| Token | Hex (referencia) | Uso orientativo |
+|-------|------------------|-----------------|
+| `brand-darkest` | #042C53 | Profundidad / contraste máximo |
+| `brand-dark` | #0C447C | Sidebar, encabezados fuertes, login |
+| `brand` (DEFAULT) | #185FA5 | Botones primarios, enlaces CTA |
+| `brand-mid` | #378ADD | Hover, focus ring, íconos activos |
+| `brand-light` | #85B7EB | Rampa; subniveles sidebar |
+| `brand-lighter` | #B5D4F4 | Texto sobre azul oscuro |
+| `brand-tint` | #E6F1FB | Fondos suaves, badges informativos |
+
+## Semánticos clínicos (`clinical`)
+
+| Token | Uso |
+|-------|-----|
+| `clinical-ok-bg` / `clinical-ok-text` | Éxito, normal (FHIR OK, SpO₂ normal, etc.) |
+| `clinical-warn-bg` / `clinical-warn-text` | Advertencia (RIPS pendiente, TA elevada, etc.) |
+| `clinical-crit-bg` / `clinical-crit-text` | Crítico / error (rechazo RIPS, valores críticos) |
+| `clinical-neutral-bg` / `clinical-neutral-text` | Neutro / inactivo (triage V, deshabilitado) |
+
+## Triage (en `tailwind.config.js`)
+
+Codificación internacional; usar los tokens en `tailwind.config.js` (p. ej. `bg-triage-i`, `bg-triage-iii`): **I** #E24B4A · **II** #D85A30 · **III** #EF9F27 · **IV** #639922 · **V** #444441.
+
+## Preferencias de implementación
+
+- Priorizar componentes y utilidades que lean los colores del tema antes que valores `#...` sueltos.
+- Si se amplía la paleta (p. ej. triage como `colors.triage`), actualizar **este archivo** y `tailwind.config.js` en conjunto.

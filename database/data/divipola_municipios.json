@@ -1,0 +1,5607 @@
+[
+    {
+        "dep_dane": "05",
+        "dane_code": "05001",
+        "nombre": "MEDELLÍN"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05002",
+        "nombre": "ABEJORRAL"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05004",
+        "nombre": "ABRIAQUÍ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05021",
+        "nombre": "ALEJANDRÍA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05030",
+        "nombre": "AMAGÁ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05031",
+        "nombre": "AMALFI"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05034",
+        "nombre": "ANDES"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05036",
+        "nombre": "ANGELÓPOLIS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05038",
+        "nombre": "ANGOSTURA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05040",
+        "nombre": "ANORÍ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05042",
+        "nombre": "SANTA FÉ DE ANTIOQUIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05044",
+        "nombre": "ANZÁ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05045",
+        "nombre": "APARTADÓ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05051",
+        "nombre": "ARBOLETES"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05055",
+        "nombre": "ARGELIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05059",
+        "nombre": "ARMENIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05079",
+        "nombre": "BARBOSA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05086",
+        "nombre": "BELMIRA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05088",
+        "nombre": "BELLO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05091",
+        "nombre": "BETANIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05093",
+        "nombre": "BETULIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05101",
+        "nombre": "CIUDAD BOLÍVAR"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05107",
+        "nombre": "BRICEÑO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05113",
+        "nombre": "BURITICÁ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05120",
+        "nombre": "CÁCERES"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05125",
+        "nombre": "CAICEDO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05129",
+        "nombre": "CALDAS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05134",
+        "nombre": "CAMPAMENTO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05138",
+        "nombre": "CAÑASGORDAS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05142",
+        "nombre": "CARACOLÍ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05145",
+        "nombre": "CARAMANTA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05147",
+        "nombre": "CAREPA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05148",
+        "nombre": "EL CARMEN DE VIBORAL"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05150",
+        "nombre": "CAROLINA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05154",
+        "nombre": "CAUCASIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05172",
+        "nombre": "CHIGORODÓ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05190",
+        "nombre": "CISNEROS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05197",
+        "nombre": "COCORNÁ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05206",
+        "nombre": "CONCEPCIÓN"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05209",
+        "nombre": "CONCORDIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05212",
+        "nombre": "COPACABANA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05234",
+        "nombre": "DABEIBA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05237",
+        "nombre": "DONMATÍAS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05240",
+        "nombre": "EBÉJICO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05250",
+        "nombre": "EL BAGRE"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05264",
+        "nombre": "ENTRERRÍOS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05266",
+        "nombre": "ENVIGADO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05282",
+        "nombre": "FREDONIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05284",
+        "nombre": "FRONTINO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05306",
+        "nombre": "GIRALDO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05308",
+        "nombre": "GIRARDOTA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05310",
+        "nombre": "GÓMEZ PLATA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05313",
+        "nombre": "GRANADA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05315",
+        "nombre": "GUADALUPE"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05318",
+        "nombre": "GUARNE"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05321",
+        "nombre": "GUATAPÉ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05347",
+        "nombre": "HELICONIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05353",
+        "nombre": "HISPANIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05360",
+        "nombre": "ITAGÜÍ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05361",
+        "nombre": "ITUANGO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05364",
+        "nombre": "JARDÍN"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05368",
+        "nombre": "JERICÓ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05376",
+        "nombre": "LA CEJA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05380",
+        "nombre": "LA ESTRELLA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05390",
+        "nombre": "LA PINTADA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05400",
+        "nombre": "LA UNIÓN"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05411",
+        "nombre": "LIBORINA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05425",
+        "nombre": "MACEO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05440",
+        "nombre": "MARINILLA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05467",
+        "nombre": "MONTEBELLO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05475",
+        "nombre": "MURINDÓ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05480",
+        "nombre": "MUTATÁ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05483",
+        "nombre": "NARIÑO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05490",
+        "nombre": "NECOCLÍ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05495",
+        "nombre": "NECHÍ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05501",
+        "nombre": "OLAYA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05541",
+        "nombre": "PEÑOL"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05543",
+        "nombre": "PEQUE"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05576",
+        "nombre": "PUEBLORRICO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05579",
+        "nombre": "PUERTO BERRÍO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05585",
+        "nombre": "PUERTO NARE"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05591",
+        "nombre": "PUERTO TRIUNFO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05604",
+        "nombre": "REMEDIOS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05607",
+        "nombre": "RETIRO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05615",
+        "nombre": "RIONEGRO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05628",
+        "nombre": "SABANALARGA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05631",
+        "nombre": "SABANETA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05642",
+        "nombre": "SALGAR"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05647",
+        "nombre": "SAN ANDRÉS DE CUERQUÍA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05649",
+        "nombre": "SAN CARLOS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05652",
+        "nombre": "SAN FRANCISCO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05656",
+        "nombre": "SAN JERÓNIMO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05658",
+        "nombre": "SAN JOSÉ DE LA MONTAÑA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05659",
+        "nombre": "SAN JUAN DE URABÁ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05660",
+        "nombre": "SAN LUIS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05664",
+        "nombre": "SAN PEDRO DE LOS MILAGROS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05665",
+        "nombre": "SAN PEDRO DE URABÁ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05667",
+        "nombre": "SAN RAFAEL"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05670",
+        "nombre": "SAN ROQUE"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05674",
+        "nombre": "SAN VICENTE FERRER"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05679",
+        "nombre": "SANTA BÁRBARA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05686",
+        "nombre": "SANTA ROSA DE OSOS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05690",
+        "nombre": "SANTO DOMINGO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05697",
+        "nombre": "EL SANTUARIO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05736",
+        "nombre": "SEGOVIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05756",
+        "nombre": "SONSÓN"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05761",
+        "nombre": "SOPETRÁN"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05789",
+        "nombre": "TÁMESIS"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05790",
+        "nombre": "TARAZÁ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05792",
+        "nombre": "TARSO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05809",
+        "nombre": "TITIRIBÍ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05819",
+        "nombre": "TOLEDO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05837",
+        "nombre": "TURBO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05842",
+        "nombre": "URAMITA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05847",
+        "nombre": "URRAO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05854",
+        "nombre": "VALDIVIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05856",
+        "nombre": "VALPARAÍSO"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05858",
+        "nombre": "VEGACHÍ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05861",
+        "nombre": "VENECIA"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05873",
+        "nombre": "VIGÍA DEL FUERTE"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05885",
+        "nombre": "YALÍ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05887",
+        "nombre": "YARUMAL"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05890",
+        "nombre": "YOLOMBÓ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05893",
+        "nombre": "YONDÓ"
+    },
+    {
+        "dep_dane": "05",
+        "dane_code": "05895",
+        "nombre": "ZARAGOZA"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08001",
+        "nombre": "BARRANQUILLA"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08078",
+        "nombre": "BARANOA"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08137",
+        "nombre": "CAMPO DE LA CRUZ"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08141",
+        "nombre": "CANDELARIA"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08296",
+        "nombre": "GALAPA"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08372",
+        "nombre": "JUAN DE ACOSTA"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08421",
+        "nombre": "LURUACO"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08433",
+        "nombre": "MALAMBO"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08436",
+        "nombre": "MANATÍ"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08520",
+        "nombre": "PALMAR DE VARELA"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08549",
+        "nombre": "PIOJÓ"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08558",
+        "nombre": "POLONUEVO"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08560",
+        "nombre": "PONEDERA"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08573",
+        "nombre": "PUERTO COLOMBIA"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08606",
+        "nombre": "REPELÓN"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08634",
+        "nombre": "SABANAGRANDE"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08638",
+        "nombre": "SABANALARGA"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08675",
+        "nombre": "SANTA LUCÍA"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08685",
+        "nombre": "SANTO TOMÁS"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08758",
+        "nombre": "SOLEDAD"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08770",
+        "nombre": "SUAN"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08832",
+        "nombre": "TUBARÁ"
+    },
+    {
+        "dep_dane": "08",
+        "dane_code": "08849",
+        "nombre": "USIACURÍ"
+    },
+    {
+        "dep_dane": "11",
+        "dane_code": "11001",
+        "nombre": "BOGOTÁ, D.C."
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13001",
+        "nombre": "CARTAGENA DE INDIAS"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13006",
+        "nombre": "ACHÍ"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13030",
+        "nombre": "ALTOS DEL ROSARIO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13042",
+        "nombre": "ARENAL"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13052",
+        "nombre": "ARJONA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13062",
+        "nombre": "ARROYOHONDO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13074",
+        "nombre": "BARRANCO DE LOBA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13140",
+        "nombre": "CALAMAR"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13160",
+        "nombre": "CANTAGALLO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13188",
+        "nombre": "CICUCO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13212",
+        "nombre": "CÓRDOBA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13222",
+        "nombre": "CLEMENCIA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13244",
+        "nombre": "EL CARMEN DE BOLÍVAR"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13248",
+        "nombre": "EL GUAMO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13268",
+        "nombre": "EL PEÑÓN"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13300",
+        "nombre": "HATILLO DE LOBA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13430",
+        "nombre": "MAGANGUÉ"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13433",
+        "nombre": "MAHATES"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13440",
+        "nombre": "MARGARITA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13442",
+        "nombre": "MARÍA LA BAJA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13458",
+        "nombre": "MONTECRISTO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13468",
+        "nombre": "SANTA CRUZ DE MOMPOX"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13473",
+        "nombre": "MORALES"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13490",
+        "nombre": "NOROSÍ"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13549",
+        "nombre": "PINILLOS"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13580",
+        "nombre": "REGIDOR"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13600",
+        "nombre": "RÍO VIEJO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13620",
+        "nombre": "SAN CRISTÓBAL"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13647",
+        "nombre": "SAN ESTANISLAO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13650",
+        "nombre": "SAN FERNANDO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13654",
+        "nombre": "SAN JACINTO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13655",
+        "nombre": "SAN JACINTO DEL CAUCA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13657",
+        "nombre": "SAN JUAN NEPOMUCENO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13667",
+        "nombre": "SAN MARTÍN DE LOBA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13670",
+        "nombre": "SAN PABLO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13673",
+        "nombre": "SANTA CATALINA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13683",
+        "nombre": "SANTA ROSA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13688",
+        "nombre": "SANTA ROSA DEL SUR"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13744",
+        "nombre": "SIMITÍ"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13760",
+        "nombre": "SOPLAVIENTO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13780",
+        "nombre": "TALAIGUA NUEVO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13810",
+        "nombre": "TIQUISIO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13836",
+        "nombre": "TURBACO"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13838",
+        "nombre": "TURBANÁ"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13873",
+        "nombre": "VILLANUEVA"
+    },
+    {
+        "dep_dane": "13",
+        "dane_code": "13894",
+        "nombre": "ZAMBRANO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15001",
+        "nombre": "TUNJA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15022",
+        "nombre": "ALMEIDA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15047",
+        "nombre": "AQUITANIA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15051",
+        "nombre": "ARCABUCO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15087",
+        "nombre": "BELÉN"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15090",
+        "nombre": "BERBEO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15092",
+        "nombre": "BETÉITIVA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15097",
+        "nombre": "BOAVITA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15104",
+        "nombre": "BOYACÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15106",
+        "nombre": "BRICEÑO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15109",
+        "nombre": "BUENAVISTA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15114",
+        "nombre": "BUSBANZÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15131",
+        "nombre": "CALDAS"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15135",
+        "nombre": "CAMPOHERMOSO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15162",
+        "nombre": "CERINZA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15172",
+        "nombre": "CHINAVITA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15176",
+        "nombre": "CHIQUINQUIRÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15180",
+        "nombre": "CHISCAS"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15183",
+        "nombre": "CHITA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15185",
+        "nombre": "CHITARAQUE"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15187",
+        "nombre": "CHIVATÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15189",
+        "nombre": "CIÉNEGA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15204",
+        "nombre": "CÓMBITA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15212",
+        "nombre": "COPER"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15215",
+        "nombre": "CORRALES"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15218",
+        "nombre": "COVARACHÍA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15223",
+        "nombre": "CUBARÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15224",
+        "nombre": "CUCAITA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15226",
+        "nombre": "CUÍTIVA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15232",
+        "nombre": "CHÍQUIZA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15236",
+        "nombre": "CHIVOR"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15238",
+        "nombre": "DUITAMA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15244",
+        "nombre": "EL COCUY"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15248",
+        "nombre": "EL ESPINO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15272",
+        "nombre": "FIRAVITOBA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15276",
+        "nombre": "FLORESTA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15293",
+        "nombre": "GACHANTIVÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15296",
+        "nombre": "GÁMEZA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15299",
+        "nombre": "GARAGOA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15317",
+        "nombre": "GUACAMAYAS"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15322",
+        "nombre": "GUATEQUE"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15325",
+        "nombre": "GUAYATÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15332",
+        "nombre": "GÜICÁN DE LA SIERRA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15362",
+        "nombre": "IZA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15367",
+        "nombre": "JENESANO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15368",
+        "nombre": "JERICÓ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15377",
+        "nombre": "LABRANZAGRANDE"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15380",
+        "nombre": "LA CAPILLA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15401",
+        "nombre": "LA VICTORIA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15403",
+        "nombre": "LA UVITA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15407",
+        "nombre": "VILLA DE LEYVA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15425",
+        "nombre": "MACANAL"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15442",
+        "nombre": "MARIPÍ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15455",
+        "nombre": "MIRAFLORES"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15464",
+        "nombre": "MONGUA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15466",
+        "nombre": "MONGUÍ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15469",
+        "nombre": "MONIQUIRÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15476",
+        "nombre": "MOTAVITA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15480",
+        "nombre": "MUZO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15491",
+        "nombre": "NOBSA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15494",
+        "nombre": "NUEVO COLÓN"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15500",
+        "nombre": "OICATÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15507",
+        "nombre": "OTANCHE"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15511",
+        "nombre": "PACHAVITA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15514",
+        "nombre": "PÁEZ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15516",
+        "nombre": "PAIPA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15518",
+        "nombre": "PAJARITO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15522",
+        "nombre": "PANQUEBA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15531",
+        "nombre": "PAUNA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15533",
+        "nombre": "PAYA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15537",
+        "nombre": "PAZ DE RÍO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15542",
+        "nombre": "PESCA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15550",
+        "nombre": "PISBA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15572",
+        "nombre": "PUERTO BOYACÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15580",
+        "nombre": "QUÍPAMA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15599",
+        "nombre": "RAMIRIQUÍ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15600",
+        "nombre": "RÁQUIRA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15621",
+        "nombre": "RONDÓN"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15632",
+        "nombre": "SABOYÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15638",
+        "nombre": "SÁCHICA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15646",
+        "nombre": "SAMACÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15660",
+        "nombre": "SAN EDUARDO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15664",
+        "nombre": "SAN JOSÉ DE PARE"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15667",
+        "nombre": "SAN LUIS DE GACENO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15673",
+        "nombre": "SAN MATEO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15676",
+        "nombre": "SAN MIGUEL DE SEMA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15681",
+        "nombre": "SAN PABLO DE BORBUR"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15686",
+        "nombre": "SANTANA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15690",
+        "nombre": "SANTA MARÍA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15693",
+        "nombre": "SANTA ROSA DE VITERBO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15696",
+        "nombre": "SANTA SOFÍA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15720",
+        "nombre": "SATIVANORTE"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15723",
+        "nombre": "SATIVASUR"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15740",
+        "nombre": "SIACHOQUE"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15753",
+        "nombre": "SOATÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15755",
+        "nombre": "SOCOTÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15757",
+        "nombre": "SOCHA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15759",
+        "nombre": "SOGAMOSO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15761",
+        "nombre": "SOMONDOCO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15762",
+        "nombre": "SORA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15763",
+        "nombre": "SOTAQUIRÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15764",
+        "nombre": "SORACÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15774",
+        "nombre": "SUSACÓN"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15776",
+        "nombre": "SUTAMARCHÁN"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15778",
+        "nombre": "SUTATENZA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15790",
+        "nombre": "TASCO"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15798",
+        "nombre": "TENZA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15804",
+        "nombre": "TIBANÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15806",
+        "nombre": "TIBASOSA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15808",
+        "nombre": "TINJACÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15810",
+        "nombre": "TIPACOQUE"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15814",
+        "nombre": "TOCA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15816",
+        "nombre": "TOGÜÍ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15820",
+        "nombre": "TÓPAGA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15822",
+        "nombre": "TOTA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15832",
+        "nombre": "TUNUNGUÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15835",
+        "nombre": "TURMEQUÉ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15837",
+        "nombre": "TUTA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15839",
+        "nombre": "TUTAZÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15842",
+        "nombre": "ÚMBITA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15861",
+        "nombre": "VENTAQUEMADA"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15879",
+        "nombre": "VIRACACHÁ"
+    },
+    {
+        "dep_dane": "15",
+        "dane_code": "15897",
+        "nombre": "ZETAQUIRA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17001",
+        "nombre": "MANIZALES"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17013",
+        "nombre": "AGUADAS"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17042",
+        "nombre": "ANSERMA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17050",
+        "nombre": "ARANZAZU"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17088",
+        "nombre": "BELALCÁZAR"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17174",
+        "nombre": "CHINCHINÁ"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17272",
+        "nombre": "FILADELFIA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17380",
+        "nombre": "LA DORADA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17388",
+        "nombre": "LA MERCED"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17433",
+        "nombre": "MANZANARES"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17442",
+        "nombre": "MARMATO"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17444",
+        "nombre": "MARQUETALIA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17446",
+        "nombre": "MARULANDA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17486",
+        "nombre": "NEIRA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17495",
+        "nombre": "NORCASIA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17513",
+        "nombre": "PÁCORA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17524",
+        "nombre": "PALESTINA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17541",
+        "nombre": "PENSILVANIA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17614",
+        "nombre": "RIOSUCIO"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17616",
+        "nombre": "RISARALDA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17653",
+        "nombre": "SALAMINA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17662",
+        "nombre": "SAMANÁ"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17665",
+        "nombre": "SAN JOSÉ"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17777",
+        "nombre": "SUPÍA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17867",
+        "nombre": "VICTORIA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17873",
+        "nombre": "VILLAMARÍA"
+    },
+    {
+        "dep_dane": "17",
+        "dane_code": "17877",
+        "nombre": "VITERBO"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18001",
+        "nombre": "FLORENCIA"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18029",
+        "nombre": "ALBANIA"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18094",
+        "nombre": "BELÉN DE LOS ANDAQUÍES"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18150",
+        "nombre": "CARTAGENA DEL CHAIRÁ"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18205",
+        "nombre": "CURILLO"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18247",
+        "nombre": "EL DONCELLO"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18256",
+        "nombre": "EL PAUJÍL"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18410",
+        "nombre": "LA MONTAÑITA"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18460",
+        "nombre": "MILÁN"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18479",
+        "nombre": "MORELIA"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18592",
+        "nombre": "PUERTO RICO"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18610",
+        "nombre": "SAN JOSÉ DEL FRAGUA"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18753",
+        "nombre": "SAN VICENTE DEL CAGUÁN"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18756",
+        "nombre": "SOLANO"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18785",
+        "nombre": "SOLITA"
+    },
+    {
+        "dep_dane": "18",
+        "dane_code": "18860",
+        "nombre": "VALPARAÍSO"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19001",
+        "nombre": "POPAYÁN"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19022",
+        "nombre": "ALMAGUER"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19050",
+        "nombre": "ARGELIA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19075",
+        "nombre": "BALBOA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19100",
+        "nombre": "BOLÍVAR"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19110",
+        "nombre": "BUENOS AIRES"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19130",
+        "nombre": "CAJIBÍO"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19137",
+        "nombre": "CALDONO"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19142",
+        "nombre": "CALOTO"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19212",
+        "nombre": "CORINTO"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19256",
+        "nombre": "EL TAMBO"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19290",
+        "nombre": "FLORENCIA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19300",
+        "nombre": "GUACHENÉ"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19318",
+        "nombre": "GUAPI"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19355",
+        "nombre": "INZÁ"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19364",
+        "nombre": "JAMBALÓ"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19392",
+        "nombre": "LA SIERRA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19397",
+        "nombre": "LA VEGA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19418",
+        "nombre": "LÓPEZ DE MICAY"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19450",
+        "nombre": "MERCADERES"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19455",
+        "nombre": "MIRANDA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19473",
+        "nombre": "MORALES"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19513",
+        "nombre": "PADILLA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19517",
+        "nombre": "PÁEZ"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19532",
+        "nombre": "PATÍA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19533",
+        "nombre": "PIAMONTE"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19548",
+        "nombre": "PIENDAMÓ - TUNÍA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19573",
+        "nombre": "PUERTO TEJADA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19585",
+        "nombre": "PURACÉ"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19622",
+        "nombre": "ROSAS"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19693",
+        "nombre": "SAN SEBASTIÁN"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19698",
+        "nombre": "SANTANDER DE QUILICHAO"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19701",
+        "nombre": "SANTA ROSA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19743",
+        "nombre": "SILVIA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19760",
+        "nombre": "SOTARÁ PAISPAMBA"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19780",
+        "nombre": "SUÁREZ"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19785",
+        "nombre": "SUCRE"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19807",
+        "nombre": "TIMBÍO"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19809",
+        "nombre": "TIMBIQUÍ"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19821",
+        "nombre": "TORIBÍO"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19824",
+        "nombre": "TOTORÓ"
+    },
+    {
+        "dep_dane": "19",
+        "dane_code": "19845",
+        "nombre": "VILLA RICA"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20001",
+        "nombre": "VALLEDUPAR"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20011",
+        "nombre": "AGUACHICA"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20013",
+        "nombre": "AGUSTÍN CODAZZI"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20032",
+        "nombre": "ASTREA"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20045",
+        "nombre": "BECERRIL"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20060",
+        "nombre": "BOSCONIA"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20175",
+        "nombre": "CHIMICHAGUA"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20178",
+        "nombre": "CHIRIGUANÁ"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20228",
+        "nombre": "CURUMANÍ"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20238",
+        "nombre": "EL COPEY"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20250",
+        "nombre": "EL PASO"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20295",
+        "nombre": "GAMARRA"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20310",
+        "nombre": "GONZÁLEZ"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20383",
+        "nombre": "LA GLORIA"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20400",
+        "nombre": "LA JAGUA DE IBIRICO"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20443",
+        "nombre": "MANAURE BALCÓN DEL CESAR"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20517",
+        "nombre": "PAILITAS"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20550",
+        "nombre": "PELAYA"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20570",
+        "nombre": "PUEBLO BELLO"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20614",
+        "nombre": "RÍO DE ORO"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20621",
+        "nombre": "LA PAZ"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20710",
+        "nombre": "SAN ALBERTO"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20750",
+        "nombre": "SAN DIEGO"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20770",
+        "nombre": "SAN MARTÍN"
+    },
+    {
+        "dep_dane": "20",
+        "dane_code": "20787",
+        "nombre": "TAMALAMEQUE"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23001",
+        "nombre": "MONTERÍA"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23068",
+        "nombre": "AYAPEL"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23079",
+        "nombre": "BUENAVISTA"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23090",
+        "nombre": "CANALETE"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23162",
+        "nombre": "CERETÉ"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23168",
+        "nombre": "CHIMÁ"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23182",
+        "nombre": "CHINÚ"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23189",
+        "nombre": "CIÉNAGA DE ORO"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23300",
+        "nombre": "COTORRA"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23350",
+        "nombre": "LA APARTADA"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23417",
+        "nombre": "LORICA"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23419",
+        "nombre": "LOS CÓRDOBAS"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23464",
+        "nombre": "MOMIL"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23466",
+        "nombre": "MONTELÍBANO"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23500",
+        "nombre": "MOÑITOS"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23555",
+        "nombre": "PLANETA RICA"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23570",
+        "nombre": "PUEBLO NUEVO"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23574",
+        "nombre": "PUERTO ESCONDIDO"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23580",
+        "nombre": "PUERTO LIBERTADOR"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23586",
+        "nombre": "PURÍSIMA DE LA CONCEPCIÓN"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23660",
+        "nombre": "SAHAGÚN"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23670",
+        "nombre": "SAN ANDRÉS DE SOTAVENTO"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23672",
+        "nombre": "SAN ANTERO"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23675",
+        "nombre": "SAN BERNARDO DEL VIENTO"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23678",
+        "nombre": "SAN CARLOS"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23682",
+        "nombre": "SAN JOSÉ DE URÉ"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23686",
+        "nombre": "SAN PELAYO"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23807",
+        "nombre": "TIERRALTA"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23815",
+        "nombre": "TUCHÍN"
+    },
+    {
+        "dep_dane": "23",
+        "dane_code": "23855",
+        "nombre": "VALENCIA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25001",
+        "nombre": "AGUA DE DIOS"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25019",
+        "nombre": "ALBÁN"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25035",
+        "nombre": "ANAPOIMA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25040",
+        "nombre": "ANOLAIMA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25053",
+        "nombre": "ARBELÁEZ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25086",
+        "nombre": "BELTRÁN"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25095",
+        "nombre": "BITUIMA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25099",
+        "nombre": "BOJACÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25120",
+        "nombre": "CABRERA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25123",
+        "nombre": "CACHIPAY"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25126",
+        "nombre": "CAJICÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25148",
+        "nombre": "CAPARRAPÍ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25151",
+        "nombre": "CÁQUEZA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25154",
+        "nombre": "CARMEN DE CARUPA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25168",
+        "nombre": "CHAGUANÍ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25175",
+        "nombre": "CHÍA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25178",
+        "nombre": "CHIPAQUE"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25181",
+        "nombre": "CHOACHÍ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25183",
+        "nombre": "CHOCONTÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25200",
+        "nombre": "COGUA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25214",
+        "nombre": "COTA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25224",
+        "nombre": "CUCUNUBÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25245",
+        "nombre": "EL COLEGIO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25258",
+        "nombre": "EL PEÑÓN"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25260",
+        "nombre": "EL ROSAL"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25269",
+        "nombre": "FACATATIVÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25279",
+        "nombre": "FÓMEQUE"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25281",
+        "nombre": "FOSCA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25286",
+        "nombre": "FUNZA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25288",
+        "nombre": "FÚQUENE"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25290",
+        "nombre": "FUSAGASUGÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25293",
+        "nombre": "GACHALÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25295",
+        "nombre": "GACHANCIPÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25297",
+        "nombre": "GACHETÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25299",
+        "nombre": "GAMA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25307",
+        "nombre": "GIRARDOT"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25312",
+        "nombre": "GRANADA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25317",
+        "nombre": "GUACHETÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25320",
+        "nombre": "GUADUAS"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25322",
+        "nombre": "GUASCA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25324",
+        "nombre": "GUATAQUÍ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25326",
+        "nombre": "GUATAVITA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25328",
+        "nombre": "GUAYABAL DE SÍQUIMA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25335",
+        "nombre": "GUAYABETAL"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25339",
+        "nombre": "GUTIÉRREZ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25368",
+        "nombre": "JERUSALÉN"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25372",
+        "nombre": "JUNÍN"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25377",
+        "nombre": "LA CALERA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25386",
+        "nombre": "LA MESA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25394",
+        "nombre": "LA PALMA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25398",
+        "nombre": "LA PEÑA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25402",
+        "nombre": "LA VEGA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25407",
+        "nombre": "LENGUAZAQUE"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25426",
+        "nombre": "MACHETÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25430",
+        "nombre": "MADRID"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25436",
+        "nombre": "MANTA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25438",
+        "nombre": "MEDINA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25473",
+        "nombre": "MOSQUERA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25483",
+        "nombre": "NARIÑO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25486",
+        "nombre": "NEMOCÓN"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25488",
+        "nombre": "NILO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25489",
+        "nombre": "NIMAIMA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25491",
+        "nombre": "NOCAIMA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25506",
+        "nombre": "VENECIA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25513",
+        "nombre": "PACHO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25518",
+        "nombre": "PAIME"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25524",
+        "nombre": "PANDI"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25530",
+        "nombre": "PARATEBUENO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25535",
+        "nombre": "PASCA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25572",
+        "nombre": "PUERTO SALGAR"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25580",
+        "nombre": "PULÍ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25592",
+        "nombre": "QUEBRADANEGRA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25594",
+        "nombre": "QUETAME"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25596",
+        "nombre": "QUIPILE"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25599",
+        "nombre": "APULO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25612",
+        "nombre": "RICAURTE"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25645",
+        "nombre": "SAN ANTONIO DEL TEQUENDAMA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25649",
+        "nombre": "SAN BERNARDO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25653",
+        "nombre": "SAN CAYETANO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25658",
+        "nombre": "SAN FRANCISCO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25662",
+        "nombre": "SAN JUAN DE RIOSECO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25718",
+        "nombre": "SASAIMA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25736",
+        "nombre": "SESQUILÉ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25740",
+        "nombre": "SIBATÉ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25743",
+        "nombre": "SILVANIA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25745",
+        "nombre": "SIMIJACA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25754",
+        "nombre": "SOACHA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25758",
+        "nombre": "SOPÓ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25769",
+        "nombre": "SUBACHOQUE"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25772",
+        "nombre": "SUESCA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25777",
+        "nombre": "SUPATÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25779",
+        "nombre": "SUSA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25781",
+        "nombre": "SUTATAUSA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25785",
+        "nombre": "TABIO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25793",
+        "nombre": "TAUSA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25797",
+        "nombre": "TENA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25799",
+        "nombre": "TENJO"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25805",
+        "nombre": "TIBACUY"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25807",
+        "nombre": "TIBIRITA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25815",
+        "nombre": "TOCAIMA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25817",
+        "nombre": "TOCANCIPÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25823",
+        "nombre": "TOPAIPÍ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25839",
+        "nombre": "UBALÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25841",
+        "nombre": "UBAQUE"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25843",
+        "nombre": "VILLA DE SAN DIEGO DE UBATÉ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25845",
+        "nombre": "UNE"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25851",
+        "nombre": "ÚTICA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25862",
+        "nombre": "VERGARA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25867",
+        "nombre": "VIANÍ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25871",
+        "nombre": "VILLAGÓMEZ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25873",
+        "nombre": "VILLAPINZÓN"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25875",
+        "nombre": "VILLETA"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25878",
+        "nombre": "VIOTÁ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25885",
+        "nombre": "YACOPÍ"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25898",
+        "nombre": "ZIPACÓN"
+    },
+    {
+        "dep_dane": "25",
+        "dane_code": "25899",
+        "nombre": "ZIPAQUIRÁ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27001",
+        "nombre": "QUIBDÓ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27006",
+        "nombre": "ACANDÍ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27025",
+        "nombre": "ALTO BAUDÓ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27050",
+        "nombre": "ATRATO"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27073",
+        "nombre": "BAGADÓ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27075",
+        "nombre": "BAHÍA SOLANO"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27077",
+        "nombre": "BAJO BAUDÓ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27099",
+        "nombre": "BOJAYÁ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27135",
+        "nombre": "EL CANTÓN DEL SAN PABLO"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27150",
+        "nombre": "CARMEN DEL DARIÉN"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27160",
+        "nombre": "CÉRTEGUI"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27205",
+        "nombre": "CONDOTO"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27245",
+        "nombre": "EL CARMEN DE ATRATO"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27250",
+        "nombre": "EL LITORAL DEL SAN JUAN"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27361",
+        "nombre": "ISTMINA"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27372",
+        "nombre": "JURADÓ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27413",
+        "nombre": "LLORÓ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27425",
+        "nombre": "MEDIO ATRATO"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27430",
+        "nombre": "MEDIO BAUDÓ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27450",
+        "nombre": "MEDIO SAN JUAN"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27491",
+        "nombre": "NÓVITA"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27495",
+        "nombre": "NUQUÍ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27580",
+        "nombre": "RÍO IRÓ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27600",
+        "nombre": "RÍO QUITO"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27615",
+        "nombre": "RIOSUCIO"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27660",
+        "nombre": "SAN JOSÉ DEL PALMAR"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27745",
+        "nombre": "SIPÍ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27787",
+        "nombre": "TADÓ"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27800",
+        "nombre": "UNGUÍA"
+    },
+    {
+        "dep_dane": "27",
+        "dane_code": "27810",
+        "nombre": "UNIÓN PANAMERICANA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41001",
+        "nombre": "NEIVA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41006",
+        "nombre": "ACEVEDO"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41013",
+        "nombre": "AGRADO"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41016",
+        "nombre": "AIPE"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41020",
+        "nombre": "ALGECIRAS"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41026",
+        "nombre": "ALTAMIRA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41078",
+        "nombre": "BARAYA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41132",
+        "nombre": "CAMPOALEGRE"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41206",
+        "nombre": "COLOMBIA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41244",
+        "nombre": "ELÍAS"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41298",
+        "nombre": "GARZÓN"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41306",
+        "nombre": "GIGANTE"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41319",
+        "nombre": "GUADALUPE"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41349",
+        "nombre": "HOBO"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41357",
+        "nombre": "ÍQUIRA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41359",
+        "nombre": "ISNOS"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41378",
+        "nombre": "LA ARGENTINA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41396",
+        "nombre": "LA PLATA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41483",
+        "nombre": "NÁTAGA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41503",
+        "nombre": "OPORAPA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41518",
+        "nombre": "PAICOL"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41524",
+        "nombre": "PALERMO"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41530",
+        "nombre": "PALESTINA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41548",
+        "nombre": "PITAL"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41551",
+        "nombre": "PITALITO"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41615",
+        "nombre": "RIVERA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41660",
+        "nombre": "SALADOBLANCO"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41668",
+        "nombre": "SAN AGUSTÍN"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41676",
+        "nombre": "SANTA MARÍA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41770",
+        "nombre": "SUAZA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41791",
+        "nombre": "TARQUI"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41797",
+        "nombre": "TESALIA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41799",
+        "nombre": "TELLO"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41801",
+        "nombre": "TERUEL"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41807",
+        "nombre": "TIMANÁ"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41872",
+        "nombre": "VILLAVIEJA"
+    },
+    {
+        "dep_dane": "41",
+        "dane_code": "41885",
+        "nombre": "YAGUARÁ"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44001",
+        "nombre": "RIOHACHA"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44035",
+        "nombre": "ALBANIA"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44078",
+        "nombre": "BARRANCAS"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44090",
+        "nombre": "DIBULLA"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44098",
+        "nombre": "DISTRACCIÓN"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44110",
+        "nombre": "EL MOLINO"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44279",
+        "nombre": "FONSECA"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44378",
+        "nombre": "HATONUEVO"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44420",
+        "nombre": "LA JAGUA DEL PILAR"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44430",
+        "nombre": "MAICAO"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44560",
+        "nombre": "MANAURE"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44650",
+        "nombre": "SAN JUAN DEL CESAR"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44847",
+        "nombre": "URIBIA"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44855",
+        "nombre": "URUMITA"
+    },
+    {
+        "dep_dane": "44",
+        "dane_code": "44874",
+        "nombre": "VILLANUEVA"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47001",
+        "nombre": "SANTA MARTA"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47030",
+        "nombre": "ALGARROBO"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47053",
+        "nombre": "ARACATACA"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47058",
+        "nombre": "ARIGUANÍ"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47161",
+        "nombre": "CERRO DE SAN ANTONIO"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47170",
+        "nombre": "CHIVOLO"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47189",
+        "nombre": "CIÉNAGA"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47205",
+        "nombre": "CONCORDIA"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47245",
+        "nombre": "EL BANCO"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47258",
+        "nombre": "EL PIÑÓN"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47268",
+        "nombre": "EL RETÉN"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47288",
+        "nombre": "FUNDACIÓN"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47318",
+        "nombre": "GUAMAL"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47460",
+        "nombre": "NUEVA GRANADA"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47541",
+        "nombre": "PEDRAZA"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47545",
+        "nombre": "PIJIÑO DEL CARMEN"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47551",
+        "nombre": "PIVIJAY"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47555",
+        "nombre": "PLATO"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47570",
+        "nombre": "PUEBLOVIEJO"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47605",
+        "nombre": "REMOLINO"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47660",
+        "nombre": "SABANAS DE SAN ÁNGEL"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47675",
+        "nombre": "SALAMINA"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47692",
+        "nombre": "SAN SEBASTIÁN DE BUENAVISTA"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47703",
+        "nombre": "SAN ZENÓN"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47707",
+        "nombre": "SANTA ANA"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47720",
+        "nombre": "SANTA BÁRBARA DE PINTO"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47745",
+        "nombre": "SITIONUEVO"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47798",
+        "nombre": "TENERIFE"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47960",
+        "nombre": "ZAPAYÁN"
+    },
+    {
+        "dep_dane": "47",
+        "dane_code": "47980",
+        "nombre": "ZONA BANANERA"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50001",
+        "nombre": "VILLAVICENCIO"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50006",
+        "nombre": "ACACÍAS"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50110",
+        "nombre": "BARRANCA DE UPÍA"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50124",
+        "nombre": "CABUYARO"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50150",
+        "nombre": "CASTILLA LA NUEVA"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50223",
+        "nombre": "CUBARRAL"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50226",
+        "nombre": "CUMARAL"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50245",
+        "nombre": "EL CALVARIO"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50251",
+        "nombre": "EL CASTILLO"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50270",
+        "nombre": "EL DORADO"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50287",
+        "nombre": "FUENTE DE ORO"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50313",
+        "nombre": "GRANADA"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50318",
+        "nombre": "GUAMAL"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50325",
+        "nombre": "MAPIRIPÁN"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50330",
+        "nombre": "MESETAS"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50350",
+        "nombre": "LA MACARENA"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50370",
+        "nombre": "URIBE"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50400",
+        "nombre": "LEJANÍAS"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50450",
+        "nombre": "PUERTO CONCORDIA"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50568",
+        "nombre": "PUERTO GAITÁN"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50573",
+        "nombre": "PUERTO LÓPEZ"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50577",
+        "nombre": "PUERTO LLERAS"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50590",
+        "nombre": "PUERTO RICO"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50606",
+        "nombre": "RESTREPO"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50680",
+        "nombre": "SAN CARLOS DE GUAROA"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50683",
+        "nombre": "SAN JUAN DE ARAMA"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50686",
+        "nombre": "SAN JUANITO"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50689",
+        "nombre": "SAN MARTÍN"
+    },
+    {
+        "dep_dane": "50",
+        "dane_code": "50711",
+        "nombre": "VISTAHERMOSA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52001",
+        "nombre": "PASTO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52019",
+        "nombre": "ALBÁN"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52022",
+        "nombre": "ALDANA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52036",
+        "nombre": "ANCUYA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52051",
+        "nombre": "ARBOLEDA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52079",
+        "nombre": "BARBACOAS"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52083",
+        "nombre": "BELÉN"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52110",
+        "nombre": "BUESACO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52203",
+        "nombre": "COLÓN"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52207",
+        "nombre": "CONSACÁ"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52210",
+        "nombre": "CONTADERO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52215",
+        "nombre": "CÓRDOBA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52224",
+        "nombre": "CUASPUD CARLOSAMA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52227",
+        "nombre": "CUMBAL"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52233",
+        "nombre": "CUMBITARA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52240",
+        "nombre": "CHACHAGÜÍ"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52250",
+        "nombre": "EL CHARCO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52254",
+        "nombre": "EL PEÑOL"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52256",
+        "nombre": "EL ROSARIO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52258",
+        "nombre": "EL TABLÓN DE GÓMEZ"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52260",
+        "nombre": "EL TAMBO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52287",
+        "nombre": "FUNES"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52317",
+        "nombre": "GUACHUCAL"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52320",
+        "nombre": "GUAITARILLA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52323",
+        "nombre": "GUALMATÁN"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52352",
+        "nombre": "ILES"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52354",
+        "nombre": "IMUÉS"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52356",
+        "nombre": "IPIALES"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52378",
+        "nombre": "LA CRUZ"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52381",
+        "nombre": "LA FLORIDA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52385",
+        "nombre": "LA LLANADA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52390",
+        "nombre": "LA TOLA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52399",
+        "nombre": "LA UNIÓN"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52405",
+        "nombre": "LEIVA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52411",
+        "nombre": "LINARES"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52418",
+        "nombre": "LOS ANDES"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52427",
+        "nombre": "MAGÜÍ"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52435",
+        "nombre": "MALLAMA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52473",
+        "nombre": "MOSQUERA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52480",
+        "nombre": "NARIÑO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52490",
+        "nombre": "OLAYA HERRERA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52506",
+        "nombre": "OSPINA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52520",
+        "nombre": "FRANCISCO PIZARRO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52540",
+        "nombre": "POLICARPA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52560",
+        "nombre": "POTOSÍ"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52565",
+        "nombre": "PROVIDENCIA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52573",
+        "nombre": "PUERRES"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52585",
+        "nombre": "PUPIALES"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52612",
+        "nombre": "RICAURTE"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52621",
+        "nombre": "ROBERTO PAYÁN"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52678",
+        "nombre": "SAMANIEGO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52683",
+        "nombre": "SANDONÁ"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52685",
+        "nombre": "SAN BERNARDO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52687",
+        "nombre": "SAN LORENZO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52693",
+        "nombre": "SAN PABLO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52694",
+        "nombre": "SAN PEDRO DE CARTAGO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52696",
+        "nombre": "SANTA BÁRBARA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52699",
+        "nombre": "SANTACRUZ"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52720",
+        "nombre": "SAPUYES"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52786",
+        "nombre": "TAMINANGO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52788",
+        "nombre": "TANGUA"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52835",
+        "nombre": "SAN ANDRÉS DE TUMACO"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52838",
+        "nombre": "TÚQUERRES"
+    },
+    {
+        "dep_dane": "52",
+        "dane_code": "52885",
+        "nombre": "YACUANQUER"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54001",
+        "nombre": "SAN JOSÉ DE CÚCUTA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54003",
+        "nombre": "ÁBREGO"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54051",
+        "nombre": "ARBOLEDAS"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54099",
+        "nombre": "BOCHALEMA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54109",
+        "nombre": "BUCARASICA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54125",
+        "nombre": "CÁCOTA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54128",
+        "nombre": "CÁCHIRA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54172",
+        "nombre": "CHINÁCOTA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54174",
+        "nombre": "CHITAGÁ"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54206",
+        "nombre": "CONVENCIÓN"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54223",
+        "nombre": "CUCUTILLA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54239",
+        "nombre": "DURANIA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54245",
+        "nombre": "EL CARMEN"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54250",
+        "nombre": "EL TARRA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54261",
+        "nombre": "EL ZULIA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54313",
+        "nombre": "GRAMALOTE"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54344",
+        "nombre": "HACARÍ"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54347",
+        "nombre": "HERRÁN"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54377",
+        "nombre": "LABATECA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54385",
+        "nombre": "LA ESPERANZA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54398",
+        "nombre": "LA PLAYA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54405",
+        "nombre": "LOS PATIOS"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54418",
+        "nombre": "LOURDES"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54480",
+        "nombre": "MUTISCUA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54498",
+        "nombre": "OCAÑA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54518",
+        "nombre": "PAMPLONA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54520",
+        "nombre": "PAMPLONITA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54553",
+        "nombre": "PUERTO SANTANDER"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54599",
+        "nombre": "RAGONVALIA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54660",
+        "nombre": "SALAZAR"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54670",
+        "nombre": "SAN CALIXTO"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54673",
+        "nombre": "SAN CAYETANO"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54680",
+        "nombre": "SANTIAGO"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54720",
+        "nombre": "SARDINATA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54743",
+        "nombre": "SILOS"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54800",
+        "nombre": "TEORAMA"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54810",
+        "nombre": "TIBÚ"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54820",
+        "nombre": "TOLEDO"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54871",
+        "nombre": "VILLA CARO"
+    },
+    {
+        "dep_dane": "54",
+        "dane_code": "54874",
+        "nombre": "VILLA DEL ROSARIO"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63001",
+        "nombre": "ARMENIA"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63111",
+        "nombre": "BUENAVISTA"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63130",
+        "nombre": "CALARCÁ"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63190",
+        "nombre": "CIRCASIA"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63212",
+        "nombre": "CÓRDOBA"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63272",
+        "nombre": "FILANDIA"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63302",
+        "nombre": "GÉNOVA"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63401",
+        "nombre": "LA TEBAIDA"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63470",
+        "nombre": "MONTENEGRO"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63548",
+        "nombre": "PIJAO"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63594",
+        "nombre": "QUIMBAYA"
+    },
+    {
+        "dep_dane": "63",
+        "dane_code": "63690",
+        "nombre": "SALENTO"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66001",
+        "nombre": "PEREIRA"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66045",
+        "nombre": "APÍA"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66075",
+        "nombre": "BALBOA"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66088",
+        "nombre": "BELÉN DE UMBRÍA"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66170",
+        "nombre": "DOSQUEBRADAS"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66318",
+        "nombre": "GUÁTICA"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66383",
+        "nombre": "LA CELIA"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66400",
+        "nombre": "LA VIRGINIA"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66440",
+        "nombre": "MARSELLA"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66456",
+        "nombre": "MISTRATÓ"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66572",
+        "nombre": "PUEBLO RICO"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66594",
+        "nombre": "QUINCHÍA"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66682",
+        "nombre": "SANTA ROSA DE CABAL"
+    },
+    {
+        "dep_dane": "66",
+        "dane_code": "66687",
+        "nombre": "SANTUARIO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68001",
+        "nombre": "BUCARAMANGA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68013",
+        "nombre": "AGUADA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68020",
+        "nombre": "ALBANIA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68051",
+        "nombre": "ARATOCA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68077",
+        "nombre": "BARBOSA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68079",
+        "nombre": "BARICHARA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68081",
+        "nombre": "BARRANCABERMEJA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68092",
+        "nombre": "BETULIA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68101",
+        "nombre": "BOLÍVAR"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68121",
+        "nombre": "CABRERA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68132",
+        "nombre": "CALIFORNIA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68147",
+        "nombre": "CAPITANEJO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68152",
+        "nombre": "CARCASÍ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68160",
+        "nombre": "CEPITÁ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68162",
+        "nombre": "CERRITO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68167",
+        "nombre": "CHARALÁ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68169",
+        "nombre": "CHARTA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68176",
+        "nombre": "CHIMA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68179",
+        "nombre": "CHIPATÁ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68190",
+        "nombre": "CIMITARRA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68207",
+        "nombre": "CONCEPCIÓN"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68209",
+        "nombre": "CONFINES"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68211",
+        "nombre": "CONTRATACIÓN"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68217",
+        "nombre": "COROMORO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68229",
+        "nombre": "CURITÍ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68235",
+        "nombre": "EL CARMEN DE CHUCURÍ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68245",
+        "nombre": "EL GUACAMAYO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68250",
+        "nombre": "EL PEÑÓN"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68255",
+        "nombre": "EL PLAYÓN"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68264",
+        "nombre": "ENCINO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68266",
+        "nombre": "ENCISO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68271",
+        "nombre": "FLORIÁN"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68276",
+        "nombre": "FLORIDABLANCA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68296",
+        "nombre": "GALÁN"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68298",
+        "nombre": "GÁMBITA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68307",
+        "nombre": "GIRÓN"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68318",
+        "nombre": "GUACA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68320",
+        "nombre": "GUADALUPE"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68322",
+        "nombre": "GUAPOTÁ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68324",
+        "nombre": "GUAVATÁ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68327",
+        "nombre": "GÜEPSA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68344",
+        "nombre": "HATO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68368",
+        "nombre": "JESÚS MARÍA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68370",
+        "nombre": "JORDÁN"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68377",
+        "nombre": "LA BELLEZA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68385",
+        "nombre": "LANDÁZURI"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68397",
+        "nombre": "LA PAZ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68406",
+        "nombre": "LEBRIJA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68418",
+        "nombre": "LOS SANTOS"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68425",
+        "nombre": "MACARAVITA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68432",
+        "nombre": "MÁLAGA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68444",
+        "nombre": "MATANZA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68464",
+        "nombre": "MOGOTES"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68468",
+        "nombre": "MOLAGAVITA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68498",
+        "nombre": "OCAMONTE"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68500",
+        "nombre": "OIBA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68502",
+        "nombre": "ONZAGA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68522",
+        "nombre": "PALMAR"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68524",
+        "nombre": "PALMAS DEL SOCORRO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68533",
+        "nombre": "PÁRAMO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68547",
+        "nombre": "PIEDECUESTA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68549",
+        "nombre": "PINCHOTE"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68572",
+        "nombre": "PUENTE NACIONAL"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68573",
+        "nombre": "PUERTO PARRA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68575",
+        "nombre": "PUERTO WILCHES"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68615",
+        "nombre": "RIONEGRO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68655",
+        "nombre": "SABANA DE TORRES"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68669",
+        "nombre": "SAN ANDRÉS"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68673",
+        "nombre": "SAN BENITO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68679",
+        "nombre": "SAN GIL"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68682",
+        "nombre": "SAN JOAQUÍN"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68684",
+        "nombre": "SAN JOSÉ DE MIRANDA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68686",
+        "nombre": "SAN MIGUEL"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68689",
+        "nombre": "SAN VICENTE DE CHUCURÍ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68705",
+        "nombre": "SANTA BÁRBARA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68720",
+        "nombre": "SANTA HELENA DEL OPÓN"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68745",
+        "nombre": "SIMACOTA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68755",
+        "nombre": "SOCORRO"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68770",
+        "nombre": "SUAITA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68773",
+        "nombre": "SUCRE"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68780",
+        "nombre": "SURATÁ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68820",
+        "nombre": "TONA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68855",
+        "nombre": "VALLE DE SAN JOSÉ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68861",
+        "nombre": "VÉLEZ"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68867",
+        "nombre": "VETAS"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68872",
+        "nombre": "VILLANUEVA"
+    },
+    {
+        "dep_dane": "68",
+        "dane_code": "68895",
+        "nombre": "ZAPATOCA"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70001",
+        "nombre": "SINCELEJO"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70110",
+        "nombre": "BUENAVISTA"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70124",
+        "nombre": "CAIMITO"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70204",
+        "nombre": "COLOSÓ"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70215",
+        "nombre": "COROZAL"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70221",
+        "nombre": "COVEÑAS"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70230",
+        "nombre": "CHALÁN"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70233",
+        "nombre": "EL ROBLE"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70235",
+        "nombre": "GALERAS"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70265",
+        "nombre": "GUARANDA"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70400",
+        "nombre": "LA UNIÓN"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70418",
+        "nombre": "LOS PALMITOS"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70429",
+        "nombre": "MAJAGUAL"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70473",
+        "nombre": "MORROA"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70508",
+        "nombre": "OVEJAS"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70523",
+        "nombre": "PALMITO"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70670",
+        "nombre": "SAMPUÉS"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70678",
+        "nombre": "SAN BENITO ABAD"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70702",
+        "nombre": "SAN JUAN DE BETULIA"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70708",
+        "nombre": "SAN MARCOS"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70713",
+        "nombre": "SAN ONOFRE"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70717",
+        "nombre": "SAN PEDRO"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70742",
+        "nombre": "SAN LUIS DE SINCÉ"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70771",
+        "nombre": "SUCRE"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70820",
+        "nombre": "SANTIAGO DE TOLÚ"
+    },
+    {
+        "dep_dane": "70",
+        "dane_code": "70823",
+        "nombre": "SAN JOSÉ DE TOLUVIEJO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73001",
+        "nombre": "IBAGUÉ"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73024",
+        "nombre": "ALPUJARRA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73026",
+        "nombre": "ALVARADO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73030",
+        "nombre": "AMBALEMA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73043",
+        "nombre": "ANZOÁTEGUI"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73055",
+        "nombre": "ARMERO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73067",
+        "nombre": "ATACO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73124",
+        "nombre": "CAJAMARCA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73148",
+        "nombre": "CARMEN DE APICALÁ"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73152",
+        "nombre": "CASABIANCA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73168",
+        "nombre": "CHAPARRAL"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73200",
+        "nombre": "COELLO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73217",
+        "nombre": "COYAIMA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73226",
+        "nombre": "CUNDAY"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73236",
+        "nombre": "DOLORES"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73268",
+        "nombre": "ESPINAL"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73270",
+        "nombre": "FALAN"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73275",
+        "nombre": "FLANDES"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73283",
+        "nombre": "FRESNO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73319",
+        "nombre": "GUAMO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73347",
+        "nombre": "HERVEO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73349",
+        "nombre": "HONDA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73352",
+        "nombre": "ICONONZO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73408",
+        "nombre": "LÉRIDA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73411",
+        "nombre": "LÍBANO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73443",
+        "nombre": "SAN SEBASTIÁN DE MARIQUITA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73449",
+        "nombre": "MELGAR"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73461",
+        "nombre": "MURILLO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73483",
+        "nombre": "NATAGAIMA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73504",
+        "nombre": "ORTEGA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73520",
+        "nombre": "PALOCABILDO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73547",
+        "nombre": "PIEDRAS"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73555",
+        "nombre": "PLANADAS"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73563",
+        "nombre": "PRADO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73585",
+        "nombre": "PURIFICACIÓN"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73616",
+        "nombre": "RIOBLANCO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73622",
+        "nombre": "RONCESVALLES"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73624",
+        "nombre": "ROVIRA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73671",
+        "nombre": "SALDAÑA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73675",
+        "nombre": "SAN ANTONIO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73678",
+        "nombre": "SAN LUIS"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73686",
+        "nombre": "SANTA ISABEL"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73770",
+        "nombre": "SUÁREZ"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73854",
+        "nombre": "VALLE DE SAN JUAN"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73861",
+        "nombre": "VENADILLO"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73870",
+        "nombre": "VILLAHERMOSA"
+    },
+    {
+        "dep_dane": "73",
+        "dane_code": "73873",
+        "nombre": "VILLARRICA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76001",
+        "nombre": "CALI"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76020",
+        "nombre": "ALCALÁ"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76036",
+        "nombre": "ANDALUCÍA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76041",
+        "nombre": "ANSERMANUEVO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76054",
+        "nombre": "ARGELIA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76100",
+        "nombre": "BOLÍVAR"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76109",
+        "nombre": "BUENAVENTURA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76111",
+        "nombre": "GUADALAJARA DE BUGA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76113",
+        "nombre": "BUGALAGRANDE"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76122",
+        "nombre": "CAICEDONIA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76126",
+        "nombre": "CALIMA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76130",
+        "nombre": "CANDELARIA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76147",
+        "nombre": "CARTAGO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76233",
+        "nombre": "DAGUA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76243",
+        "nombre": "EL ÁGUILA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76246",
+        "nombre": "EL CAIRO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76248",
+        "nombre": "EL CERRITO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76250",
+        "nombre": "EL DOVIO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76275",
+        "nombre": "FLORIDA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76306",
+        "nombre": "GINEBRA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76318",
+        "nombre": "GUACARÍ"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76364",
+        "nombre": "JAMUNDÍ"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76377",
+        "nombre": "LA CUMBRE"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76400",
+        "nombre": "LA UNIÓN"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76403",
+        "nombre": "LA VICTORIA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76497",
+        "nombre": "OBANDO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76520",
+        "nombre": "PALMIRA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76563",
+        "nombre": "PRADERA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76606",
+        "nombre": "RESTREPO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76616",
+        "nombre": "RIOFRÍO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76622",
+        "nombre": "ROLDANILLO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76670",
+        "nombre": "SAN PEDRO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76736",
+        "nombre": "SEVILLA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76823",
+        "nombre": "TORO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76828",
+        "nombre": "TRUJILLO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76834",
+        "nombre": "TULUÁ"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76845",
+        "nombre": "ULLOA"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76863",
+        "nombre": "VERSALLES"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76869",
+        "nombre": "VIJES"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76890",
+        "nombre": "YOTOCO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76892",
+        "nombre": "YUMBO"
+    },
+    {
+        "dep_dane": "76",
+        "dane_code": "76895",
+        "nombre": "ZARZAL"
+    },
+    {
+        "dep_dane": "81",
+        "dane_code": "81001",
+        "nombre": "ARAUCA"
+    },
+    {
+        "dep_dane": "81",
+        "dane_code": "81065",
+        "nombre": "ARAUQUITA"
+    },
+    {
+        "dep_dane": "81",
+        "dane_code": "81220",
+        "nombre": "CRAVO NORTE"
+    },
+    {
+        "dep_dane": "81",
+        "dane_code": "81300",
+        "nombre": "FORTUL"
+    },
+    {
+        "dep_dane": "81",
+        "dane_code": "81591",
+        "nombre": "PUERTO RONDÓN"
+    },
+    {
+        "dep_dane": "81",
+        "dane_code": "81736",
+        "nombre": "SARAVENA"
+    },
+    {
+        "dep_dane": "81",
+        "dane_code": "81794",
+        "nombre": "TAME"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85001",
+        "nombre": "YOPAL"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85010",
+        "nombre": "AGUAZUL"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85015",
+        "nombre": "CHÁMEZA"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85125",
+        "nombre": "HATO COROZAL"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85136",
+        "nombre": "LA SALINA"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85139",
+        "nombre": "MANÍ"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85162",
+        "nombre": "MONTERREY"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85225",
+        "nombre": "NUNCHÍA"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85230",
+        "nombre": "OROCUÉ"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85250",
+        "nombre": "PAZ DE ARIPORO"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85263",
+        "nombre": "PORE"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85279",
+        "nombre": "RECETOR"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85300",
+        "nombre": "SABANALARGA"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85315",
+        "nombre": "SÁCAMA"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85325",
+        "nombre": "SAN LUIS DE PALENQUE"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85400",
+        "nombre": "TÁMARA"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85410",
+        "nombre": "TAURAMENA"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85430",
+        "nombre": "TRINIDAD"
+    },
+    {
+        "dep_dane": "85",
+        "dane_code": "85440",
+        "nombre": "VILLANUEVA"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86001",
+        "nombre": "MOCOA"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86219",
+        "nombre": "COLÓN"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86320",
+        "nombre": "ORITO"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86568",
+        "nombre": "PUERTO ASÍS"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86569",
+        "nombre": "PUERTO CAICEDO"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86571",
+        "nombre": "PUERTO GUZMÁN"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86573",
+        "nombre": "PUERTO LEGUÍZAMO"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86749",
+        "nombre": "SIBUNDOY"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86755",
+        "nombre": "SAN FRANCISCO"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86757",
+        "nombre": "SAN MIGUEL"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86760",
+        "nombre": "SANTIAGO"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86865",
+        "nombre": "VALLE DEL GUAMUEZ"
+    },
+    {
+        "dep_dane": "86",
+        "dane_code": "86885",
+        "nombre": "VILLAGARZÓN"
+    },
+    {
+        "dep_dane": "88",
+        "dane_code": "88001",
+        "nombre": "SAN ANDRÉS"
+    },
+    {
+        "dep_dane": "88",
+        "dane_code": "88564",
+        "nombre": "PROVIDENCIA"
+    },
+    {
+        "dep_dane": "91",
+        "dane_code": "91001",
+        "nombre": "LETICIA"
+    },
+    {
+        "dep_dane": "91",
+        "dane_code": "91263",
+        "nombre": "EL ENCANTO"
+    },
+    {
+        "dep_dane": "91",
+        "dane_code": "91405",
+        "nombre": "LA CHORRERA"
+    },
+    {
+        "dep_dane": "91",
+        "dane_code": "91407",
+        "nombre": "LA PEDRERA"
+    },
+    {
+        "dep_dane": "91",
+        "dane_code": "91430",
+        "nombre": "LA VICTORIA"
+    },
+    {
+        "dep_dane": "91",
+        "dane_code": "91460",
+        "nombre": "MIRITÍ - PARANÁ"
+    },
+    {
+        "dep_dane": "91",
+        "dane_code": "91530",
+        "nombre": "PUERTO ALEGRÍA"
+    },
+    {
+        "dep_dane": "91",
+        "dane_code": "91536",
+        "nombre": "PUERTO ARICA"
+    },
+    {
+        "dep_dane": "91",
+        "dane_code": "91540",
+        "nombre": "PUERTO NARIÑO"
+    },
+    {
+        "dep_dane": "91",
+        "dane_code": "91669",
+        "nombre": "PUERTO SANTANDER"
+    },
+    {
+        "dep_dane": "91",
+        "dane_code": "91798",
+        "nombre": "TARAPACÁ"
+    },
+    {
+        "dep_dane": "94",
+        "dane_code": "94001",
+        "nombre": "INÍRIDA"
+    },
+    {
+        "dep_dane": "94",
+        "dane_code": "94343",
+        "nombre": "BARRANCOMINAS"
+    },
+    {
+        "dep_dane": "94",
+        "dane_code": "94883",
+        "nombre": "SAN FELIPE"
+    },
+    {
+        "dep_dane": "94",
+        "dane_code": "94884",
+        "nombre": "PUERTO COLOMBIA"
+    },
+    {
+        "dep_dane": "94",
+        "dane_code": "94885",
+        "nombre": "LA GUADALUPE"
+    },
+    {
+        "dep_dane": "94",
+        "dane_code": "94886",
+        "nombre": "CACAHUAL"
+    },
+    {
+        "dep_dane": "94",
+        "dane_code": "94887",
+        "nombre": "PANA PANA"
+    },
+    {
+        "dep_dane": "94",
+        "dane_code": "94888",
+        "nombre": "MORICHAL"
+    },
+    {
+        "dep_dane": "95",
+        "dane_code": "95001",
+        "nombre": "SAN JOSÉ DEL GUAVIARE"
+    },
+    {
+        "dep_dane": "95",
+        "dane_code": "95015",
+        "nombre": "CALAMAR"
+    },
+    {
+        "dep_dane": "95",
+        "dane_code": "95025",
+        "nombre": "EL RETORNO"
+    },
+    {
+        "dep_dane": "95",
+        "dane_code": "95200",
+        "nombre": "MIRAFLORES"
+    },
+    {
+        "dep_dane": "97",
+        "dane_code": "97001",
+        "nombre": "MITÚ"
+    },
+    {
+        "dep_dane": "97",
+        "dane_code": "97161",
+        "nombre": "CARURÚ"
+    },
+    {
+        "dep_dane": "97",
+        "dane_code": "97511",
+        "nombre": "PACOA"
+    },
+    {
+        "dep_dane": "97",
+        "dane_code": "97666",
+        "nombre": "TARAIRA"
+    },
+    {
+        "dep_dane": "97",
+        "dane_code": "97777",
+        "nombre": "PAPUNAHUA"
+    },
+    {
+        "dep_dane": "97",
+        "dane_code": "97889",
+        "nombre": "YAVARATÉ"
+    },
+    {
+        "dep_dane": "99",
+        "dane_code": "99001",
+        "nombre": "PUERTO CARREÑO"
+    },
+    {
+        "dep_dane": "99",
+        "dane_code": "99524",
+        "nombre": "LA PRIMAVERA"
+    },
+    {
+        "dep_dane": "99",
+        "dane_code": "99624",
+        "nombre": "SANTA ROSALÍA"
+    },
+    {
+        "dep_dane": "99",
+        "dane_code": "99773",
+        "nombre": "CUMARIBO"
+    }
+]
