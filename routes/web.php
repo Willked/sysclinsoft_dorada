@@ -33,6 +33,7 @@ Route::middleware([
     Route::post('/atenciones/{atencion}/finalizar', [AtencionController::class, 'finalizar'])->name('atenciones.finalizar');
     Route::post('/atenciones/{atencion}/signos-vitales', [AtencionController::class, 'storeSignosVitales'])->name('atenciones.signos-vitales.store');
     Route::post('/atenciones/{atencion}/notas-clinicas', [AtencionController::class, 'storeNotaClinica'])->name('atenciones.notas-clinicas.store');
+    Route::post('/atenciones/{atencion}/diagnosticos', [AtencionController::class, 'storeDiagnostico'])->name('atenciones.diagnosticos.store');
 
     Route::get('/geo/departamentos', [DivipolaController::class, 'departamentos'])->name('geo.departamentos');
     Route::get('/geo/departamentos/{departamento}/municipios', [DivipolaController::class, 'municipios'])->name('geo.municipios');
