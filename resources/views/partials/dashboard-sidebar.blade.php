@@ -31,7 +31,7 @@
         <x-lucide-users />
         {{ __('Pacientes') }}
     </div>
-    @canany(['usuarios.gestionar', 'roles.gestionar', 'ambulancias.gestionar', 'eps.gestionar', 'cups.gestionar', 'cie10.gestionar'])
+    @canany(['usuarios.gestionar', 'roles.gestionar', 'ambulancias.gestionar', 'conductores.gestionar', 'eps.gestionar', 'causasexternas.gestionar', 'cups.gestionar', 'cie10.gestionar'])
         <div class="dashboard-nav-section">{{ __('Parametrización') }}</div>
     @endcanany
     @can('usuarios.gestionar')
@@ -52,10 +52,22 @@
             {{ __('Ambulancias') }}
         </a>
     @endcan
+    @can('conductores.gestionar')
+        <a href="{{ route('parametros.conductores.index') }}" class="dashboard-nav-item {{ request()->routeIs('parametros.conductores.*') ? 'active' : '' }}">
+            <x-lucide-id-card />
+            {{ __('Conductores') }}
+        </a>
+    @endcan
     @can('eps.gestionar')
         <a href="{{ route('parametros.eps.index') }}" class="dashboard-nav-item {{ request()->routeIs('parametros.eps.*') ? 'active' : '' }}">
             <x-lucide-building-2 />
-            {{ __('EPS') }}
+            {{ __('Aseguradoras o EPS') }}
+        </a>
+    @endcan
+    @can('causasexternas.gestionar')
+        <a href="{{ route('parametros.causas-externas.index') }}" class="dashboard-nav-item {{ request()->routeIs('parametros.causas-externas.*') ? 'active' : '' }}">
+            <x-lucide-file-text />
+            {{ __('Causas externas') }}
         </a>
     @endcan
     @can('cups.gestionar')
