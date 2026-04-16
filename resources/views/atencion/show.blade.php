@@ -373,8 +373,43 @@
                             <div class="hc-panel" data-hc-panel="2" role="tabpanel" hidden>
                                 <div style="padding:14px 16px">
                                     <div class="hc-section-title">{{ __('Diagnósticos CIE-10') }}</div>
-                                    <p class="hc-empty" style="padding:0">{{ __('No hay diagnósticos cargados.') }}</p>
-                                    <button type="button" class="hc-add-btn" disabled>+ {{ __('Agregar diagnóstico') }}</button>
+                                    @php
+                                        $currentDiagnosticoId = (int) old('diagnostico_id', $atencion->diagnostico_id);
+                                    @endphp
+                                    @if ($errors->diagnostico->any())
+                                        <div class="hc-inline-alert error">{{ $errors->diagnostico->first() }}</div>
+                                    @endif
+
+                                    @if ($atencion->diagnostico)
+                                        <p class="hc-prose" style="margin:10px 0 12px">
+                                            {{ $atencion->diagnostico->codigo }} — {{ $atencion->diagnostico->descripcion }}
+                                        </p>
+                                    @else
+                                        <p class="hc-empty" style="padding:0 0 12px">{{ __('No hay diagnósticos cargados.') }}</p>
+                                    @endif
+
+                                    <form method="POST" action="{{ route('atenciones.diagnosticos.store', $atencion) }}" class="hc-modal-form" style="margin-top:10px">
+                                        @csrf
+                                        <label style="display:block;font-size:12px;color:var(--dash-text-secondary);margin-bottom:6px">
+                                            {{ __('Seleccionar CIE-10') }}
+                                        </label>
+                                        <select name="diagnostico_id" class="atencion-select">
+                                            <option value="" @selected($currentDiagnosticoId === 0)>
+                                                {{ __('Sin diagnóstico') }}
+                                            </option>
+                                            @foreach ($cie10List as $cie10)
+                                                <option
+                                                    value="{{ $cie10->id }}"
+                                                    @selected($currentDiagnosticoId === (int) $cie10->id)
+                                                >
+                                                    {{ $cie10->codigo }} — {{ $cie10->descripcion }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                        <div class="hc-modal-actions" style="margin-top:12px">
+                                            <button type="submit" class="hc-btn-primary">{{ __('Guardar diagnóstico') }}</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
 

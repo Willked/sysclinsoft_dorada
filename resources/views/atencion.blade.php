@@ -231,7 +231,7 @@
                                             @enderror
                                         </div>
                                         <div>
-                                            <label for="email">{{ __('Email') }}<span class="atencion-req">*</span></label>
+                                            <label for="email">{{ __('Email') }}</label>
                                             <input id="email" class="atencion-input @error('email') atencion-input-invalid @enderror" type="email" name="email" value="{{ old('email', $pacienteModel?->email ?? '') }}" autocomplete="off">
                                             @error('email')
                                                 <p class="atencion-field-error" role="alert">{{ $message }}</p>
@@ -258,14 +258,14 @@
                                 <div class="atencion-card-body">
                                     <div class="atencion-field-grid cols2">
                                         <div>
-                                            <label for="nombre-acompanante">{{ __('Nombre del acompañante') }}<span class="atencion-req">*</span></label>
+                                            <label for="nombre-acompanante">{{ __('Nombre del acompañante') }}</label>
                                             <input id="nombre-acompanante" class="atencion-input @error('nombre_acompanante') atencion-input-invalid @enderror" type="text" name="nombre_acompanante" value="{{ old('nombre_acompanante', $acompananteModel?->nombre ?? '') }}" autocomplete="off">
                                             @error('nombre_acompanante')
                                                 <p class="atencion-field-error" role="alert">{{ $message }}</p>
                                             @enderror
                                         </div>
                                         <div>
-                                            <label for="parentesco-acompanante">{{ __('Parentesco del acompañante') }}<span class="atencion-req">*</span></label>
+                                            <label for="parentesco-acompanante">{{ __('Parentesco del acompañante') }}</label>
                                             <select id="parentesco-acompanante" class="atencion-select @error('parentesco_acompanante') atencion-input-invalid @enderror" name="parentesco_acompanante">
                                                 <option value="" @selected(! filled($parentescoVal))>{{ __('Seleccione…') }}</option>
                                                 @foreach ($parentescos as $parentesco => $nombre)
@@ -277,7 +277,7 @@
                                             @enderror
                                         </div>
                                         <div>
-                                            <label for="doc-type-acompanante">{{ __('Tipo de documento del acompañante') }}<span class="atencion-req">*</span></label>
+                                            <label for="doc-type-acompanante">{{ __('Tipo de documento del acompañante') }}</label>
                                             <select id="doc-type-acompanante" class="atencion-select @error('doc_type_acompanante') atencion-input-invalid @enderror" name="doc_type_acompanante">
                                                 @forelse ($tipoDocumentos as $tipoDocumento)
                                                     <option value="{{ $tipoDocumento->codigo }}" @selected($tipoDocAco === $tipoDocumento->codigo)>{{ $tipoDocumento->nombre }}</option>
@@ -290,14 +290,14 @@
                                             @enderror
                                         </div>
                                         <div>
-                                            <label for="doc-num-acompanante">{{ __('Número de documento del acompañante') }}<span class="atencion-req">*</span></label>
+                                            <label for="doc-num-acompanante">{{ __('Número de documento del acompañante') }}</label>
                                             <input id="doc-num-acompanante" class="atencion-input @error('doc_num_acompanante') atencion-input-invalid @enderror" type="text" name="doc_num_acompanante" value="{{ old('doc_num_acompanante', $acompananteModel?->numero_documento ?? '') }}" autocomplete="off">
                                             @error('doc_num_acompanante')
                                                 <p class="atencion-field-error" role="alert">{{ $message }}</p>
                                             @enderror
                                         </div>
                                         <div>
-                                            <label for="telefono-acompanante">{{ __('Teléfono del acompañante') }}<span class="atencion-req">*</span></label>
+                                            <label for="telefono-acompanante">{{ __('Teléfono del acompañante') }}</label>
                                             <input id="telefono-acompanante" class="atencion-input @error('telefono_acompanante') atencion-input-invalid @enderror" type="text" name="telefono_acompanante" value="{{ old('telefono_acompanante', $acompananteModel?->telefono ?? '') }}" autocomplete="off">
                                             @error('telefono_acompanante')
                                                 <p class="atencion-field-error" role="alert">{{ $message }}</p>
@@ -528,6 +528,13 @@
                                         <button type="button" class="atencion-triage-btn t3{{ $triageKey === 't3' ? ' is-selected' : '' }}" data-triage="III">{{ __('III') }}<span class="atencion-triage-label">{{ __('Amarillo') }}</span></button>
                                         <button type="button" class="atencion-triage-btn t4{{ $triageKey === 't4' ? ' is-selected' : '' }}" data-triage="IV">{{ __('IV') }}<span class="atencion-triage-label">{{ __('Verde') }}</span></button>
                                         <button type="button" class="atencion-triage-btn t5{{ $triageKey === 't5' ? ' is-selected' : '' }}" data-triage="V">{{ __('V') }}<span class="atencion-triage-label">{{ __('Negro') }}</span></button>
+                                    </div>
+                                    <div style="margin-top:12px">
+                                        <label for="evaluacion-fisica">{{ __('Hallazgos / evaluación física') }}<span class="atencion-req">*</span></label>
+                                        <textarea id="evaluacion-fisica" class="atencion-textarea @error('evaluacion_fisica') atencion-input-invalid @enderror" name="evaluacion_fisica" rows="4" maxlength="5000">{{ old('evaluacion_fisica', $atencionModel?->evaluacion_fisica ?? '') }}</textarea>
+                                        @error('evaluacion_fisica')
+                                            <p class="atencion-field-error" role="alert">{{ $message }}</p>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>

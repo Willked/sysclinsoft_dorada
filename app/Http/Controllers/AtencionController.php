@@ -11,6 +11,7 @@ use App\Models\Cup;
 use App\Models\Eps;
 use App\Models\NotaClinica;
 use App\Models\Paciente;
+use App\Models\Cie10;
 use App\Models\SignoVital;
 use App\Models\TipoDocumento;
 use App\Models\TipoUsuario;
@@ -96,6 +97,7 @@ class AtencionController extends Controller
             'municipio',
             'cup',
             'medico',
+            'diagnostico',
             'signosVitales' => fn ($q) => $q->orderBy('medicion_en')->orderBy('id'),
             'notasClinicas' => fn ($q) => $q->with('usuario')->orderByDesc('created_at')->orderByDesc('id'),
         ]);
@@ -108,6 +110,7 @@ class AtencionController extends Controller
         return view('atencion.show', [
             'atencion' => $atencion,
             'ultimoGlasgow' => $ultimoGlasgow,
+            'cie10List' => Cie10::query()->activosOrdenados()->get(),
         ]);
     }
 
@@ -171,6 +174,21 @@ class AtencionController extends Controller
             ->with('status_nota', __('Nota clínica registrada correctamente.'));
     }
 
+    public function storeDiagnostico(Request $request, Atencion $atencion): RedirectResponse
+    {
+        $validated = $request->validateWithBag('diagnostico', [
+            'diagnostico_id' => ['nullable', 'integer', 'exists:cie_10,id'],
+        ]);
+
+        $atencion->forceFill([
+            'diagnostico_id' => $validated['diagnostico_id'] ?? null,
+        ])->save();
+
+        return redirect()
+            ->route('atenciones.show', $atencion)
+            ->with('status_atencion', __('Diagnóstico CIE-10 actualizado correctamente.'));
+    }
+
     public function store(Request $request): RedirectResponse
     {
         $request->validate(
@@ -216,6 +234,14 @@ class AtencionController extends Controller
                 ->withInput()
                 ->withErrors(['hora_llamada' => __('La hora de llamada es obligatoria.')]);
         }
+
+        $request->validate(
+            [
+                'evaluacion_fisica' => ['required', 'string', 'max:5000', 'regex:/\S/'],
+            ],
+            [],
+            $this->atributosValidacionNuevaAtencion(),
+        );
 
         try {
             DB::transaction(function () use ($request, $atencion, $horaLlamada): void {
@@ -277,7 +303,7 @@ class AtencionController extends Controller
             'sexo' => $request->input('sexo'),
             'estado_civil' => $request->input('estado_civil'),
             'direccion' => $request->input('direccion'),
-            'email' => $request->input('email'),
+            'email' => (string) ($request->input('email') ?? ''),
             'telefono' => $request->input('telefono'),
         ]);
     }
@@ -327,7 +353,7 @@ class AtencionController extends Controller
             'sexo' => $request->input('sexo'),
             'estado_civil' => $request->input('estado_civil'),
             'direccion' => $request->input('direccion'),
-            'email' => $request->input('email'),
+            'email' => (string) ($request->input('email') ?? ''),
             'telefono' => $request->input('telefono'),
         ])->save();
     }
@@ -390,6 +416,7 @@ class AtencionController extends Controller
         $causaExternaId = CausaExterna::query()->where('codigo', $request->input('causa_externa'))->value('id');
         $epsId = Eps::query()->where('codigo', $request->input('eps'))->value('id');
         $tipoUsuarioId = TipoUsuario::query()->where('codigo', $request->input('tipo_usuario'))->value('id');
+        $evaluacionFisica = trim((string) $request->input('evaluacion_fisica', '')) ?: null;
 
         return Atencion::query()->create([
             'paciente_id' => $paciente->id,
@@ -415,7 +442,7 @@ class AtencionController extends Controller
             'autorizacion_eps' => $request->input('autorizacion_eps') ?: null,
             'tipo_usuario_id' => $tipoUsuarioId,
             'zona' => $request->input('zona'),
-            'evaluacion_fisica' => null,
+            'evaluacion_fisica' => $evaluacionFisica,
             'comentario' => null,
             'estado' => 'en_atencion',
             'triage' => null,
@@ -432,6 +459,7 @@ class AtencionController extends Controller
         $causaExternaId = CausaExterna::query()->where('codigo', $request->input('causa_externa'))->value('id');
         $epsId = Eps::query()->where('codigo', $request->input('eps'))->value('id');
         $tipoUsuarioId = TipoUsuario::query()->where('codigo', $request->input('tipo_usuario'))->value('id');
+        $evaluacionFisica = trim((string) $request->input('evaluacion_fisica', '')) ?: null;
 
         $atencion->forceFill([
             'acompanante_id' => $acompanante?->id,
@@ -455,6 +483,7 @@ class AtencionController extends Controller
             'autorizacion_eps' => $request->input('autorizacion_eps') ?: null,
             'tipo_usuario_id' => $tipoUsuarioId,
             'zona' => $request->input('zona'),
+            'evaluacion_fisica' => $evaluacionFisica,
             'triage' => $request->filled('triage') ? $request->input('triage') : null,
         ])->save();
     }
@@ -478,13 +507,18 @@ class AtencionController extends Controller
             'sexo' => ['required', 'in:M,F,I'],
             'estado_civil' => ['required', 'in:S,C,D,V,U'],
             'direccion' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255'],
+            'email' => ['nullable', 'email', 'max:255'],
             'telefono' => ['required', 'string', 'max:32'],
-            'nombre_acompanante' => ['required', 'string', 'max:255'],
-            'parentesco_acompanante' => ['required', 'string', 'max:8'],
-            'doc_type_acompanante' => ['required', 'string', Rule::exists('tipo_documentos', 'codigo')],
-            'doc_num_acompanante' => ['required', 'string', 'max:64'],
-            'telefono_acompanante' => ['required', 'string', 'max:32'],
+            'nombre_acompanante' => ['nullable', 'string', 'max:255'],
+            'parentesco_acompanante' => ['required_with:nombre_acompanante', 'nullable', 'string', 'max:8'],
+            'doc_type_acompanante' => [
+                'required_with:nombre_acompanante',
+                'nullable',
+                'string',
+                Rule::exists('tipo_documentos', 'codigo'),
+            ],
+            'doc_num_acompanante' => ['required_with:nombre_acompanante', 'nullable', 'string', 'max:64'],
+            'telefono_acompanante' => ['nullable', 'string', 'max:32'],
             'tipo_servicio' => ['required', 'string', Rule::exists('cups', 'codigo')],
             'causa_externa' => ['nullable', 'string'],
             'institucion_origen' => ['nullable', 'string', 'max:255'],
@@ -504,6 +538,8 @@ class AtencionController extends Controller
             'ambulancia_id' => ['required', 'integer', 'exists:ambulancias,id'],
             'conductor_id' => ['required', 'integer', 'exists:conductores,id'],
             'medico_id' => ['nullable', 'integer', 'exists:users,id'],
+            // Obligatorio: no permitir solo espacios.
+            'evaluacion_fisica' => ['required', 'string', 'max:5000', 'regex:/\S/'],
         ];
     }
 
@@ -544,6 +580,7 @@ class AtencionController extends Controller
             'ambulancia_id' => __('móvil'),
             'conductor_id' => __('conductor'),
             'medico_id' => __('médico'),
+            'evaluacion_fisica' => __('hallazgos / evaluación física'),
         ];
     }
 
