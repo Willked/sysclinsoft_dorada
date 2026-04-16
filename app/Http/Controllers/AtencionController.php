@@ -84,6 +84,10 @@ class AtencionController extends Controller
             'eps' => Eps::query()->activosOrdenados()->get(),
             'ambulancias' => Ambulancia::activosOrdenados()->get(),
             'conductores' => Conductor::activosOrdenados()->get(),
+            'enfermeros' => User::query()
+                ->whereHas('roles', fn ($query) => $query->where('roles.id', 3))
+                ->orderBy('name')
+                ->get(),
             'medicos' => User::query()
                 ->whereHas('roles', fn ($query) => $query->where('roles.id', 2))
                 ->orderBy('name')
@@ -426,7 +430,7 @@ class AtencionController extends Controller
             'acompanante_id' => $acompanante?->id,
             'ambulancia_id' => $request->filled('ambulancia_id') ? $request->integer('ambulancia_id') : null,
             'conductor_id' => $request->filled('conductor_id') ? $request->integer('conductor_id') : null,
-            'enfermero_id' => auth()->id(),
+            'enfermero_id' => $request->filled('enfermero_id') ? $request->integer('enfermero_id') : null,
             'medico_id' => $request->filled('medico_id') ? $request->integer('medico_id') : null,
             'hora_llamada' => $horaLlamada,
             'hora_despacho' => $this->parseDatetimeLocalOptional($request->input('hora_despacho')),
@@ -540,6 +544,7 @@ class AtencionController extends Controller
             'zona' => ['required', 'in:U,R'],
             'ambulancia_id' => ['required', 'integer', 'exists:ambulancias,id'],
             'conductor_id' => ['required', 'integer', 'exists:conductores,id'],
+            'enfermero_id' => ['required', 'integer', 'exists:users,id'],
             'medico_id' => ['nullable', 'integer', 'exists:users,id'],
             // Obligatorio: no permitir solo espacios.
             'evaluacion_fisica' => ['required', 'string', 'max:5000', 'regex:/\S/'],
@@ -582,6 +587,7 @@ class AtencionController extends Controller
             'zona' => __('zona'),
             'ambulancia_id' => __('móvil'),
             'conductor_id' => __('conductor'),
+            'enfermero_id' => __('auxiliar de enfermería'),
             'medico_id' => __('médico'),
             'evaluacion_fisica' => __('hallazgos / evaluación física'),
         ];
