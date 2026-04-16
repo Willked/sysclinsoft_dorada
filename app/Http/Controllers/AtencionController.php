@@ -84,7 +84,10 @@ class AtencionController extends Controller
             'eps' => Eps::query()->activosOrdenados()->get(),
             'ambulancias' => Ambulancia::activosOrdenados()->get(),
             'conductores' => Conductor::activosOrdenados()->get(),
-            'medicos' => User::all(),
+            'medicos' => User::query()
+                ->whereHas('roles', fn ($query) => $query->where('roles.id', 2))
+                ->orderBy('name')
+                ->get(),
         ];
     }
 
