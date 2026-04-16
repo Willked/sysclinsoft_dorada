@@ -430,7 +430,7 @@
                                     <span class="atencion-card-head-note">{{ __('Requeridos por RIPS') }}</span>
                                 </div>
                                 <div class="atencion-card-body">
-                                    <div class="atencion-field-grid cols3">
+                                    <div class="atencion-field-grid cols2">
                                         <div>
                                             <label for="ambulancia-placa">{{ __('movil') }}<span class="atencion-req">*</span></label>
                                             <select id="ambulancia-placa" class="atencion-select @error('ambulancia_id') atencion-input-invalid @enderror" name="ambulancia_id">
@@ -456,6 +456,18 @@
                                             @enderror
                                         </div>
                                         <div>
+                                            <label for="enfermero-nombre">{{ __('Auxiliar de enfermería') }}<span class="atencion-req">*</span></label>
+                                            <select id="enfermero-nombre" class="atencion-select @error('enfermero_id') atencion-input-invalid @enderror" name="enfermero_id" required>
+                                                <option value="">{{ __('Seleccione un auxiliar de enfermería') }}</option>
+                                                @foreach ($enfermeros as $enfermero)
+                                                    <option value="{{ $enfermero->id }}" @selected(old('enfermero_id', $atencionModel?->enfermero_id) == $enfermero->id)>{{ $enfermero->name }}</option>
+                                                @endforeach
+                                            </select>
+                                            @error('enfermero_id')
+                                                <p class="atencion-field-error" role="alert">{{ $message }}</p>
+                                            @enderror
+                                        </div>
+                                        <div>
                                             <label for="medico-nombre">{{ __('Médico') }}</label>
                                             <select id="medico-nombre" class="atencion-select @error('medico_id') atencion-input-invalid @enderror" name="medico_id">
                                                 <option value="">{{ __('Seleccione un médico') }}</option>
@@ -468,6 +480,7 @@
                                             @enderror
                                         </div>
                                     </div>
+                                    <br>
                                     <div class="atencion-field-grid cols3">
                                         <div>
                                             <div class="atencion-tiempo-row">
