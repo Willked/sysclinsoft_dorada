@@ -4,7 +4,9 @@ use App\Http\Controllers\AtencionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DivipolaController;
 use App\Http\Controllers\Parametros\AmbulanciaController;
+use App\Http\Controllers\Parametros\CausaExternaController;
 use App\Http\Controllers\Parametros\Cie10Controller;
+use App\Http\Controllers\Parametros\ConductorController;
 use App\Http\Controllers\Parametros\CupController;
 use App\Http\Controllers\Parametros\EpsController;
 use App\Http\Controllers\Parametros\RolController;
@@ -60,6 +62,16 @@ Route::middleware([
             Route::resource('ambulancias', AmbulanciaController::class)->except(['show']);
         });
 
+        Route::middleware(['permission:conductores.gestionar'])->group(function (): void {
+            Route::post('conductores/{conductor}/activar', [ConductorController::class, 'activar'])
+                ->name('conductores.activar');
+            Route::post('conductores/{conductor}/desactivar', [ConductorController::class, 'desactivar'])
+                ->name('conductores.desactivar');
+            Route::resource('conductores', ConductorController::class)
+                ->parameters(['conductores' => 'conductor'])
+                ->except(['show', 'destroy']);
+        });
+
         Route::middleware(['permission:eps.gestionar'])->group(function (): void {
             Route::post('eps/{eps}/activar', [EpsController::class, 'activar'])
                 ->name('eps.activar');
@@ -67,6 +79,16 @@ Route::middleware([
                 ->name('eps.desactivar');
             Route::resource('eps', EpsController::class)
                 ->parameters(['eps' => 'eps'])
+                ->except(['show', 'destroy']);
+        });
+
+        Route::middleware(['permission:causasexternas.gestionar'])->group(function (): void {
+            Route::post('causas-externas/{causaExterna}/activar', [CausaExternaController::class, 'activar'])
+                ->name('causas-externas.activar');
+            Route::post('causas-externas/{causaExterna}/desactivar', [CausaExternaController::class, 'desactivar'])
+                ->name('causas-externas.desactivar');
+            Route::resource('causas-externas', CausaExternaController::class)
+                ->parameters(['causas-externas' => 'causaExterna'])
                 ->except(['show', 'destroy']);
         });
 

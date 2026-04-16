@@ -373,7 +373,7 @@
                                             @enderror
                                         </div>                                      
                                         <div>
-                                            <label for="eps">{{ __('EPS') }}<span class="atencion-req">*</span></label>
+                                            <label for="eps">{{ __('Aseguradora o EPS') }}<span class="atencion-req">*</span></label>
                                             <select id="eps" class="atencion-select @error('eps') atencion-input-invalid @enderror" name="eps">
                                                 <option value="" @selected(! filled($epsVal))>{{ __('Seleccione…') }}</option>
                                                 @foreach ($eps as $epsItem)
@@ -385,7 +385,7 @@
                                             @enderror
                                         </div>
                                         <div>
-                                            <label for="autorizacion">{{ __('Nro. autorización EPS') }}</label>
+                                            <label for="autorizacion">{{ __('Nro. autorización') }}</label>
                                             <input id="autorizacion" class="atencion-input @error('autorizacion_eps') atencion-input-invalid @enderror" type="text" name="autorizacion_eps" value="{{ old('autorizacion_eps', $atencionModel?->autorizacion_eps ?? '') }}" placeholder="{{ __('Opcional') }}">
                                             @error('autorizacion_eps')
                                                 <p class="atencion-field-error" role="alert">{{ $message }}</p>
