@@ -25,6 +25,8 @@ class Paciente extends Model
         'sexo',
         'estado_civil',
         'direccion',
+        'departamento_id',
+        'municipio_id',
         'email',
         'telefono',
     ];
@@ -39,6 +41,16 @@ class Paciente extends Model
     public function tipoDocumento(): BelongsTo
     {
         return $this->belongsTo(TipoDocumento::class);
+    }
+
+    public function departamento(): BelongsTo
+    {
+        return $this->belongsTo(Departamento::class);
+    }
+
+    public function municipio(): BelongsTo
+    {
+        return $this->belongsTo(Municipio::class);
     }
 
     public function acompanante(): HasOne

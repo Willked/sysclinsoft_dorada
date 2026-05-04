@@ -34,7 +34,11 @@ class AtencionController extends Controller
     {
         $atencion->load([
             'paciente.tipoDocumento',
+            'paciente.departamento',
+            'paciente.municipio',
             'acompanante.tipoDocumento',
+            'municipioOrigen.departamento',
+            'departamentoOrigen',
             'municipio.departamento',
             'departamento',
             'cup',
@@ -101,6 +105,9 @@ class AtencionController extends Controller
             'paciente.tipoDocumento',
             'eps',
             'tipoUsuario',
+            'departamentoOrigen',
+            'municipioOrigen',
+            'departamento',
             'municipio',
             'cup',
             'medico',
@@ -204,12 +211,12 @@ class AtencionController extends Controller
             $this->atributosValidacionNuevaAtencion(),
         );
 
-        $horaLlamada = $this->parseDatetimeLocal($request->input('hora_llamada'));
+        $horaLlamada = $this->parseDatetimeLocal($request->input('hora_solicitud'));
         if ($horaLlamada === null) {
             return redirect()
                 ->route('atenciones.nueva')
                 ->withInput()
-                ->withErrors(['hora_llamada' => __('La hora de llamada no es válida.')]);
+                ->withErrors(['hora_solicitud' => __('La hora de solicitud no es válida.')]);
         }
 
         try {
@@ -234,12 +241,12 @@ class AtencionController extends Controller
 
     public function update(Request $request, Atencion $atencion): RedirectResponse
     {
-        $horaLlamada = $this->parseDatetimeLocal($request->input('hora_llamada'));
+        $horaLlamada = $this->parseDatetimeLocal($request->input('hora_solicitud'));
         if ($horaLlamada === null) {
             return redirect()
                 ->route('atenciones.edit', $atencion)
                 ->withInput()
-                ->withErrors(['hora_llamada' => __('La hora de llamada es obligatoria.')]);
+                ->withErrors(['hora_solicitud' => __('La hora de solicitud es obligatoria.')]);
         }
 
         $request->validate(
@@ -310,6 +317,8 @@ class AtencionController extends Controller
             'sexo' => $request->input('sexo'),
             'estado_civil' => $request->input('estado_civil'),
             'direccion' => $request->input('direccion'),
+            'departamento_id' => $request->filled('departamento_paciente_id') ? $request->integer('departamento_paciente_id') : null,
+            'municipio_id' => $request->filled('municipio_paciente_id') ? $request->integer('municipio_paciente_id') : null,
             'email' => (string) ($request->input('email') ?? ''),
             'telefono' => $request->input('telefono'),
         ]);
@@ -360,6 +369,8 @@ class AtencionController extends Controller
             'sexo' => $request->input('sexo'),
             'estado_civil' => $request->input('estado_civil'),
             'direccion' => $request->input('direccion'),
+            'departamento_id' => $request->filled('departamento_paciente_id') ? $request->integer('departamento_paciente_id') : null,
+            'municipio_id' => $request->filled('municipio_paciente_id') ? $request->integer('municipio_paciente_id') : null,
             'email' => (string) ($request->input('email') ?? ''),
             'telefono' => $request->input('telefono'),
         ])->save();
@@ -424,6 +435,7 @@ class AtencionController extends Controller
         $epsId = Eps::query()->where('codigo', $request->input('eps'))->value('id');
         $tipoUsuarioId = TipoUsuario::query()->where('codigo', $request->input('tipo_usuario'))->value('id');
         $evaluacionFisica = trim((string) $request->input('evaluacion_fisica', '')) ?: null;
+        $triage = $request->filled('triage') ? strtoupper((string) $request->input('triage')) : null;
 
         return Atencion::query()->create([
             'paciente_id' => $paciente->id,
@@ -438,13 +450,16 @@ class AtencionController extends Controller
             'llegada_escena' => $this->parseDatetimeLocalOptional($request->input('llegada_escena')),
             'salida_escena' => $this->parseDatetimeLocalOptional($request->input('salida_escena')),
             'llegada_destino' => $this->parseDatetimeLocalOptional($request->input('llegada_destino')),
+            'hora_entrega' => $this->parseDatetimeLocalOptional($request->input('hora_entrega')),
             'cups_id' => $cupsId,
             'tipo_servicio' => $request->input('tipo_servicio'),
             'causa_externa_id' => $causaExternaId,
             'institucion_origen' => $request->input('institucion_origen') ?: null,
+            'departamento_origen_id' => $request->filled('departamento_origen_id') ? $request->integer('departamento_origen_id') : null,
+            'municipio_origen_id' => $request->filled('municipio_origen_id') ? $request->integer('municipio_origen_id') : null,
             'institucion_destino' => $request->input('institucion_destino') ?: null,
-            'departamento_id' => $request->filled('departamento_id') ? $request->integer('departamento_id') : null,
-            'municipio_id' => $request->filled('municipio_id') ? $request->integer('municipio_id') : null,
+            'departamento_destino_id' => $request->filled('departamento_destino_id') ? $request->integer('departamento_destino_id') : null,
+            'municipio_destino_id' => $request->filled('municipio_destino_id') ? $request->integer('municipio_destino_id') : null,
             'eps_id' => $epsId,
             'autorizacion_eps' => $request->input('autorizacion_eps') ?: null,
             'tipo_usuario_id' => $tipoUsuarioId,
@@ -452,7 +467,7 @@ class AtencionController extends Controller
             'evaluacion_fisica' => $evaluacionFisica,
             'comentario' => null,
             'estado' => 'en_atencion',
-            'triage' => null,
+            'triage' => $triage,
         ]);
     }
 
@@ -472,6 +487,7 @@ class AtencionController extends Controller
             'acompanante_id' => $acompanante?->id,
             'ambulancia_id' => $request->filled('ambulancia_id') ? $request->integer('ambulancia_id') : null,
             'conductor_id' => $request->filled('conductor_id') ? $request->integer('conductor_id') : null,
+            'enfermero_id' => $request->filled('enfermero_id') ? $request->integer('enfermero_id') : null,
             'medico_id' => $request->filled('medico_id') ? $request->integer('medico_id') : null,
             'hora_llamada' => $horaLlamada,
             'hora_despacho' => $this->parseDatetimeLocalOptional($request->input('hora_despacho')),
@@ -479,13 +495,16 @@ class AtencionController extends Controller
             'llegada_escena' => $this->parseDatetimeLocalOptional($request->input('llegada_escena')),
             'salida_escena' => $this->parseDatetimeLocalOptional($request->input('salida_escena')),
             'llegada_destino' => $this->parseDatetimeLocalOptional($request->input('llegada_destino')),
+            'hora_entrega' => $this->parseDatetimeLocalOptional($request->input('hora_entrega')),
             'cups_id' => $cupsId,
             'tipo_servicio' => $request->input('tipo_servicio'),
             'causa_externa_id' => $causaExternaId,
             'institucion_origen' => $request->input('institucion_origen') ?: null,
+            'departamento_origen_id' => $request->filled('departamento_origen_id') ? $request->integer('departamento_origen_id') : null,
+            'municipio_origen_id' => $request->filled('municipio_origen_id') ? $request->integer('municipio_origen_id') : null,
             'institucion_destino' => $request->input('institucion_destino') ?: null,
-            'departamento_id' => $request->filled('departamento_id') ? $request->integer('departamento_id') : null,
-            'municipio_id' => $request->filled('municipio_id') ? $request->integer('municipio_id') : null,
+            'departamento_destino_id' => $request->filled('departamento_destino_id') ? $request->integer('departamento_destino_id') : null,
+            'municipio_destino_id' => $request->filled('municipio_destino_id') ? $request->integer('municipio_destino_id') : null,
             'eps_id' => $epsId,
             'autorizacion_eps' => $request->input('autorizacion_eps') ?: null,
             'tipo_usuario_id' => $tipoUsuarioId,
@@ -503,7 +522,7 @@ class AtencionController extends Controller
     private function reglasNuevaAtencion(Request $request): array
     {
         return [
-            'hora_llamada' => ['required', 'date'],
+            'hora_solicitud' => ['required', 'date'],
             'tipo_documento' => ['required', 'string', Rule::exists('tipo_documentos', 'codigo')],
             'numero_documento' => ['required', 'string', 'max:64'],
             'primer_nombre' => ['required', 'string', 'max:120'],
@@ -516,6 +535,14 @@ class AtencionController extends Controller
             'direccion' => ['required', 'string', 'max:255'],
             'email' => ['nullable', 'email', 'max:255'],
             'telefono' => ['required', 'string', 'max:32'],
+            'departamento_paciente_id' => ['required', 'integer', 'exists:departamentos,id'],
+            'municipio_paciente_id' => [
+                'required',
+                'integer',
+                Rule::exists('municipios', 'id')->where(function ($query) use ($request) {
+                    $query->where('departamento_id', (int) $request->input('departamento_paciente_id'));
+                }),
+            ],
             'nombre_acompanante' => ['nullable', 'string', 'max:255'],
             'parentesco_acompanante' => ['required_with:nombre_acompanante', 'nullable', 'string', 'max:8'],
             'doc_type_acompanante' => [
@@ -529,13 +556,21 @@ class AtencionController extends Controller
             'tipo_servicio' => ['required', 'string', Rule::exists('cups', 'codigo')],
             'causa_externa' => ['nullable', 'string'],
             'institucion_origen' => ['nullable', 'string', 'max:255'],
-            'institucion_destino' => ['nullable', 'string', 'max:255'],
-            'departamento_id' => ['required', 'integer', 'exists:departamentos,id'],
-            'municipio_id' => [
+            'departamento_origen_id' => ['required', 'integer', 'exists:departamentos,id'],
+            'municipio_origen_id' => [
                 'required',
                 'integer',
                 Rule::exists('municipios', 'id')->where(function ($query) use ($request) {
-                    $query->where('departamento_id', (int) $request->input('departamento_id'));
+                    $query->where('departamento_id', (int) $request->input('departamento_origen_id'));
+                }),
+            ],
+            'institucion_destino' => ['nullable', 'string', 'max:255'],
+            'departamento_destino_id' => ['required', 'integer', 'exists:departamentos,id'],
+            'municipio_destino_id' => [
+                'required',
+                'integer',
+                Rule::exists('municipios', 'id')->where(function ($query) use ($request) {
+                    $query->where('departamento_id', (int) $request->input('departamento_destino_id'));
                 }),
             ],
             'eps' => ['required', 'string', Rule::exists('eps', 'codigo')],
@@ -546,6 +581,7 @@ class AtencionController extends Controller
             'conductor_id' => ['required', 'integer', 'exists:conductores,id'],
             'enfermero_id' => ['required', 'integer', 'exists:users,id'],
             'medico_id' => ['nullable', 'integer', 'exists:users,id'],
+            'triage' => ['nullable', 'in:I,II,III,IV,V,1,2,3,4,5'],
             // Obligatorio: no permitir solo espacios.
             'evaluacion_fisica' => ['required', 'string', 'max:5000', 'regex:/\S/'],
         ];
@@ -557,7 +593,7 @@ class AtencionController extends Controller
     private function atributosValidacionNuevaAtencion(): array
     {
         return [
-            'hora_llamada' => __('hora de llamada'),
+            'hora_solicitud' => __('hora de solicitud'),
             'tipo_documento' => __('tipo de documento del paciente'),
             'numero_documento' => __('número de documento del paciente'),
             'primer_nombre' => __('primer nombre'),
@@ -570,6 +606,8 @@ class AtencionController extends Controller
             'direccion' => __('dirección'),
             'email' => __('correo electrónico'),
             'telefono' => __('teléfono'),
+            'departamento_paciente_id' => __('departamento del paciente'),
+            'municipio_paciente_id' => __('municipio del paciente'),
             'nombre_acompanante' => __('nombre del acompañante'),
             'parentesco_acompanante' => __('parentesco del acompañante'),
             'doc_type_acompanante' => __('tipo de documento del acompañante'),
@@ -578,9 +616,11 @@ class AtencionController extends Controller
             'tipo_servicio' => __('tipo de servicio'),
             'causa_externa' => __('causa externa'),
             'institucion_origen' => __('institución origen'),
+            'departamento_origen_id' => __('departamento de origen'),
+            'municipio_origen_id' => __('municipio de origen'),
             'institucion_destino' => __('institución destino'),
-            'departamento_id' => __('departamento'),
-            'municipio_id' => __('municipio'),
+            'departamento_destino_id' => __('departamento de destino'),
+            'municipio_destino_id' => __('municipio de destino'),
             'eps' => __('EPS'),
             'autorizacion_eps' => __('número de autorización EPS'),
             'tipo_usuario' => __('tipo de usuario'),
@@ -589,6 +629,7 @@ class AtencionController extends Controller
             'conductor_id' => __('conductor'),
             'enfermero_id' => __('auxiliar de enfermería'),
             'medico_id' => __('médico'),
+            'triage' => __('triage'),
             'evaluacion_fisica' => __('hallazgos / evaluación física'),
         ];
     }
