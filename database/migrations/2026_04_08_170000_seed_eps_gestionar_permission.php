@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Schema;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
@@ -9,6 +10,10 @@ return new class extends Migration
 {
     public function up(): void
     {
+        if (! Schema::hasTable('permissions') || ! Schema::hasTable('roles')) {
+            return;
+        }
+
         $permission = Permission::query()->firstOrCreate(
             ['name' => 'eps.gestionar', 'guard_name' => 'web'],
         );
@@ -27,6 +32,10 @@ return new class extends Migration
 
     public function down(): void
     {
+        if (! Schema::hasTable('permissions') || ! Schema::hasTable('roles')) {
+            return;
+        }
+
         $permission = Permission::query()
             ->where('name', 'eps.gestionar')
             ->where('guard_name', 'web')

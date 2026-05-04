@@ -23,13 +23,16 @@ class Atencion extends Model
         'llegada_escena',
         'salida_escena',
         'llegada_destino',
+        'hora_entrega',
         'cups_id',
         'tipo_servicio',
         'causa_externa_id',
         'institucion_origen',
+        'departamento_origen_id',
+        'municipio_origen_id',
         'institucion_destino',
-        'departamento_id',
-        'municipio_id',
+        'departamento_destino_id',
+        'municipio_destino_id',
         'eps_id',
         'autorizacion_eps',
         'tipo_usuario_id',
@@ -51,6 +54,7 @@ class Atencion extends Model
             'llegada_escena' => 'datetime',
             'salida_escena' => 'datetime',
             'llegada_destino' => 'datetime',
+            'hora_entrega' => 'datetime',
         ];
     }
 
@@ -96,12 +100,22 @@ class Atencion extends Model
 
     public function departamento(): BelongsTo
     {
-        return $this->belongsTo(Departamento::class);
+        return $this->belongsTo(Departamento::class, 'departamento_destino_id');
     }
 
     public function municipio(): BelongsTo
     {
-        return $this->belongsTo(Municipio::class);
+        return $this->belongsTo(Municipio::class, 'municipio_destino_id');
+    }
+
+    public function departamentoOrigen(): BelongsTo
+    {
+        return $this->belongsTo(Departamento::class, 'departamento_origen_id');
+    }
+
+    public function municipioOrigen(): BelongsTo
+    {
+        return $this->belongsTo(Municipio::class, 'municipio_origen_id');
     }
 
     public function eps(): BelongsTo

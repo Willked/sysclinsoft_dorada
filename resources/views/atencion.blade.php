@@ -26,6 +26,18 @@
     $defaultMunDane = $editing
         ? (string) ($atencionModel->municipio?->dane_code ?? '')
         : '17380';
+    $defaultOrigenDepDane = $editing
+        ? (string) ($atencionModel->departamentoOrigen?->dane_code ?? $atencionModel->municipioOrigen?->departamento?->dane_code ?? '17')
+        : '17';
+    $defaultOrigenMunDane = $editing
+        ? (string) ($atencionModel->municipioOrigen?->dane_code ?? '')
+        : '17380';
+    $defaultPacienteDepDane = $editing
+        ? (string) ($pacienteModel?->departamento?->dane_code ?? $pacienteModel?->municipio?->departamento?->dane_code ?? '17')
+        : '17';
+    $defaultPacienteMunDane = $editing
+        ? (string) ($pacienteModel?->municipio?->dane_code ?? '')
+        : '17380';
     $triageCurrent = old('triage', $atencionModel?->triage);
     $triageKey = match ($triageCurrent) {
         'I', '1' => 't1',
@@ -222,6 +234,13 @@
                                             @error('estado_civil')
                                                 <p class="atencion-field-error" role="alert">{{ $message }}</p>
                                             @enderror
+                                        </div>   
+                                        <div>
+                                            <label for="email">{{ __('Email') }}</label>
+                                            <input id="email" class="atencion-input @error('email') atencion-input-invalid @enderror" type="email" name="email" value="{{ old('email', $pacienteModel?->email ?? '') }}" autocomplete="off">
+                                            @error('email')
+                                                <p class="atencion-field-error" role="alert">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                         <div>
                                             <label for="direccion">{{ __('Dirección') }}<span class="atencion-req">*</span></label>
@@ -229,13 +248,26 @@
                                             @error('direccion')
                                                 <p class="atencion-field-error" role="alert">{{ $message }}</p>
                                             @enderror
-                                        </div>
-                                        <div>
-                                            <label for="email">{{ __('Email') }}</label>
-                                            <input id="email" class="atencion-input @error('email') atencion-input-invalid @enderror" type="email" name="email" value="{{ old('email', $pacienteModel?->email ?? '') }}" autocomplete="off">
-                                            @error('email')
-                                                <p class="atencion-field-error" role="alert">{{ $message }}</p>
-                                            @enderror
+                                        </div>                                     
+                                        <div class="atencion-field-grid cols2">                                            
+                                            <div>
+                                                <label for="departamento_paciente">{{ __('Departamento') }}<span class="atencion-req">*</span></label>
+                                                <select id="departamento_paciente" class="atencion-select @error('departamento_paciente_id') atencion-input-invalid @enderror" name="departamento_paciente_id" data-atencion-geo-base="{{ url('/geo/departamentos') }}" data-atencion-default-dep-dane="{{ $defaultPacienteDepDane }}">
+                                                    <option value="">{{ __('Cargando…') }}</option>
+                                                </select>
+                                                @error('departamento_paciente_id')
+                                                    <p class="atencion-field-error" role="alert">{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                            <div>
+                                                <label for="municipio_paciente">{{ __('Municipio') }}<span class="atencion-req">*</span></label>
+                                                <select id="municipio_paciente" class="atencion-select @error('municipio_paciente_id') atencion-input-invalid @enderror" name="municipio_paciente_id" disabled data-atencion-default-mun-dane="{{ $defaultPacienteMunDane }}">
+                                                    <option value="">{{ __('Seleccione un departamento') }}</option>
+                                                </select>
+                                                @error('municipio_paciente_id')
+                                                    <p class="atencion-field-error" role="alert">{{ $message }}</p>
+                                                @enderror
+                                            </div> 
                                         </div>
                                         <div>
                                             <label for="telefono">{{ __('Teléfono') }}<span class="atencion-req">*</span></label>
@@ -347,6 +379,27 @@
                                                 <p class="atencion-field-error" role="alert">{{ $message }}</p>
                                             @enderror
                                         </div>
+                                                                            
+                                        <div class="atencion-field-grid cols2">                                            
+                                            <div>
+                                                <label for="departamento_origen">{{ __('Departamento de origen') }}<span class="atencion-req">*</span></label>
+                                                <select id="departamento_origen" class="atencion-select @error('departamento_origen_id') atencion-input-invalid @enderror" name="departamento_origen_id" data-atencion-geo-base="{{ url('/geo/departamentos') }}" data-atencion-default-dep-dane="{{ $defaultOrigenDepDane }}">
+                                                    <option value="">{{ __('Cargando…') }}</option>
+                                                </select>
+                                                @error('departamento_origen_id')
+                                                    <p class="atencion-field-error" role="alert">{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                            <div>
+                                                <label for="municipio_origen">{{ __('Municipio de origen') }}<span class="atencion-req">*</span></label>
+                                                <select id="municipio_origen" class="atencion-select @error('municipio_origen_id') atencion-input-invalid @enderror" name="municipio_origen_id" disabled data-atencion-default-mun-dane="{{ $defaultOrigenMunDane }}">
+                                                    <option value="">{{ __('Seleccione un departamento') }}</option>
+                                                </select>
+                                                @error('municipio_origen_id')
+                                                    <p class="atencion-field-error" role="alert">{{ $message }}</p>
+                                                @enderror
+                                            </div> 
+                                        </div>
                                         <div>
                                             <label for="destino">{{ __('Institución destino') }}</label>
                                             <input id="destino" class="atencion-input @error('institucion_destino') atencion-input-invalid @enderror" type="text" name="institucion_destino" value="{{ old('institucion_destino', $atencionModel?->institucion_destino ?? '') }}" placeholder="{{ __('Hospital / IPS destino') }}">
@@ -354,24 +407,26 @@
                                                 <p class="atencion-field-error" role="alert">{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <div>
-                                            <label for="departamento">{{ __('Departamento') }}<span class="atencion-req">*</span></label>
-                                            <select id="departamento" class="atencion-select @error('departamento_id') atencion-input-invalid @enderror" name="departamento_id" data-atencion-geo-base="{{ url('/geo/departamentos') }}" data-atencion-default-dep-dane="{{ $defaultDepDane }}">
-                                                <option value="">{{ __('Cargando…') }}</option>
-                                            </select>
-                                            @error('departamento_id')
-                                                <p class="atencion-field-error" role="alert">{{ $message }}</p>
-                                            @enderror
+                                        <div class="atencion-field-grid cols2">                                            
+                                            <div>
+                                                <label for="departamento">{{ __('Departamento') }}<span class="atencion-req">*</span></label>
+                                                <select id="departamento" class="atencion-select @error('departamento_destino_id') atencion-input-invalid @enderror" name="departamento_destino_id" data-atencion-geo-base="{{ url('/geo/departamentos') }}" data-atencion-default-dep-dane="{{ $defaultDepDane }}">
+                                                    <option value="">{{ __('Cargando…') }}</option>
+                                                </select>
+                                                @error('departamento_destino_id')
+                                                    <p class="atencion-field-error" role="alert">{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                            <div>
+                                                <label for="municipio">{{ __('Municipio') }}<span class="atencion-req">*</span></label>
+                                                <select id="municipio" class="atencion-select @error('municipio_destino_id') atencion-input-invalid @enderror" name="municipio_destino_id" disabled data-atencion-default-mun-dane="{{ $defaultMunDane }}">
+                                                    <option value="">{{ __('Seleccione un departamento') }}</option>
+                                                </select>
+                                                @error('municipio_destino_id')
+                                                    <p class="atencion-field-error" role="alert">{{ $message }}</p>
+                                                @enderror
+                                            </div>  
                                         </div>
-                                        <div>
-                                            <label for="municipio">{{ __('Municipio') }}<span class="atencion-req">*</span></label>
-                                            <select id="municipio" class="atencion-select @error('municipio_id') atencion-input-invalid @enderror" name="municipio_id" disabled data-atencion-default-mun-dane="{{ $defaultMunDane }}">
-                                                <option value="">{{ __('Seleccione un departamento') }}</option>
-                                            </select>
-                                            @error('municipio_id')
-                                                <p class="atencion-field-error" role="alert">{{ $message }}</p>
-                                            @enderror
-                                        </div>                                      
                                         <div>
                                             <label for="eps">{{ __('Aseguradora o EPS') }}<span class="atencion-req">*</span></label>
                                             <select id="eps" class="atencion-select @error('eps') atencion-input-invalid @enderror" name="eps">
@@ -482,24 +537,19 @@
                                     </div>
                                     <br>
                                     <div class="atencion-field-grid cols3">
-                                        <div>
+                                        <div>                                            
                                             <div class="atencion-tiempo-row">
-                                                <label>{{ __('Hora de llamada') }}<span class="atencion-req">*</span></label>
-                                                <input class="atencion-input atencion-datetime @error('hora_llamada') atencion-input-invalid @enderror" type="datetime-local" name="hora_llamada" value="{{ old('hora_llamada', $editing ? $fmtDtLocal($atencionModel->hora_llamada) : '') }}">
+                                                <label>{{ __('Fecha y hora de solicitud') }}<span class="atencion-req">*</span></label>
+                                                <input class="atencion-input atencion-datetime @error('hora_solicitud') atencion-input-invalid @enderror" type="datetime-local" name="hora_solicitud" value="{{ old('hora_solicitud', $editing ? $fmtDtLocal($atencionModel->hora_llamada) : '') }}">
                                                 <button type="button" class="atencion-tiempo-now" data-atencion-now>{{ __('Usar hora actual') }}</button>
                                             </div>
-                                            @error('hora_llamada')
+                                            @error('hora_solicitud')
                                                 <p class="atencion-field-error" role="alert">{{ $message }}</p>
                                             @enderror
                                         </div>
                                         <div class="atencion-tiempo-row">
                                             <label>{{ __('Hora de despacho') }}</label>
                                             <input class="atencion-input atencion-datetime" type="datetime-local" name="hora_despacho" value="{{ old('hora_despacho', $editing ? $fmtDtLocal($atencionModel->hora_despacho) : '') }}">
-                                            <button type="button" class="atencion-tiempo-now" data-atencion-now>{{ __('Usar hora actual') }}</button>
-                                        </div>
-                                        <div class="atencion-tiempo-row">
-                                            <label>{{ __('Salida de base') }}</label>
-                                            <input class="atencion-input atencion-datetime" type="datetime-local" name="salida_base" value="{{ old('salida_base', $editing ? $fmtDtLocal($atencionModel->salida_base) : '') }}">
                                             <button type="button" class="atencion-tiempo-now" data-atencion-now>{{ __('Usar hora actual') }}</button>
                                         </div>
                                         <div class="atencion-tiempo-row">
@@ -513,8 +563,13 @@
                                             <button type="button" class="atencion-tiempo-now" data-atencion-now>{{ __('Usar hora actual') }}</button>
                                         </div>
                                         <div class="atencion-tiempo-row">
-                                            <label>{{ __('Llegada a destino') }}</label>
+                                            <label>{{ __('Llegada al servicio') }}</label>
                                             <input class="atencion-input atencion-datetime" type="datetime-local" name="llegada_destino" value="{{ old('llegada_destino', $editing ? $fmtDtLocal($atencionModel->llegada_destino) : '') }}">
+                                            <button type="button" class="atencion-tiempo-now" data-atencion-now>{{ __('Usar hora actual') }}</button>
+                                        </div>
+                                        <div class="atencion-tiempo-row">
+                                            <label>{{ __('Entrega al paciente') }}</label>
+                                            <input class="atencion-input atencion-datetime" type="datetime-local" name="hora_entrega" value="{{ old('hora_entrega', $editing ? $fmtDtLocal($atencionModel->hora_entrega) : '') }}">
                                             <button type="button" class="atencion-tiempo-now" data-atencion-now>{{ __('Usar hora actual') }}</button>
                                         </div>
                                     </div>
@@ -784,11 +839,35 @@
                 return d.toISOString().slice(0, 16);
             }
 
+            function localDateValue() {
+                var d = new Date();
+                d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
+                return d.toISOString().slice(0, 10);
+            }
+
+            function localTimeValue() {
+                var d = new Date();
+                d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
+                return d.toISOString().slice(11, 16);
+            }
+
             document.querySelectorAll('[data-atencion-now]').forEach(function (btn) {
                 btn.addEventListener('click', function () {
                     var row = btn.closest('.atencion-tiempo-row');
-                    var input = row && row.querySelector('.atencion-datetime');
-                    if (input) input.value = localDatetimeValue();
+                    var input = row && row.querySelector('input[type="date"], input[type="time"], input[type="datetime-local"], .atencion-datetime, .atencion-time');
+                    if (!input) return;
+
+                    if (input.type === 'date') {
+                        input.value = localDateValue();
+                        return;
+                    }
+
+                    if (input.type === 'time') {
+                        input.value = localTimeValue();
+                        return;
+                    }
+
+                    input.value = localDatetimeValue();
                 });
             });
 
@@ -840,9 +919,13 @@
             });
             updateGlasgowTotal();
 
-            var depSel = document.getElementById('departamento');
-            var munSel = document.getElementById('municipio');
-            if (depSel && munSel) {
+            function initGeoPair(depId, munId) {
+                var depSel = document.getElementById(depId);
+                var munSel = document.getElementById(munId);
+                if (!depSel || !munSel) {
+                    return;
+                }
+
                 var geoBase = (depSel.getAttribute('data-atencion-geo-base') || '').replace(/\/$/, '');
                 var defaultDepDane = depSel.getAttribute('data-atencion-default-dep-dane') || '';
                 var defaultMunDane = munSel.getAttribute('data-atencion-default-mun-dane') || '';
@@ -951,14 +1034,23 @@
                 depSel.addEventListener('change', function () {
                     loadMunicipios(depSel.value, '');
                 });
+            }
 
-                var atencionMainForm = document.getElementById('atencion-form-main');
-                if (atencionMainForm) {
-                    atencionMainForm.addEventListener('submit', function () {
-                        /* Los <select disabled> no se envían: hay que habilitar para incluir municipio_id. */
-                        munSel.disabled = false;
-                    });
-                }
+            initGeoPair('departamento', 'municipio');
+            initGeoPair('departamento_origen', 'municipio_origen');
+            initGeoPair('departamento_paciente', 'municipio_paciente');
+
+            var atencionMainForm = document.getElementById('atencion-form-main');
+            if (atencionMainForm) {
+                atencionMainForm.addEventListener('submit', function () {
+                    /* Los <select disabled> no se envían: hay que habilitarlos antes de enviar. */
+                    var municipioAtencion = document.getElementById('municipio');
+                    var municipioOrigen = document.getElementById('municipio_origen');
+                    var municipioPaciente = document.getElementById('municipio_paciente');
+                    if (municipioAtencion) municipioAtencion.disabled = false;
+                    if (municipioOrigen) municipioOrigen.disabled = false;
+                    if (municipioPaciente) municipioPaciente.disabled = false;
+                });
             }
         })();
     </script>
